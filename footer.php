@@ -17,11 +17,20 @@
 
 
 <footer class="main-footer">
-        <div class="footer-container">
+        <div class="container">
             <div class="footer-body">
                 <div class="footer-body__branding">
                     <div class="logo">
-                        <img src="/images/logo.png" alt="" srcset="">
+                        <a href="/" >
+                            <?php 
+                                $custom_logo_id = get_theme_mod( 'custom_logo' );
+                                $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+                                
+                                if ( has_custom_logo() ) {
+                                    echo '<img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '">';
+                                } 
+                            ?>
+                        </a>
                         <div class="faculty">
                             <p>
                                 Кафедра
@@ -33,7 +42,17 @@
                         </p>
                     </div>
                 </div>
-                <nav class="footer-body__menu">
+                <?php 
+                if (has_nav_menu('footer_menu'))
+                    wp_nav_menu([
+                        'theme_location' => 'footer_menu',
+                        'container_class'=> 'footer-body__menu',
+                        'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                        'depth' => 1,
+                        'add_li_class'  => 'footer-body__li '
+                    ]); 
+                ?>
+                <!-- <nav class="footer-body__menu">
                     <ul>
                         <li class="footer-body__li">
                             <a href="#">Вступ</a>
@@ -54,7 +73,7 @@
                             <a href="#">Розклад занять</a>
                         </li>
                     </ul>
-                </nav>
+                </nav> -->
                 <div class="footer-body__phones">
                     <div class="phone">
                         <p class="phone-type">
