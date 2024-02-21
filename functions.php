@@ -44,3 +44,13 @@ function get_breadcrumb() {
         echo '</em>"';
     }
 }
+
+function check_pages() {
+    if (is_home()) {
+        return false;
+    }
+    if (is_404()) {
+        return false;
+    }
+    return true;
+}

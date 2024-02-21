@@ -3,6 +3,9 @@ body {
     font-size: 18px;
     font-weight: 400;
 }
+a {
+    text-decoration: none;
+}
 /* buttons styles */
 button {
     padding: 20px 30px;
@@ -85,9 +88,91 @@ article td {
     padding: 10px;
 }
 /* header styles */
+/* header top styles */
+.header-top {
+    background-color: #fff;
+    padding: 10px 0;
+}
+.header-top__body {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+.header-top__body > * {
+    padding: 0 15px;
+}
+.header-top__body nav {
+    display: flex;
+    align-items: center;
+    border-left: 2px solid #d6e7f45c;
+}
+.header-top__li {
+    margin: 0px 15px 0px 15px;
+    font-size: 18px;
+    font-weight: 700;
+}
+.header-top__li a {
+    color: #000;
+}
+.header-top__branding {
+    display: flex;
+    color: #00386B;
+}
+.header-top__menu {
+    display: flex;
+    padding: 15px 0;
+}
+.numbers-select {
+    font-size: 16px;
+    font-weight: 300;
+    color: #404040;
+    border: none;
+}
+.social > * {
+    margin: 0 5px 0 0 ;
+}
+.numbers {
+    display: flex;
+    align-items: center;
+}
+.mail,
+.numbers,
+.social,
+.sumdu-logo {
+    border-left: 2px solid #d6e7f45c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sumdu-logo {
+    flex: 1;
+}
+.header-top__contacts {
+    display: flex;
+    align-items: center;
+}
+.header-top__logo  img{
+    height: 60px;
+}
+.header-top__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 0 0 10px;
+}
+.header-top__text h2{
+    font-size: 18px;
+    font-weight: 700;
+}
+.header-top__text p{
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
 /* header__navbar styles */
 .navbar {
     background-color: #00386B;
+    padding: 15px 0;
 }
 .navbar__body {
     display: flex;
@@ -162,6 +247,23 @@ article td {
     padding: 15px;
     font-size: 48px;
     font-weight: 700;
+}
+/* 404 styles */
+.page-404__body {
+    display: flex;
+    padding: 150px 0;
+}
+.page-header.page-404 {
+    font-size: 48px;
+    font-weight: 900;
+}
+.page-header.page-404 h1{
+    margin: 0 0 0 15px;
+    line-height: 1.3;
+}
+.page-404__desc .description {
+    font-size: 18px;
+    margin: 25px 0;
 }
 /* footer */
 .main-footer {
