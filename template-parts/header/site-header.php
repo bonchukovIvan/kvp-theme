@@ -14,5 +14,5 @@
             <?php get_template_part( 'template-parts/header/page-header-top'); ?>
             <?php get_template_part( 'template-parts/header/page-header-navbar'); ?>
         </div>
-    <?php if (check_pages()) get_template_part( 'template-parts/header/page-breadcrumbs'); ?>
+    <?php if (!is_home()) get_template_part( 'template-parts/header/page-breadcrumbs'); ?>
 </header>

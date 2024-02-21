@@ -27,6 +27,10 @@ add_theme_support('custom-logo');
 
 function get_breadcrumb() {
     echo '<a href="'.home_url().'" rel="nofollow"><img src="'.get_template_directory_uri().'/assets/images/home.svg"/></a>';
+    if (is_404()) {
+        echo "<img src=".get_template_directory_uri().'/assets/images/breadcrumb-right.svg>';
+        wp_title();
+    }
     if (is_category() || is_single()) {
         echo "<img src=".get_template_directory_uri().'/assets/images/breadcrumb-right.svg>';
         the_category(' &bull; ');
@@ -45,12 +49,13 @@ function get_breadcrumb() {
     }
 }
 
-function check_pages() {
-    if (is_home()) {
-        return false;
+function theme_slug_filter_wp_title( $title ) {
+    if ( is_404() ) {
+        $title = 'Сторінку не знайдено';
     }
-    if (is_404()) {
-        return false;
-    }
-    return true;
+    // You can do other filtering here, or
+    // just return $title
+    return $title;
 }
+// Hook into wp_title filter hook
+add_filter( 'wp_title', 'theme_slug_filter_wp_title', 10, 1 );
