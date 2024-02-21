@@ -52,28 +52,6 @@
                         'add_li_class'  => 'footer-body__li '
                     ]); 
                 ?>
-                <!-- <nav class="footer-body__menu">
-                    <ul>
-                        <li class="footer-body__li">
-                            <a href="#">Вступ</a>
-                        </li>
-                        <li class="footer-body__li">
-                            <a href="#">Навчальний процес</a>
-                        </li>
-                        <li class="footer-body__li">
-                            <a href="#">Новини</a>
-                        </li>
-                        <li class="footer-body__li">
-                            <a href="#">Фотогалерея</a>
-                        </li>
-                        <li class="footer-body__li">
-                            <a href="#">Працевлаштування</a>        
-                        </li>
-                        <li class="footer-body__li">
-                            <a href="#">Розклад занять</a>
-                        </li>
-                    </ul>
-                </nav> -->
                 <div class="footer-body__phones">
                     <div class="phone">
                         <p class="phone-type">

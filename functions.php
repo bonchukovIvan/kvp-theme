@@ -2,7 +2,8 @@
 
 register_nav_menus(
 	array(
-		'head_menu' => 'header', 
+		'header_menu' => 'header menu', 
+		'header_top' => 'header top', 
 		'side_menu' => 'left sidebar',
 		'footer_menu' => 'footer menu'
 	)
@@ -23,3 +24,23 @@ function add_theme_scripts() {
 add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
 
 add_theme_support('custom-logo');
+
+function get_breadcrumb() {
+    echo '<a href="'.home_url().'" rel="nofollow"><img src="'.get_template_directory_uri().'/assets/images/home.svg"/></a>';
+    if (is_category() || is_single()) {
+        echo "<img src=".get_template_directory_uri().'/assets/images/breadcrumb-right.svg>';
+        the_category(' &bull; ');
+        if (is_single()) {
+            echo "<img src=".get_template_directory_uri().'/assets/images/breadcrumb-right.svg>';
+            the_title();
+        }
+    } elseif (is_page()) {
+        echo "<img src=".get_template_directory_uri().'/assets/images/breadcrumb-right.svg>';
+        echo the_title();
+    } elseif (is_search()) {
+        echo "&nbsp;&nbsp;&#187;&nbsp;&nbsp;Search Results for... ";
+        echo '"<em>';
+        echo the_search_query();
+        echo '</em>"';
+    }
+}

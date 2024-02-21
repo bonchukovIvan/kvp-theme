@@ -1,3 +1,14 @@
+<?php
+/**
+ * Template part for displaying site header
+ *
+ *
+ * @package WordPress
+ * @subpackage Sumdu_theme
+ * @since Sumdu theme 1.0
+ */
+?>
+
 <!DOCTYPE html>
 <html lang=<?php language_attributes()?>>
 <head>
