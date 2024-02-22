@@ -6,6 +6,31 @@ body {
 a {
     text-decoration: none;
 }
+.c-arrow {
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+  
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+  
+.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+  
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
 /* buttons styles */
 button {
     padding: 20px 30px;
@@ -106,6 +131,12 @@ article td {
     align-items: center;
     border-left: 2px solid #d6e7f45c;
 }
+.current_page_item.header-top__li {
+
+}
+.header-top__li:hover{
+
+}
 .header-top__li {
     margin: 0px 15px 0px 15px;
     font-size: 18px;
@@ -185,12 +216,63 @@ article td {
 .navbar__additional {
     display: flex;
 }
+.navbar__nav > li{
+    margin: 0px 45px 0px 0px;
+}
+.navbar button {
+    padding: 0;
+    background-color: transparent;
+    color: #fff;
+}
+.navbar__more-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    display: none;
+}
+.navbar__more-btn i{
+    margin: 0 0 0 10px;
+}
+/* pc version */
+body.desktop .navbar__nav > li:hover .navbar__sub-menu {
+    display: block;
+}
+.navbar__link.parent {
+    margin: 0 20px 0 0;
+}
+.navbar__sub-menu {
+    display: none;
+    min-width: 350px;
+    position: absolute;
+    left: 0;
+    top: 19px;
+    background-color: #00386B;
+    padding: 20px 0 0 0;
+}
+.navbar__sub-menu li {
+
+}
+.navbar__sub-menu li a {
+    /* margin: 0 0 0 15px; */
+    display: inline-block;
+    padding: 5px 10px;
+}
 .navbar__li {
-    margin: 0px 15px 0px 15px;
+    position: relative;
 }
 .navbar__li a {
     color: #fff;
     text-decoration: none;
+}
+.arrow {
+    position: absolute;
+    right: 0;
+    top: 7px;
+    width: 0;
+    height: 0;  
+    border-top: 5px solid #fff;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
 }
 .search {
     margin: 0 0 0 50px;
@@ -227,7 +309,7 @@ article td {
 }
 .preview__text {
     color: #fff;
-    margin: 0px 0px 0px 25px;
+    margin: 0px 25px 0px 25px;
     font-size: 22px;
 }
 .preview__img {

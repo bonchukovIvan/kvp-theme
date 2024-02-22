@@ -46,9 +46,7 @@
                         'depth' => 3,
                         'add_li_class'  => 'header-top__li '
                     ]);
-            ?>
-            <!-- <div class="header-top__contacts">   -->
-                
+            ?>  
                 <div class="numbers">
                     <a href="tel:+380542628315">
                         <div class="phone-icon">
@@ -85,7 +83,6 @@
                         <img src="<?php echo get_template_directory_uri()?>/assets/images/sumdu-logo.png" alt="">
                     </a>
                 </div>
-            <!-- </div> -->
         </div>
     </div>
 </div>

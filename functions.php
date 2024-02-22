@@ -18,8 +18,22 @@ function add_additional_class_on_li($classes, $item, $args) {
 add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
 
 function add_theme_scripts() {
+    /* 
+     * include styles
+     */
 	wp_enqueue_style( 'reset', get_template_directory_uri() . '/assets/css/reset.css');
 	wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/style.css');
+	wp_enqueue_style( 'responsive', get_template_directory_uri() . '/assets/css/responsive.css');
+    /* 
+     * reregister jquery
+     */
+    wp_deregister_script('jquery');
+    wp_register_script('jquery', 'https://code.jquery.com/jquery-3.7.1.min.js');
+    /* 
+     * include scripts
+     */
+    wp_enqueue_script('jquery');
+    wp_enqueue_script('main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), array('jquery'), '', true);
 }
 add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
 
@@ -53,9 +67,6 @@ function theme_slug_filter_wp_title( $title ) {
     if ( is_404() ) {
         $title = 'Сторінку не знайдено';
     }
-    // You can do other filtering here, or
-    // just return $title
     return $title;
 }
-// Hook into wp_title filter hook
 add_filter( 'wp_title', 'theme_slug_filter_wp_title', 10, 1 );

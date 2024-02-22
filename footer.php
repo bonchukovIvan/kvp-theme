@@ -14,8 +14,6 @@
             </main>
 		</div>
 	</div>
-
-
 <footer class="main-footer">
         <div class="container">
             <div class="footer-body">
@@ -38,7 +36,7 @@
                             <p style="color: #EF7919;">військової підготовки</p>
                         </div>
                         <p>
-                            Сумського Державного університету
+                            Сумського Державного<br>університету
                         </p>
                     </div>
                 </div>
@@ -97,5 +95,6 @@
             </div>
         </div>
     </footer>
+    <script></script>
 </body>
 </html>

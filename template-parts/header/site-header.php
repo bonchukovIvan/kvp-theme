@@ -11,8 +11,12 @@
 
 <header id="kvp-header">
         <div class="header__body">
-            <?php get_template_part( 'template-parts/header/page-header-top'); ?>
-            <?php get_template_part( 'template-parts/header/page-header-navbar'); ?>
+            <?php 
+                // get_template_part( 'template-parts/header/page-header-top'); 
+            ?>
+            <?php 
+                get_template_part( 'template-parts/header/page-header-navbar'); 
+            ?>
         </div>
     <?php if (!is_home()) get_template_part( 'template-parts/header/page-breadcrumbs'); ?>
 </header>
