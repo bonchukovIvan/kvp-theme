@@ -35,6 +35,12 @@
  */
 /* page content */
 @media (max-width: 1280px) {
+    .navbar__link {
+        font-size: 14px;
+    }
+    .schedule a div {
+        display: none;
+    }
     .breadcrumb__body {
         margin: 0 0 0 25px;
     }
@@ -58,21 +64,45 @@
     body {
         overflow-x: hidden!important;
     }
+    .navbar {
+        padding: 0;
+    }
     .navbar__body {
         display: flex;
         flex-direction: column-reverse;
+        padding: 0;
     }
-    .navbar__body .schedule {
-        display: none;
+    .navbar__nav .menu-head-container {
+        width: 100%;
+    }
+    .navbar__link {
+        font-size: 18px;
+    }
+    .navbar__bottom {
+        display: block;
+        width: 100%;
+    }
+    .navbar__additional {
+        padding: 10px 0;
+        border-bottom: 2px solid #fff;
     }
     .navbar__body nav {
-        width: 90%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .navbar__nav .arrow {
+        top: 27px;
+        right: inherit;
     }
     .navbar__nav {
         display: block;
+        width: 95%;
+
     }
     .navbar__nav .navbar__li {
-        margin: 25px 0;
+        padding: 20px 0;
+        margin: 0;
         text-align: center;
         border-top: 1px solid #ffffff15;
     }
@@ -88,10 +118,17 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        margin: 0 25px;
+        padding: 15px 0;
+        border-bottom: 2px solid #fff;
     }
     .navbar__top * {
         margin: 0 25px;
+    }
+    .schedule {
+        display: block;
+    }
+    .schedule a div{
+        display: block;
     }
     .navbar__more-btn {
         display: block;

@@ -14,27 +14,29 @@
 <div class="navbar">
     <div class="container">
         <div class="navbar__body">
-            <?php 
-                if (has_nav_menu('header_menu')) 
-                    wp_nav_menu([
-                        'theme_location' => 'header_menu',
-                        'container' => 'nav',
-                        'menu_class' => 'navbar__nav',
-                        'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                        'depth' => 2,
-                        'add_li_class'  => 'navbar__li',
-                        'walker' => new Navbar_Walker_Nav_Menu(),
-                    ]);
-            ?>
-            <div class="navbar__additional">
-                <div class="schedule">
-                    <a href="#">
-                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/schedule.svg" alt="" srcset="">
-                    
-                        <div>
-                            Розклад занять
-                        </div>
-                    </a>
+            <div class="navbar__bottom">
+                <?php 
+                    if (has_nav_menu('header_menu')) 
+                        wp_nav_menu([
+                            'theme_location' => 'header_menu',
+                            'container' => 'nav',
+                            'menu_class' => 'navbar__nav',
+                            'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                            'depth' => 2,
+                            'add_li_class'  => 'navbar__li',
+                            'walker' => new Navbar_Walker_Nav_Menu(),
+                        ]);
+                ?>
+                <div class="navbar__additional">
+                    <div class="schedule">
+                        <a href="#">
+                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/schedule.svg" alt="" srcset="">
+                        
+                            <div>
+                                Розклад занять
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="navbar__top">

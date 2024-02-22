@@ -1,6 +1,4 @@
-<?php 
-get_header(); 
-?>
+<?php get_header(); ?>
 <?
 /* Start the Loop */
 while ( have_posts() ) :
