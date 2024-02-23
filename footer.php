@@ -110,6 +110,19 @@
                 arrow.classList.toggle('active');
             });
         });
+        $(window).resize(function() {
+        if ($(window).width() <= 979) {
+            $('body').removeClass("desktop");
+        } 
+        else if ($(window).width() > 979 && !$('body').hasClass("desktop")) {
+            $('body').addClass("desktop");
+        }
+        });
+        $(window).on('load', function() {
+           if ($(window).width() < 979 && $('body').hasClass("desktop")) {
+            $('body').removeClass("desktop");
+        }
+        });
     </script>
 </body>
 </html>

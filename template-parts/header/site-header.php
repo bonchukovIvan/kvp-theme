@@ -12,7 +12,7 @@
 <header id="kvp-header">
         <div class="header__body">
             <?php 
-                // get_template_part( 'template-parts/header/page-header-top'); 
+                get_template_part( 'template-parts/header/page-header-top'); 
             ?>
             <?php 
                 get_template_part( 'template-parts/header/page-header-navbar'); 

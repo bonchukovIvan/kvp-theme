@@ -117,10 +117,15 @@
     .navbar__sub-menu {
         position: initial;
         display: none;
+        max-height: 0;
         font-weight: 400;
     }
-    .navbar__sub-menu.active{
+    .navbar__sub-menu.show{
         display: block;
+        max-height: 1000px;
+    }
+    body.desktop .navbar__nav > li:hover .navbar__sub-menu {
+        display: inline;
     }
     .navbar__additional {
         padding: 30px 0;
