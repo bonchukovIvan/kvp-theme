@@ -14,7 +14,7 @@ class Navbar_Walker_Nav_Menu extends Walker_Nav_Menu {
         if ($depth == 0 && $has_children) {
             $output .= '<li id="menu-item-'. $item->ID . '" class="' . implode(' ', $item->classes) . ' navbar__li">';
             $output .= '<a href="' . $item->url . '"class="navbar__link parent">' . $item->title . '</a>';
-            $output .= '<span class="navbar__arrow arrow"></span>';
+            $output .= '<span id="navbar__li-arrow"class="navbar__arrow arrow"></span>';
         } else {
             $output .= '<li id="menu-item-'. $item->ID . '" class="' . implode(' ', $item->classes) . ' navbar__li">';
             $output .= '<a href="' . $item->url . '" class="navbar__link"">' . $item->title . '</a>';

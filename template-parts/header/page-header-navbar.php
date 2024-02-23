@@ -14,7 +14,7 @@
 <div class="navbar">
     <div class="container">
         <div class="navbar__body">
-            <div class="navbar__bottom">
+            <div class="navbar__bottom" id="navbar__bottom-mobile">
                 <?php 
                     if (has_nav_menu('header_menu')) 
                         wp_nav_menu([
@@ -46,7 +46,7 @@
                         </a>
                 </div>
                 <div class="navbar__more">
-                        <button class="navbar__more-btn">
+                        <button class="navbar__more-btn" id="navbar__more-btn">
                             Більше
                             <i class="c-arrow down"></i>
                         </button>

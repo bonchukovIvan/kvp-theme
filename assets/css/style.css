@@ -10,7 +10,7 @@ a {
     border: solid #fff;
     border-width: 0 3px 3px 0;
     display: inline-block;
-    padding: 3px;
+    padding: 4px;
 }
 .right {
     transform: rotate(-45deg);
@@ -237,6 +237,13 @@ article td {
 }
 .navbar__more-btn i{
     margin: 0 0 0 10px;
+    position: relative;
+    bottom: 4px;
+    transition: all 0.7s;
+}
+.navbar__more-btn.active i{
+    rotate: 180deg;
+    bottom: -4px;
 }
 /* pc version */
 body.desktop .navbar__nav > li:hover .navbar__sub-menu {
@@ -253,14 +260,14 @@ body.desktop .navbar__nav > li:hover .navbar__sub-menu {
     top: 19px;
     background-color: #00386B;
     padding: 20px 0 0 0;
-}
-.navbar__sub-menu li {
-
+    transition: all 0.7s;
 }
 .navbar__sub-menu li a {
-    /* margin: 0 0 0 15px; */
     display: inline-block;
-    padding: 5px 10px;
+    padding: 15px 10px;
+}
+.navbar__sub-menu.show li:last-child {
+    padding: 20px 0 0 0;
 }
 .navbar__li {
     position: relative;

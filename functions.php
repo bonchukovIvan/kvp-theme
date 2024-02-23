@@ -33,7 +33,9 @@ function add_theme_scripts() {
      * include scripts
      */
     wp_enqueue_script('jquery');
-    wp_enqueue_script('main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), array('jquery'), '', true);
+    wp_enqueue_script('main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), '', '', true);
+    wp_enqueue_script('header', get_template_directory_uri() . '/assets/js/header.js', array('jquery'),'', '', true);
+
 }
 add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
 
