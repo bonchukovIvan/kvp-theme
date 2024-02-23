@@ -31,6 +31,56 @@ a {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
 }
+.burger {
+    display: none;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    transition: all 0.7s ease 0s;
+}
+.burger span {
+    position: absolute;
+    display: block;
+    background-color: #00386B;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    top: 9px;  
+    border-radius: 5em;
+} 
+.burger::before,
+.burger::after {
+    content: '';
+    background-color: #00386B;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    border-radius: 5em;
+}
+.burger::before {
+    top: 0;
+}
+.burger::after {
+    bottom: 0;
+}
+.burger.open span {
+    transform: scale(0);
+    transition: all 0.7s ease 0s;
+}
+.burger.open::before {
+    transform: rotate(45deg);
+    top: 9px;
+    background-color: #FF0000;
+    transition: all 0.7s ease 0s;
+}
+.burger.open::after {
+    transform: rotate(-45deg);
+    bottom: 9px;
+    background-color: #FF0000;
+    transition: all 0.7s ease 0s;
+}
 /* buttons styles */
 button {
     padding: 20px 30px;
@@ -121,18 +171,21 @@ article td {
 .header-top__body {
     display: flex;
     justify-content: flex-start;
-    align-items: stretch;
+    align-items: center;
 }
-.header-top__body > * {
+.header-top__body > *,
+.header-top__mobile-bottom > *  {
     padding: 0 15px;
 }
 .header-top__body nav {
     display: flex;
     align-items: center;
     border-left: 2px solid #d6e7f45c;
+    flex: 1;
 }
-.current_page_item.header-top__li {
-
+.header-top__mobile-bottom {
+    display: flex;
+    flex: 1;
 }
 .header-top__li:hover{
 
@@ -160,11 +213,13 @@ article td {
     border: none;
 }
 .social > * {
-    margin: 0 5px 0 0 ;
+    margin: 0 15px 0 0 ;
 }
-.numbers {
-    display: flex;
-    align-items: center;
+.numbers a{
+    padding: 0 5px;
+}
+.numbers a div{
+    color: #404040;
 }
 .mail,
 .numbers,
@@ -174,13 +229,19 @@ article td {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.sumdu-logo {
-    flex: 1;
+    height: 100%;
+    padding: 0 10px;
 }
 .header-top__contacts {
     display: flex;
+}
+.header-top__icons {
+    display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+.header-top__icons .mail{
+    height: 100%;
 }
 .header-top__logo  img{
     height: 60px;
@@ -265,9 +326,6 @@ body.desktop .navbar__nav > li:hover .navbar__sub-menu {
 .navbar__sub-menu li a {
     display: inline-block;
     padding: 15px 10px;
-}
-.navbar__sub-menu.show li:last-child {
-    padding: 20px 0 0 0;
 }
 .navbar__li {
     position: relative;

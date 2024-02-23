@@ -95,34 +95,5 @@
             </div>
         </div>
     </footer>
-    <script>
-        let navbar_more_btn = document.getElementById('navbar__more-btn');
-        let navbar_bottom = document.getElementById('navbar__bottom-mobile');
-        navbar_more_btn.addEventListener('click', function () {
-            navbar_bottom.classList.toggle('active');
-            navbar_more_btn.classList.toggle('active');
-        });
-
-        let navbar_arrows = document.querySelectorAll('#navbar__li-arrow');
-        navbar_arrows.forEach((arrow) => {
-            arrow.addEventListener('click', () => {
-                arrow.nextElementSibling.classList.toggle('show');
-                arrow.classList.toggle('active');
-            });
-        });
-        $(window).resize(function() {
-        if ($(window).width() <= 979) {
-            $('body').removeClass("desktop");
-        } 
-        else if ($(window).width() > 979 && !$('body').hasClass("desktop")) {
-            $('body').addClass("desktop");
-        }
-        });
-        $(window).on('load', function() {
-           if ($(window).width() < 979 && $('body').hasClass("desktop")) {
-            $('body').removeClass("desktop");
-        }
-        });
-    </script>
 </body>
 </html>

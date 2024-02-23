@@ -3,6 +3,17 @@
  */
 /* page content */
 @media (max-width: 1600px) {
+    /* header-top styles */
+    .header-top__menu li{
+        font-size: 16px;
+    }
+    .header-top__text {
+        display: none;
+    }
+    .social > * {
+        margin: 0 10px 0 0 ;
+    }
+    /* navbar styles */
     .navbar__body {
         padding: 0 20px;
     }
@@ -28,15 +39,30 @@
  */
 /* page content */
 @media (max-width: 1360px) {
-
+    .header-top__li {
+        margin: 0px 10px 0px 10px;
+    }
+    .navbar__nav > li {
+        margin: 0px 20px 0px 0px;
+    }
 }
 /* 
  * 1280px
  */
 /* page content */
 @media (max-width: 1280px) {
-    .navbar__link {
+    .header-top__menu li  {
         font-size: 14px;
+    }
+    /* .navbar__link {
+        font-size: 14px;
+    } */
+    .header-top__body .social {
+        display: none;
+    } 
+    .navbar__nav > li {
+        font-size: 16px;
+        margin: 0px 15px 0px 0px;
     }
     .schedule a div {
         display: none;
@@ -64,6 +90,83 @@
     body {
         overflow-x: hidden!important;
     }
+    /* header-top styles */
+    .header-top__body nav {
+        border: none;
+    }
+    .header-top__brand {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .burger {
+        display: block;
+    }
+    .mail, 
+    .numbers, 
+    .social, 
+    .sumdu-logo {
+        border: none;
+    }
+    .numbers {
+        padding: 15px 0;
+    }
+    .numbers__text {
+        display: flex;
+    }
+
+    .header-top__contacts {
+        display: block;
+        padding: 0;
+    }
+    .header-top__mobile-bottom {
+        display: flex;
+        flex-direction: column-reverse;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 1s;
+    }
+    .header-top__mobile-bottom.show {
+        /* display: flex; */
+        /* flex-direction: column-reverse; */
+        max-height: 1000px;
+    }
+    .header-top__mobile-bottom nav {
+        padding: 15px 0;
+        /* flex: 1; */
+    }
+    .header-top__mobile-bottom ul {
+        display: block;
+        width: 100%;
+        text-align: center;
+        background-color: #EFEFEF;
+        padding: 0;
+    }
+    .header-top__menu .current-menu-item{
+        background-color: #0000001A;
+    }
+    .header-top__mobile-bottom ul li {
+        padding: 20px 0;
+        border-top: 1px solid #0000001A;
+        border-bottom: 1px solid #0000001A;
+        margin: 0;
+    }
+    .header-top__mobile-bottom ul li:first-child {
+        border: none;
+    }
+    .header-top__mobile-bottom ul li:last-child {
+        border: none;
+    }
+    .header-top__body {
+        display: block;
+    }
+    .header-top__text {
+        display: block;
+    }
+    .header-top__body .social {
+        display: flex;
+    }
+    /* navbar styles */
     .navbar {
         padding: 0;
     }
@@ -79,8 +182,9 @@
         justify-content: center;
     }
     .navbar__sub-menu {
-        display: block;
         max-height: 0;
+        overflow: hidden;
+        transition: all 0.7s;
     }
     .navbar__bottom {
         display: block;
@@ -105,8 +209,6 @@
     }
     .navbar__sub-menu.show {
         max-height: 1000px;
-        display: block;
-        transition: max-height 0.7s;
     }
     .navbar__nav .menu-head-container {
         width: 100%;
@@ -135,15 +237,11 @@
         top: 27px;
         right: inherit;
     }
-    .navbar__nav .navbar__li {
+    .navbar__nav > .navbar__li {
         padding: 20px 0;
         margin: 0;
         text-align: center;
         border-top: 1px solid #ffffff15;
-    }
-    .menu-item-has-children.navbar__li {
-        
-
     }
     .navbar__body .search {
         margin: 0;
@@ -226,6 +324,9 @@
  */
 /* page content */
 @media (max-width: 400px) {
+    .header-top__contacts .numbers {
+        font-size: 15px;
+    }
     .preview__img img {
         width: 330px;
     }
