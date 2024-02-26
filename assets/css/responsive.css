@@ -1,7 +1,6 @@
 /* 
- * 1580px
+ * 1600px
  */
-/* page content */
 @media (max-width: 1600px) {
     /* header-top styles */
     .header-top__menu li{
@@ -13,18 +12,8 @@
     .social > * {
         margin: 0 10px 0 0 ;
     }
-    /* navbar styles */
-    .navbar__body {
-        padding: 0 20px;
-    }
-    .breadcrumb__body {
-        margin: 0 0 0 20px;
-    }
     article {
         padding: 0 25px;
-    }
-    .preview {
-        margin: 50px 25px;
     }
     .preview__img img {
         width: 550px;

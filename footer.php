@@ -112,5 +112,14 @@
             </div>
         </div>
     </footer>
+    <script>
+        let navbar_arrows = document.querySelectorAll('#navbar__li-arrow');
+        navbar_arrows.forEach((arrow) => {
+            arrow.addEventListener('click', () => {
+                arrow.nextElementSibling.classList.toggle('show');
+                arrow.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>
