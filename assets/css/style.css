@@ -6,6 +6,21 @@ body {
 a {
     text-decoration: none;
 }
+.border-header {
+    border-left: 3px solid #EF7918;
+    display: block;
+    text-transform: uppercase;
+}
+.border-header h2 {
+   padding: 15px;
+   font-size: 30px;
+   font-weight: 700;
+}
+.border-header h1 {
+    padding: 15px;
+    font-size: 48px;
+    font-weight: 700;
+ }
 .c-arrow {
     border: solid #fff;
     border-width: 0 3px 3px 0;
@@ -82,7 +97,8 @@ a {
     transition: all 0.7s ease 0s;
 }
 /* buttons styles */
-button {
+button,
+input.btn-blue {
     padding: 20px 30px;
     border: none;
     color: #fff;
@@ -112,7 +128,7 @@ input[type=checkbox] {
     transform: scale(1.5);
 }
 .container {
-    max-width: 1560px;
+    max-width: 1920px;
     margin: auto;
 }
 /* article styles */
@@ -419,6 +435,61 @@ body.desktop .navbar__nav > li:hover .navbar__sub-menu {
 }
 .page-404__img {
     margin-right: 50px;
+}
+/* callback */
+.callback-container {
+    max-width: 1920px;
+    margin: auto;
+}
+.callback-body {
+    display: flex;
+    justify-content: space-evenly;
+    background-repeat: no-repeat;
+}
+.callback-body__image {
+    height: 800px;
+}
+.callback-body__form {
+    background-color: #fff;
+    margin: auto 0px;
+    font-weight: 600;
+    padding: 50px 50px;
+}
+.callback__form {
+    margin: 15px 0;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin: 25px 0;
+}
+.form-group span {
+    margin: 15px 0 0 0;
+}
+.form-group span input {
+    width: 100%;
+    padding: 15px 0;
+    border: 1px solid #5F675A;
+    text-indent:15px;
+}
+
+.form-group.horizontal {
+    display: block;
+}
+.form-group.horizontal span:last-child {
+    margin: 0 0 0 30px;
+}
+.form-group.horizontal span input {
+    width: 300px;
+}
+.form-group span textarea {
+    width: 100%;
+    resize: none;
+    font-family: 'Roboto', sans-serif!important;
+    text-indent: 15px;
+    border: 1px solid #5F675A;
+    padding: 15px 0 0 0;
+    margin: 15px 0 ;
 }
 /* footer */
 .main-footer {
