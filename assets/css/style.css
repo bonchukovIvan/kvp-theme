@@ -417,6 +417,9 @@ body.desktop .navbar__nav > li:hover .navbar__sub-menu {
     font-size: 18px;
     margin: 25px 0;
 }
+.page-404__img {
+    margin-right: 50px;
+}
 /* footer */
 .main-footer {
     background-color: #00386B;
