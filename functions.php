@@ -22,7 +22,7 @@ function wporg_custom_post_type() {
 				'name'          => __('Спеціальності', 'textdomain'),
 				'singular_name' => __('Спеціальність', 'textdomain'),
 			),
-				'public'      => false,
+				'public'      => true,
 				'has_archive' => false,
                 'supports' => array(
                     'title',
@@ -46,7 +46,7 @@ function cc_mime_types($mimes) {
     $mimes['svg'] = 'image/svg+xml';
     return $mimes;
   }
-add_filter('upload_mimes', 'cc_mime_types');
+
 
 
 function add_theme_scripts() {
@@ -54,6 +54,7 @@ function add_theme_scripts() {
      * include styles
      */
 	wp_enqueue_style( 'reset', get_template_directory_uri() . '/assets/css/reset.css' );
+    wp_enqueue_style( 'slick', get_template_directory_uri() . '/assets/js/slick/slick.css' );
 	wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/style.css' );
 	wp_enqueue_style( 'index-page', get_template_directory_uri() . '/assets/css/index-page.css' );
 	wp_enqueue_style( 'responsive', get_template_directory_uri() . '/assets/css/responsive.css' );
@@ -66,8 +67,10 @@ function add_theme_scripts() {
      * include scripts
      */
     wp_enqueue_script( 'jquery' );
+    wp_enqueue_script( 'slick', get_template_directory_uri() . '/assets/js/slick/slick.js', array('jquery'), '', '', true );
     wp_enqueue_script( 'main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), '', '', true );
     wp_enqueue_script( 'header', get_template_directory_uri() . '/assets/js/header.js', array('jquery'),'', '', true );
+    wp_enqueue_script( 'slider', get_template_directory_uri() . '/assets/js/slider.js', array('jquery'),'', '', true );
 
 }
 
@@ -108,6 +111,7 @@ add_action('init', 'wporg_custom_post_type');
 add_filter( 'nav_menu_css_class', 'add_additional_class_on_li', 1, 3 );
 add_filter( 'wp_title', 'theme_slug_filter_wp_title', 10, 1 );
 add_filter( 'wpcf7_autop_or_not', '__return_false' );
+add_filter( 'upload_mimes', 'cc_mime_types' );
 
 add_theme_support( 'custom-logo' );
 add_theme_support( 'post-thumbnails' );

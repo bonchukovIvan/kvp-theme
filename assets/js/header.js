@@ -24,4 +24,4 @@ $(document).ready(function() {
     $('.navbar__arrow').click(function() {
         
     });
-})
+})  

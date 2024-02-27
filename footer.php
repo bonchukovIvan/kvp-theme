@@ -130,6 +130,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                 arrow.classList.toggle('active');
             });
         });
+
     </script>
 </body>
 </html>

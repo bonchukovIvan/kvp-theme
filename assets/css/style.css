@@ -3,6 +3,12 @@ body {
     font-size: 18px;
     font-weight: 400;
 }
+.slick-dots li{
+    display: inline;   
+   }
+.slick-dots li.slick-active button{
+    background-color: #272727;
+}
 a {
     color: #fff;
     text-decoration: none;
@@ -21,7 +27,13 @@ a {
     padding: 15px;
     font-size: 48px;
     font-weight: 700;
- }
+}
+.slider-arrow {
+    border: solid #000;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 10px;
+}
 .c-arrow {
     border: solid #fff;
     border-width: 0 3px 3px 0;
