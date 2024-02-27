@@ -71,23 +71,23 @@
                     </div>
                     <div class="header-top__icons">
                         <div class="mail">
-                            <a href="#">
+                            <a href="mailto:example@mail.com">
                                 <img src="<?php echo get_template_directory_uri()?>/assets/images/email.svg" alt="">
                             </a>
                         </div>
                         <div class="social">
-                            <a href="#">
+                            <a href="https://www.youtube.com/">
                                 <img src="<?php echo get_template_directory_uri()?>/assets/images/youtube.svg" alt="">
                             </a>
-                            <a href="#">
+                            <a href="https://www.facebook.com/">
                                 <img src="<?php echo get_template_directory_uri()?>/assets/images/facebook.svg" alt="">
                             </a>
-                            <a href="#">
+                            <a href="https://www.instagram.com/">
                                 <img src="<?php echo get_template_directory_uri()?>/assets/images/instagram.svg" alt="">
                             </a>
                         </div>
                         <div class="sumdu-logo">
-                            <a href="#">
+                            <a href="https://sumdu.edu.ua" target="_blank">
                                 <img src="<?php echo get_template_directory_uri()?>/assets/images/sumdu-logo.png" alt="">
                             </a>
                         </div>

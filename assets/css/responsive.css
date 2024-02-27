@@ -31,6 +31,9 @@
     .page-header.page-404  {
         font-size: 40px;
     }
+    .callback {
+        background-position: inherit;
+    }
     .callback-body {
         padding: 0 25px;
     }
@@ -111,6 +114,9 @@
     .border-header h2{
         font-size: 24px;
     }
+    .form-group.horizontal span:last-child {
+        margin: 0 0 0 0px;
+    }
     
     /* header-top styles */
     .header-top__body nav {
@@ -120,6 +126,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin: 0px 10px 0px 10px;
     }
     .burger {
         display: block;
@@ -135,6 +142,12 @@
     }
     .numbers__text {
         display: flex;
+    }
+    .numbers__text * {
+        padding: 10px 0;
+    }
+    .numbers__text a:last-child {
+        border-left: 2px solid #d6e7f44b;;
     }
 
     .header-top__contacts {
@@ -187,6 +200,8 @@
     }
     .header-top__body .social {
         display: flex;
+        border-left: 2px solid #d6e7f44b;
+        border-right: 2px solid #d6e7f44b;;
     }
     /* navbar styles */
     .navbar {
@@ -277,7 +292,7 @@
         border-bottom: 2px solid #fff;
     }
     .navbar__top * {
-        margin: 0 25px;
+        margin: 0 10px 0 10px;
     }
     .schedule {
         display: block;
@@ -386,5 +401,8 @@
     }
     .callback-body__form {
         padding: 15px 15px;
+    }
+    .sumdu-logo img {
+        height: 25px;
     }
 }

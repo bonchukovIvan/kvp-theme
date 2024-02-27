@@ -10,13 +10,18 @@
  * @subpackage Sumdu_theme
  * @since Sumdu theme 1.0
  */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
 ?>
             </main>
 		</div>
 	</div>
-        <section class="callback">
+        <section class="callback" style="background-image: url('<?php echo get_template_directory_uri()?>/assets/images/callback.png')">
             <div class="container">
-                <div class="callback-body" style="background-image: url('<?php echo get_template_directory_uri()?>/assets/images/callback.png')">
+                <div class="callback-body">
                     <div class="callback-body__form">
                         <div class="border-header">
                             <h2 class="border-title">
@@ -72,17 +77,21 @@
                         <p class="phone-type">
                             тел./факс:
                         </p>
-                        <h1 class="phone-number">
-                            +38 0542 62 83 15
-                        </h1>
+                        <a href="tel:+380542628315">
+                            <h1 class="phone-number">
+                                +38 0542 62 83 15
+                            </h1>
+                        </a>
                     </div>
                     <div class="phone">
                         <p class="phone-type">
                             консультант приймальної комісії:
                         </p>
-                        <h1 class="phone-number">
-                            +38 068 581 96 87
-                        </h1>
+                        <a href="tel:+380685819687">
+                            <h1 class="phone-number">
+                                +38 068 581 96 87
+                            </h1>
+                        </a>
                     </div>
                 </div>
                 <div class="footer-body__contacts">
@@ -92,6 +101,7 @@
                         </button>
                     </a>
                     <div class="email">
+                    <a href="info@kvp.sumdu.edu.ua">
                         <img src="/images/mail.svg" alt="">
                         <p>
                             info@kvp.sumdu.edu.ua

@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
 register_nav_menus(
 	array(
 		'header_menu' => 'header menu', 

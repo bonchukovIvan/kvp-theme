@@ -7,6 +7,10 @@
  * @since Sumdu theme 1.0
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
 get_header(); ?>
 
 	<div id="primary" class="content-area">

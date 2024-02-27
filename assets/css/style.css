@@ -4,6 +4,7 @@ body {
     font-weight: 400;
 }
 a {
+    color: #fff;
     text-decoration: none;
 }
 .border-header {
@@ -64,6 +65,7 @@ a {
     left: 0;
     top: 9px;  
     border-radius: 5em;
+    transition: all 0.7s ease 0s;
 } 
 .burger::before,
 .burger::after {
@@ -73,6 +75,7 @@ a {
     width: 100%;
     height: 3px;
     border-radius: 5em;
+    transition: all 0.7s ease 0s;
 }
 .burger::before {
     top: 0;
@@ -82,19 +85,16 @@ a {
 }
 .burger.open span {
     transform: scale(0);
-    transition: all 0.7s ease 0s;
 }
 .burger.open::before {
     transform: rotate(45deg);
     top: 9px;
     background-color: #FF0000;
-    transition: all 0.7s ease 0s;
 }
 .burger.open::after {
     transform: rotate(-45deg);
     bottom: 9px;
     background-color: #FF0000;
-    transition: all 0.7s ease 0s;
 }
 /* buttons styles */
 button,
@@ -128,7 +128,7 @@ input[type=checkbox] {
     transform: scale(1.5);
 }
 .container {
-    max-width: 1920px;
+    max-width: 1520px;
     margin: auto;
 }
 /* article styles */
@@ -192,7 +192,7 @@ article td {
 }
 .header-top__body > *,
 .header-top__mobile-bottom > *  {
-    padding: 0 15px;
+    /* padding: 0 15px; */
 }
 .header-top__body nav {
     display: flex;
@@ -209,7 +209,7 @@ article td {
 
 }
 .header-top__li {
-    margin: 0px 15px 0px 15px;
+    margin: 0px 10px 0px 0px;
     font-size: 18px;
     font-weight: 700;
 }
@@ -219,6 +219,7 @@ article td {
 .header-top__branding {
     display: flex;
     color: #00386B;
+    margin: 0 5px 0 0;
 }
 .header-top__menu {
     display: flex;
@@ -278,6 +279,9 @@ article td {
     font-size: 12px;
     font-weight: 400;
     text-transform: uppercase;
+}
+.numbers__text {
+    margin: 0px 0px 0px 15px;
 }
 /* header__navbar styles */
 .navbar {
@@ -449,6 +453,10 @@ body.desktop .navbar__nav > li:hover .navbar__arrow {
     margin-right: 50px;
 }
 /* callback */
+.callback {
+    background-repeat: no-repeat;
+    background-position: center;
+}
 .callback-container {
     max-width: 1920px;
     margin: auto;
@@ -456,7 +464,6 @@ body.desktop .navbar__nav > li:hover .navbar__arrow {
 .callback-body {
     display: flex;
     justify-content: space-evenly;
-    background-repeat: no-repeat;
 }
 .callback-body__image {
     height: 800px;
