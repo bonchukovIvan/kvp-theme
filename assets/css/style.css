@@ -296,6 +296,7 @@ article td {
 .navbar {
     background-color: #00386B;
     padding: 15px 0;
+    border-bottom: 1px solid #fff;
 }
 .navbar__body {
     display: flex;
