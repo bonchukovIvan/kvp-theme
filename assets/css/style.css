@@ -3,6 +3,11 @@ body {
     font-size: 18px;
     font-weight: 400;
 }
+br
+{   content: "A" !important;
+    display: block !important;
+    margin-bottom: 1.5em !important;
+}
 .slick-dots li{
     display: inline;   
    }
@@ -129,9 +134,6 @@ input.btn-blue {
 .btn-white {
     background-color: #fff;
     color: #000;
-    padding: 10px 50px;
-    display: flex;
-    align-items: center;
 }
 .btn-white img {
     margin-left: 5px;

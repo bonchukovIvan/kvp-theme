@@ -63,20 +63,22 @@ if ( ! defined( 'ABSPATH' ) ) {
     </div>
     <div class="join-us__gradient"></div>
 </section>
-<!-- <section class="about-us" id="about-us-index" style=" background-image: url('<?php echo get_template_directory_uri()?>/assets/images/grid-bg.png');">
+<section class="about-us" id="about-us-index" style=" background-image: url('<?php echo get_template_directory_uri()?>/assets/images/grid-bg.png');">         
+    
     <div class="container">
         <div class="about-us__body" >
+            <div class="about-us__main">
+            <div class="border-header">
+                <h1>
+                    Про нас
+                </h1>
+            </div>
             <div class="about-us__content">
                 <div class="about-us__preview">
-                    <div class="border-header">
-                        <h1>
-                            Про нас
-                        </h1>
-                    </div>
                     <div class="about-us__text">
                     <strong>
                         Кафедра є правонаступником Військового інституту ракетних військ і артилерії Сумського державного університету з військової підготовки громадян України за програмою офіцерів запасу. 
-                        Кафедра має подвійне підпорядкування: Командуванню Сухопутних військ Збройних Сил України та Сумському державному університету. 
+                        <br>Кафедра має подвійне підпорядкування: Командуванню Сухопутних військ Збройних Сил України та Сумському державному університету. 
                     </strong>
                     <p>
                         Кафедра військової підготовки є структурним підрозділом СумДУ, що входить до Всесвітнього рейтингу дослідницьких університетів світу від Times Higher Education World University Rankings (THE) на позиції 501-600 та на 1-2 позиції серед університетів України. Згідно з міжнародним рейтингом вищих навчальних закладів QS World University Rankings Сумський державний університет входить до топ-групи 701-750 провідних університетів світу.
@@ -85,15 +87,76 @@ if ( ! defined( 'ABSPATH' ) ) {
                     <button class="btn-blue">
                         Подивитися відео про кафедру
                     </button>
-                </div>
-                <div class="about-us__img">
-                    <img src="<?php echo get_template_directory_uri()?>/assets/images/about-us-man.png" alt="">
+                    </div>
                 </div>
             </div>
+            <div class="about-us__white"></div>
+            <div class="about-us__bg" style="background-image: url('<?php echo get_template_directory_uri()?>/assets/images/background-main.png');"></div>  
+            <div class="about-us__img">
+                <img src="<?php echo get_template_directory_uri()?>/assets/images/about-us-man.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="about-us__gradient"></div>   
+</section>
+<section class="virtual-ex">
+    <div class="container">
+        <div class="virtual-ex__body">
             
         </div>
     </div>
-</section> -->
+</section>
+<section class="collab">
+    <div class="container">
+        <div class="collab__body">
+        <div class="last-news__body">
+            <div class="border-header">
+                <h2>
+                    Навчальні заклади, з якими ми співпрацюємо
+                </h2>
+            </div> 
+            <div class="collab__top">
+                <div class="slider__control">
+                    <div class="slider-arrow left" id="collab__ln-right"></div>
+                    <div class="slider__count">
+                        <h1 class="slider__current-page" id="collab__current-page"></h1>
+                        /
+                        <h3 class="slider__summary-page" id="collab__summary-page"></h3>
+                    </div>
+                    <div class="slider-arrow right" id="collab__ln-left"></div>
+                </div>
+            </div>
+            <div class="collab__slider">
+                <div class="collab__track">
+                    <?php
+                        $args = array('post_type' => 'kvp_collab', 'post_pre_page' => 6, 'order' => 'ASC');
+                        $the_query = new WP_Query( $args );
+                        if ( $the_query->have_posts() ): ?>
+                        <?php $count = 0;?>
+                            <?php while ( $the_query->have_posts() ) : ?>
+                                <?php $count++;?>
+                                <div class="carousel__item collab__item item-<?php echo $count;?>">
+                                <div class="collab__content">
+                                    <?php $the_query->the_post(); ?>
+                                    <div class="collab__img">
+                                        <?php if(get_the_post_thumbnail_url()) : ?>
+                                            <img src="<?php  echo get_the_post_thumbnail_url(); ?>" alt="" srcset="">
+                                        <?php else : ?>
+                                            <img src="<?php  echo get_template_directory_uri()?>/assets/images/not-found-news.jpg" alt="" srcset="">
+                                        <?php endif; ?>
+                                    </div>                                   
+                                        <div class="collab__title"><?= get_the_title(); ?></div>
+                                    </div>
+                                </div>
+                            <?php endwhile ?>
+                        <?php endif; ?>
+                        <?php wp_reset_postdata(); ?>
+                </div>
+                <div class="slider__switcher collab__switcher"></div>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="last-news">
     <div class="container">
         <div class="last-news__body">
@@ -104,16 +167,16 @@ if ( ! defined( 'ABSPATH' ) ) {
             </div> 
             <div class="last-news__top">
                 <button class="btn-blue">Відкрити сторінку новин</button>
-                <div class="last-news_control">
-                    <div class="slider-arrow left" id="ln-right">
+                <div class="slider__control">
+                    <div class="slider-arrow left" id="last-news__ln-right">
                         
                     </div>
-                    <div class="last-news__count">
-                        <h1 class="current-page"></h1>
+                    <div class="slider__count">
+                        <h1 class="slider__current-page" id="last-news__current-page"></h1>
                         /
-                        <h3 class="summary-page"></h3>
+                        <h3 class="slider__summary-page" id="last-news__summary-page"></h3>
                     </div>
-                    <div class="slider-arrow right" id="ln-left">
+                    <div class="slider-arrow right" id="last-news__ln-left">
 
                     </div>
                 </div>
@@ -127,7 +190,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                         <?php $count = 0;?>
                             <?php while ( $the_query->have_posts() ) : ?>
                                 <?php $count++;?>
-                                <div class="carousel__item last-news item-<?php echo $count;?>">
+                                <div class="carousel__item last-news__item item-<?php echo $count;?>">
                                     <?php $the_query->the_post(); ?>
                                     <div class="last-news__img">
                                         <?php if(get_the_post_thumbnail_url()) : ?>
@@ -143,9 +206,11 @@ if ( ! defined( 'ABSPATH' ) ) {
                                         </div>
                                         <div class="last-news__content-main">
                                             <div class="last-news__title"><?= get_the_title(); ?></div>
-                                            <div class="last-news__preview-text"><?=wp_trim_words( get_the_content(), 10 ); ?></div>
+                                            <div class="last-news__preview-text"><?= wp_trim_words( get_the_content(), 25 ); ?></div>
                                         </div>
-                                        <button class="btn-blue more">Читати новину</button>
+                                        <div class="btn-container">
+                                            <button class="btn-white more">Читати новину</button>
+                                        </div>
                                     </div>
                                     
                                 </div>
@@ -153,7 +218,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                         <?php endif; ?>
                         <?php wp_reset_postdata(); ?>
                 </div>
-                <div class="last-news__switcher"></div>
+                <div class="slider__switcher last-news__switcher"></div>
             </div>
         </div>
     </div>

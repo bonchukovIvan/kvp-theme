@@ -80,13 +80,44 @@
 }
 /* about-us */
 .about-us {
-    background-repeat: repeat;
-    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+.about-us__gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #00386B66, #5F675A66);
+    /* background: linear-gradient(to right, #00386b2e, #d8d8d866); */
+    z-index: 1;
+}
+.about-us__body {
+    position: relative;
+    height: 750px;
+    padding: 50px 0;
+}
+.about-us__white {
+    position: absolute;
+    top: 0;
+    left: -45%;
+    height: 70%;
+    width: 1400px;
+    background: #fff;
+    z-index: 2;
+    border-radius: 0 0 15px 15px;
+}
+.about-us__main {
+    position: relative;
+    z-index: 4;
 }
 .about-us__content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    z-index: 5;
 }
 .about-us__text strong {
     font-weight: 700;
@@ -97,7 +128,50 @@
 .about-us__text * {
     margin: 25px 0;
 }
+.about-us__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 400px;
+}
+.about-us__img {
+    position: absolute;
+   bottom: 0;
+    right: 0;
+    height: 750px;
+    z-index: 9;
+}
+.about-us__img img{
+    height: 100%;
+}
 
+/* collab */
+.collab {
+    padding: 50px 0;
+}
+.collab__top {
+    display: flex;
+    justify-content: end;
+}
+.collab__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.collab__img {
+    height: 210px;
+    width: 210px;
+    margin: 0px 0px 25px 0px;
+}
+.collab__img img {
+    height: 100%; 
+    width: 100%; 
+    object-fit: contain;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
 /* last-news */
 .last-news {
     background-color: #F7F7F7;
@@ -108,27 +182,77 @@
     display: flex;
     justify-content: space-between;
 }
-.current-page {
-    font-size: 36px;
-    color: #EF7918;
-}
-.last-news_control {
-    display: flex;
-    align-items: center
-}
+
 .last-news__slider {
     margin: 50px 0;
 }
-.last-news__count {
+.last-news .slick-slide {
+    margin: 0px 25px;
+}
+.last-news__item {
+    background-color: #00386B;
+    color: #fff;
+}
+.last-news__content-top {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 20px 10px 20px;
+}
+.last-news__content-main {
+    margin: 20px 20px 15px 20px;
+    display: grid;
+    grid-template-rows: repeat(2, 90px);
+    grid-gap: 25px;
+}
+.last-news__content-main button {
+    text-align: center;
+}
+.last-news__title {
+    font-weight: 700;
+    margin: 0px 0px 15px 0px;
+    overflow:hidden;
+    display: -webkit-box;
+    max-width: 400px;
+}
+.last-news__preview-text {
+    font-size: 15px;
+}
+.last-news .btn-container {
+    text-align: center;
+    margin: 0px 0px 35px 0px;
+}
+.last-news__img {
+    height: 300px;
+}
+.last-news__img img{
+    height: 100%; 
+    width: 100%; 
+    object-fit: cover;
+}
+.collab__track, .last-news__track {
+    opacity: 0
+}
+.slider__current-page {
+    font-size: 36px;
+    color: #EF7918;
+}
+.slider__count {
     display: flex;
     align-items: baseline
 }
-.last-news__switcher ul {
+.slider__control {
+    display: flex;
+    align-items: baseline;
+}
+.slider__switcher {
+    margin: 25px 0;
+}
+.slider__switcher ul {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.last-news__switcher button {
+.slider__switcher button {
     padding: 0 25px;
     border: 0;
     width: 1.5em;
@@ -140,17 +264,16 @@
     line-height: 1.2;
     border-radius: 5em;
 }
-.last-news__switcher li.active {
+.slider__switcher li.active {
     background: #272727;
-    
 }
-.last-news__switcher li:not(.active):hover {
+.slider__switcher button:not(.active):hover {
     background: #272727;;
 }
-.last-news__switcher li:focus {
+.slider__switcher button:focus {
     outline: none;
 }
-.last-news__switcher li:after {
+.slider__switcher button:after {
     content: '';
     width: 100%;
     height: 1.8em;

@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-define('THEME_NAME', 'Sumdu');
+define('SUMDU_THEME_NAME', 'Sumdu');
 
 register_nav_menus(
 	array(
@@ -15,7 +15,7 @@ register_nav_menus(
 	)
 );
 
-function wporg_custom_post_type() {
+function wporg_custom_post_types() {
 	register_post_type('kvp_specialities',
 		array(
 			'labels'      => array(
@@ -33,6 +33,21 @@ function wporg_custom_post_type() {
                 
 		)
 	);
+    register_post_type('kvp_collab',
+    array(
+        'labels'      => array(
+            'name'          => __('Навчальні заклади', 'textdomain'),
+            'singular_name' => __('Навчальний заклад', 'textdomain'),
+        ),
+            'public'      => true,
+            'has_archive' => false,
+            'supports' => array(
+                'title',
+                'thumbnail',
+                'custom-fields'
+            )   
+    )
+);
 }
 
 function add_additional_class_on_li($classes, $item, $args) {
@@ -47,32 +62,6 @@ function cc_mime_types($mimes) {
     return $mimes;
   }
 
-
-
-function add_theme_scripts() {
-    /* 
-     * include styles
-     */
-	wp_enqueue_style( 'reset', get_template_directory_uri() . '/assets/css/reset.css' );
-    wp_enqueue_style( 'slick', get_template_directory_uri() . '/assets/js/slick/slick.css' );
-	wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/style.css' );
-	wp_enqueue_style( 'index-page', get_template_directory_uri() . '/assets/css/index-page.css' );
-	wp_enqueue_style( 'responsive', get_template_directory_uri() . '/assets/css/responsive.css' );
-    /* 
-     * reregister jquery
-     */
-    wp_deregister_script( 'jquery' );
-    wp_register_script( 'jquery', 'https://code.jquery.com/jquery-3.7.1.min.js');
-    /* 
-     * include scripts
-     */
-    wp_enqueue_script( 'jquery' );
-    wp_enqueue_script( 'slick', get_template_directory_uri() . '/assets/js/slick/slick.js', array('jquery'), '', '', true );
-    wp_enqueue_script( 'main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), '', '', true );
-    wp_enqueue_script( 'header', get_template_directory_uri() . '/assets/js/header.js', array('jquery'),'', '', true );
-    wp_enqueue_script( 'slider', get_template_directory_uri() . '/assets/js/slider.js', array('jquery'),'', '', true );
-
-}
 
 function get_breadcrumb() {
     echo '<a href="'.home_url().'" rel="nofollow"><img src="'.get_template_directory_uri().'/assets/images/home.svg"/></a>';
@@ -105,8 +94,33 @@ function theme_slug_filter_wp_title( $title ) {
     return $title;
 }
 
+function add_theme_scripts() {
+    /* 
+     * include styles
+     */
+	wp_enqueue_style( 'reset', get_template_directory_uri() . '/assets/css/reset.css' );
+    wp_enqueue_style( 'slick', get_template_directory_uri() . '/assets/js/slick/slick.css' );
+	wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/style.css' );
+	wp_enqueue_style( 'index-page', get_template_directory_uri() . '/assets/css/index-page.css' );
+	wp_enqueue_style( 'responsive', get_template_directory_uri() . '/assets/css/responsive.css' );
+    /* 
+     * reregister jquery
+     */
+    wp_deregister_script( 'jquery' );
+    wp_register_script( 'jquery', 'https://code.jquery.com/jquery-3.7.1.min.js');
+    /* 
+     * include scripts
+     */
+    wp_enqueue_script( 'jquery' );
+    wp_enqueue_script( 'slick', get_template_directory_uri() . '/assets/js/slick/slick.js', array('jquery'), '', '', true );
+    wp_enqueue_script( 'main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), '', '', true );
+    wp_enqueue_script( 'header', get_template_directory_uri() . '/assets/js/header.js', array('jquery'),'', '', true );
+    wp_enqueue_script( 'slider', get_template_directory_uri() . '/assets/js/slider.js', array('jquery'),'', '', true );
+
+}
+
 add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
-add_action('init', 'wporg_custom_post_type');
+add_action('init', 'wporg_custom_post_types');
 
 add_filter( 'nav_menu_css_class', 'add_additional_class_on_li', 1, 3 );
 add_filter( 'wp_title', 'theme_slug_filter_wp_title', 10, 1 );
