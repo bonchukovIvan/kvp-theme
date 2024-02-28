@@ -8,9 +8,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="container">
         <div class="special__body">
             <div class="border-header">
-                <h2>
+                <h1>
                     Військові спеціальності
-                </h2>
+                </h1>
             </div> 
             <div class="special__content">
                 <?php
@@ -78,7 +78,9 @@ if ( ! defined( 'ABSPATH' ) ) {
                     <div class="about-us__text">
                     <strong>
                         Кафедра є правонаступником Військового інституту ракетних військ і артилерії Сумського державного університету з військової підготовки громадян України за програмою офіцерів запасу. 
-                        <br>Кафедра має подвійне підпорядкування: Командуванню Сухопутних військ Збройних Сил України та Сумському державному університету. 
+                        <br>
+                        <br>
+                        Кафедра має подвійне підпорядкування: Командуванню Сухопутних військ Збройних Сил України та Сумському державному університету. 
                     </strong>
                     <p>
                         Кафедра військової підготовки є структурним підрозділом СумДУ, що входить до Всесвітнього рейтингу дослідницьких університетів світу від Times Higher Education World University Rankings (THE) на позиції 501-600 та на 1-2 позиції серед університетів України. Згідно з міжнародним рейтингом вищих навчальних закладів QS World University Rankings Сумський державний університет входить до топ-групи 701-750 провідних університетів світу.
@@ -99,11 +101,45 @@ if ( ! defined( 'ABSPATH' ) ) {
     </div>
     <div class="about-us__gradient"></div>   
 </section>
-<section class="virtual-ex">
+<section class="virtual-ex" style="background: url('<?php echo get_template_directory_uri()?>/assets/images/background-main.png')">
     <div class="container">
-        <div class="virtual-ex__body">
-            
+        <div class="virtual-ex__body" >
+            <div class="border-header">
+                <h1>
+                    Віртуальна екскурсія
+                </h1>
+            </div> 
+            <div class="virtual-ex__content">
+                <div class="virtual-ex__text">
+                    <strong>
+                        Ласкаво просимо вас на віртуальну екскурсію кафедрою військової підготовки! Ця сторінка пропонує унікальну можливість дізнатися більше про нашу кафедру, не покидаючи зручностей вашого комп'ютера.
+                    </strong>
+                    <p>
+                        Ви можете переглянути фотографії наших приміщень. За допомогою віртуальної екскурсії та зможете краще ознайомитися з нашою кафедрою та відчути її атмосферу.
+                    </p>
+                    <p>
+                    Якщо ви бажаєте більше інформації або бажаєте  вступити до нашої кафедри, будь ласка, зв'яжіться з нами за допомогою контактних даних нашого сайту. Ми готові відповісти на всі ваші питання та надати додаткову інформацію.
+                    </p>
+                    <p>Дякуємо вам за інтерес до нашої кафедри. Ми сподіваємося, що ви знайдете цю віртуальну екскурсію корисною та захоплюючою!</p>
+                </div>
+                <div class="virtual-ex__excursion">
+                    <iframe src="https://kvp.sumdu.edu.ua/3d-index.html" frameborder="0"></iframe>
+                </div>
+                <div class="virtual-ex__app-text">
+                    Також в нас є додаток для Android з аудіоекскурсіями по 3D простору наших приміщень та віртуальному полігону з військовою технікою.
+                </div>
+                <div class="virtual-ex__app">
+                    <div class="virtual-ex__app-add">
+                        Зацікавились? Завантажуйте додаток з Google Play за посиланням:
+                    </div>
+                    <div class="virtual-ex__button">
+                        <button class="btn-blue">Завантажити додаток</button>
+                    </div>
+
+                </div>
+            </div>
         </div>
+        <div class="virtual-ex__gradient"></div>
     </div>
 </section>
 <section class="collab">
@@ -111,9 +147,9 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div class="collab__body">
         <div class="last-news__body">
             <div class="border-header">
-                <h2>
+                <h1>
                     Навчальні заклади, з якими ми співпрацюємо
-                </h2>
+                </h1>
             </div> 
             <div class="collab__top">
                 <div class="slider__control">
@@ -161,9 +197,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="container">
         <div class="last-news__body">
             <div class="border-header">
-                <h2>
+                <h1>
                     Новини
-                </h2>
+                </h1>
             </div> 
             <div class="last-news__top">
                 <button class="btn-blue">Відкрити сторінку новин</button>

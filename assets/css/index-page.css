@@ -145,7 +145,68 @@
 .about-us__img img{
     height: 100%;
 }
-
+/* virtual-ex */
+.virtual-ex {
+    position: relative;
+    padding: 50px 0;
+    color: #fff;
+}
+.virtual-ex__gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #161C20, #00386B66 );
+}
+.virtual-ex__body {
+    position: relative;
+    z-index: 4;
+}
+.virtual-ex__content {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 50%);
+    gap: 35px;
+    grid-template-rows: 2fr 0.5fr;
+}
+.virtual-ex__excursion {
+    height: 500px;
+}
+.virtual-ex__excursion iframe {
+    height: 100%;
+    width: 100%;
+    border: 1px solid #fff;
+} 
+.virtual-ex__app {
+    display: flex;
+    color: #404040;
+    background-color: #fff;
+    padding: 15px;
+}
+.virtual-ex__button {
+    flex-basis: 80%;
+    text-align: end;
+}
+.virtual-ex__button button {
+    padding: 15px 50px;
+}
+.virtual-ex__app-text {
+    font-size: 24px;
+}
+.virtual-ex__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+.virtual-ex__text * {
+    margin: 25px 0px;
+}
+.virtual-ex__text strong {
+    font-weight: 700;
+}
 /* collab */
 .collab {
     padding: 50px 0;

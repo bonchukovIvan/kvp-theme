@@ -3,11 +3,6 @@ body {
     font-size: 18px;
     font-weight: 400;
 }
-br
-{   content: "A" !important;
-    display: block !important;
-    margin-bottom: 1.5em !important;
-}
 .slick-dots li{
     display: inline;   
    }
