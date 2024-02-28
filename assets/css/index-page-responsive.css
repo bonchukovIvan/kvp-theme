@@ -49,6 +49,35 @@
  * 979px
  */
 @media (max-width: 979px) {
+    .last-news .btn-container .more {
+        width: 80%;
+    }
+    .last-news__top .btn-blue {
+        width: 100%;
+    }
+    .last-news .border-header {
+        margin: 0px 25px;
+    }
+    .last-news__top{
+        padding: 0px 25px;
+    }
+    .last-news__main {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .slider__control {
+        display: none;
+    }
+    .collab__body .border-header {
+        margin: 0px 25px;
+    }
+    .collab__top {
+        display: none;
+    }
+    .collab__title {
+        font-size: 13px;
+        text-align: center;
+    }
     .virtual-ex__app-add {
         margin: 0px 0px 15px 0px;
     }
@@ -160,6 +189,9 @@
  */
 
 @media (max-width: 600px) {
+    .collab__img {
+        width: 150px;
+    }
     .main-slider__title {
         font-size: 28px;
     }

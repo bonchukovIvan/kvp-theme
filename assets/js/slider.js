@@ -15,7 +15,23 @@ jQuery(document).ready(function() {
         customPaging : function(slider, i) {
             return ' <button type="button" aria-label="switch 2" class></button>';
         },
-        adaptiveHeight: true
+        adaptiveHeight: true,
+        responsive: [
+            {
+                breakpoint: 979,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                },
+            },
+        ]
     }); 
     set_slick_arrows('#last-news__ln-right', '#last-news__ln-left', '.last-news__track');
     /* 
@@ -34,7 +50,16 @@ jQuery(document).ready(function() {
         customPaging : function(slider, i) {
             return ' <button type="button" aria-label="switch 2" class></button>';
         },
-        adaptiveHeight: true
+        adaptiveHeight: true,
+        responsive: [
+            {
+                breakpoint: 979,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 2,
+                },
+            },
+        ]
     }); 
     set_slick_arrows('#collab__ln-right', '#collab__ln-left', '.collab__track');
 });

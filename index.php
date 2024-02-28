@@ -150,7 +150,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <div class="about-us__gradient"></div>   
 </section>
-
 <section class="virtual-ex" style="background: url('<?php echo get_template_directory_uri()?>/assets/images/background-main.png')">
     <div class="container">
         <div class="virtual-ex__body" >
@@ -195,7 +194,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <section class="collab">
     <div class="container">
         <div class="collab__body">
-        <div class="last-news__body">
+        <div class="collab__body">
             <div class="border-header">
                 <h1>
                     Навчальні заклади, з якими ми співпрацюємо
@@ -243,7 +242,6 @@ if ( ! defined( 'ABSPATH' ) ) {
         </div>
     </div>
 </section>
-<!--
 <section class="last-news">
     <div class="container">
         <div class="last-news__body">
@@ -252,62 +250,65 @@ if ( ! defined( 'ABSPATH' ) ) {
                     Новини
                 </h1>
             </div> 
-            <div class="last-news__top">
-                <button class="btn-blue">Відкрити сторінку новин</button>
-                <div class="slider__control">
-                    <div class="slider-arrow left" id="last-news__ln-right">
-                        
-                    </div>
-                    <div class="slider__count">
-                        <h1 class="slider__current-page" id="last-news__current-page"></h1>
-                        /
-                        <h3 class="slider__summary-page" id="last-news__summary-page"></h3>
-                    </div>
-                    <div class="slider-arrow right" id="last-news__ln-left">
+            <div class="last-news__main">
+                <div class="last-news__top">
+                    <button class="btn-blue">Відкрити сторінку новин</button>
+                    <div class="slider__control">
+                        <div class="slider-arrow left" id="last-news__ln-right">
+                            
+                        </div>
+                        <div class="slider__count">
+                            <h1 class="slider__current-page" id="last-news__current-page"></h1>
+                            /
+                            <h3 class="slider__summary-page" id="last-news__summary-page"></h3>
+                        </div>
+                        <div class="slider-arrow right" id="last-news__ln-left">
 
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="last-news__slider">
-                <div class="last-news__track">
-                    <?php
-                        $args = array('post_type' => 'post', 'post_pre_page' => 6, 'order' => 'ASC');
-                        $the_query = new WP_Query( $args );
-                        if ( $the_query->have_posts() ): ?>
-                        <?php $count = 0;?>
-                            <?php while ( $the_query->have_posts() ) : ?>
-                                <?php $count++;?>
-                                <div class="carousel__item last-news__item item-<?php echo $count;?>">
-                                    <?php $the_query->the_post(); ?>
-                                    <div class="last-news__img">
-                                        <?php if(get_the_post_thumbnail_url()) : ?>
-                                            <img src="<?php  echo get_the_post_thumbnail_url(); ?>" alt="" srcset="">
-                                        <?php else : ?>
-                                            <img src="<?php  echo get_template_directory_uri()?>/assets/images/not-found-news.jpg" alt="" srcset="">
-                                        <?php endif; ?>
+                <div class="last-news__slider">
+                    <div class="last-news__track">
+                        <?php
+                            $args = array('post_type' => 'post', 'post_pre_page' => 6, 'order' => 'ASC');
+                            $the_query = new WP_Query( $args );
+                            if ( $the_query->have_posts() ): ?>
+                            <?php $count = 0;?>
+                                <?php while ( $the_query->have_posts() ) : ?>
+                                    <?php $count++;?>
+                                    <div class="carousel__item last-news__item item-<?php echo $count;?>">
+                                        <?php $the_query->the_post(); ?>
+                                        <div class="last-news__img">
+                                            <?php if(get_the_post_thumbnail_url()) : ?>
+                                                <img src="<?php  echo get_the_post_thumbnail_url(); ?>" alt="" srcset="">
+                                            <?php else : ?>
+                                                <img src="<?php  echo get_template_directory_uri()?>/assets/images/not-found-news.jpg" alt="" srcset="">
+                                            <?php endif; ?>
+                                        </div>
+                                        <div class="last-news__content">
+                                            <div class="last-news__content-top">
+                                                <div class="last-news__category"><?= get_the_category()[0]->name; ?></div>
+                                                <div class="last-news__date"><?= get_the_date(); ?></div>
+                                            </div>
+                                            <div class="last-news__content-main">
+                                                <div class="last-news__title"><?= get_the_title(); ?></div>
+                                                <div class="last-news__preview-text"><?= wp_trim_words( get_the_content(), 25 ); ?></div>
+                                            </div>
+                                            <div class="btn-container">
+                                                <button class="btn-white more">Читати новину</button>
+                                            </div>
+                                        </div>
+                                        
                                     </div>
-                                    <div class="last-news__content">
-                                        <div class="last-news__content-top">
-                                            <div class="last-news__category"><?= get_the_category()[0]->name; ?></div>
-                                            <div class="last-news__date"><?= get_the_date(); ?></div>
-                                        </div>
-                                        <div class="last-news__content-main">
-                                            <div class="last-news__title"><?= get_the_title(); ?></div>
-                                            <div class="last-news__preview-text"><?= wp_trim_words( get_the_content(), 25 ); ?></div>
-                                        </div>
-                                        <div class="btn-container">
-                                            <button class="btn-white more">Читати новину</button>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            <?php endwhile ?>
-                        <?php endif; ?>
-                        <?php wp_reset_postdata(); ?>
+                                <?php endwhile ?>
+                            <?php endif; ?>
+                            <?php wp_reset_postdata(); ?>
+                    </div>
+                    <div class="slider__switcher last-news__switcher"></div>
                 </div>
-                <div class="slider__switcher last-news__switcher"></div>
             </div>
+
         </div>
     </div>
-</section> -->
+</section>
 <?php get_footer(); ?>
