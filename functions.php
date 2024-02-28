@@ -103,6 +103,7 @@ function add_theme_scripts() {
 	wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/style.css' );
 	wp_enqueue_style( 'index-page', get_template_directory_uri() . '/assets/css/index-page.css' );
 	wp_enqueue_style( 'responsive', get_template_directory_uri() . '/assets/css/responsive.css' );
+	wp_enqueue_style( 'index-page-responsive', get_template_directory_uri() . '/assets/css/index-page-responsive.css' );
     /* 
      * reregister jquery
      */

@@ -42,6 +42,10 @@
 .main-slider__logo {
     display: flex;
 }
+
+.main-slider__logo--mobile {
+    display: none;
+}
 .main-slider__btn {
     text-align: center;
 }
@@ -78,6 +82,14 @@
 .main-slider__icon-text {
     font-size: 24px;
     font-weight: 700;
+}
+.main-slider__img {
+    flex-basis: 100%;
+    align-self: center;
+}
+.main-slider__img img {
+ 
+    width: 100%;
 }
 /* special */
 .special {
@@ -163,13 +175,17 @@
     background-position: center;
 
 }
+.about-us__img--mobile {
+    display: none;
+}
 .about-us__gradient {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, #00386B66, #5F675A66);
+    background: linear-gradient(to right, #26344117, #e0dddd66);
+    /* background: linear-gradient(to right, #00386B66, #5F675A66); */
     /* background: linear-gradient(to right, #00386b2e, #d8d8d866); */
     z-index: 1;
 }

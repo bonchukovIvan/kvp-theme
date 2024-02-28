@@ -8,6 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="container">
         <div class="main-slider__body">
             <div class="main-slider__content">
+
                 <div class="main-slider__text">
                     <div class="main-slider__logo">
                         <div class="main-slider__logo-img">
@@ -32,6 +33,15 @@ if ( ! defined( 'ABSPATH' ) ) {
                 <div class="main-slider__img">
                     <img src="<?php echo get_template_directory_uri()?>/assets/images/main-slider-img.png" alt="">
                 </div>
+                <div class="main-slider__logo--mobile">
+                        <div class="main-slider__logo-img">
+                            <img src="<?php echo get_template_directory_uri()?>/assets/images/main-logo.png" alt="">
+                        </div>
+                        <div class="main-slider__title-text">
+                            <div class="main-slider__title">Кафедра військової підготовки</div>
+                            <div class="main-slider__title-add">СУМСЬКОГО ДЕРЖАВНОГО УНІВЕРСИТЕТУ</div>                 
+                        </div>
+                    </div>
             </div>
         </div>
     </div>
@@ -79,7 +89,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             </div>
         </div>
     </div>
-</section>
+</section> 
 <section class="join-us" style=" background-image: url('<?php echo get_template_directory_uri()?>/assets/images/background-main.png');">
     <div class="container">
         <div class="join-us__body">
@@ -98,7 +108,6 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="join-us__gradient"></div>
 </section>
 <section class="about-us" id="about-us-index" style=" background-image: url('<?php echo get_template_directory_uri()?>/assets/images/grid-bg.png');">         
-    
     <div class="container">
         <div class="about-us__body" >
             <div class="about-us__main">
@@ -120,13 +129,17 @@ if ( ! defined( 'ABSPATH' ) ) {
                         Кафедра військової підготовки є структурним підрозділом СумДУ, що входить до Всесвітнього рейтингу дослідницьких університетів світу від Times Higher Education World University Rankings (THE) на позиції 501-600 та на 1-2 позиції серед університетів України. Згідно з міжнародним рейтингом вищих навчальних закладів QS World University Rankings Сумський державний університет входить до топ-групи 701-750 провідних університетів світу.
                     </p>
                     </div>
-                    <button class="btn-blue">
-                        Подивитися відео про кафедру
-                    </button>
+                    <div class="btn-container">
+                        <button class="btn-blue">
+                            Подивитися відео про кафедру
+                        </button>
+                    </div>
+                    <div class="about-us__img--mobile">
+                        <img src="<?php echo get_template_directory_uri()?>/assets/images/about-us-man.png" alt="">
+                    </div>
                     </div>
                 </div>
             </div>
-
             <div class="about-us__bg" style="background-image: url('<?php echo get_template_directory_uri()?>/assets/images/background-main.png');"></div>  
             <div class="about-us__img">
                 <img src="<?php echo get_template_directory_uri()?>/assets/images/about-us-man.png" alt="">
@@ -137,6 +150,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <div class="about-us__gradient"></div>   
 </section>
+
 <section class="virtual-ex" style="background: url('<?php echo get_template_directory_uri()?>/assets/images/background-main.png')">
     <div class="container">
         <div class="virtual-ex__body" >
@@ -229,6 +243,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         </div>
     </div>
 </section>
+<!--
 <section class="last-news">
     <div class="container">
         <div class="last-news__body">
@@ -294,5 +309,5 @@ if ( ! defined( 'ABSPATH' ) ) {
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <?php get_footer(); ?>

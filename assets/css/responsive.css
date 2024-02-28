@@ -98,6 +98,7 @@
     }
     .callback-body {
         padding: 25px;
+        justify-content: center;
     }
 }
 /* 
@@ -111,6 +112,9 @@
         width: 100%;
     }
     .border-header h2{
+        font-size: 24px;
+    }
+    .border-header h1{
         font-size: 24px;
     }
     .form-group.horizontal span:last-child {
@@ -382,6 +386,9 @@
     }
     .callback-body__form {
         padding: 25px 25px;
+    }
+    .callback-body {
+        display: block;
     }
 }
 /* 
