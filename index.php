@@ -4,6 +4,40 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <?php get_header(); ?>
+<section class="main-slider">
+    <div class="container">
+        <div class="main-slider__body">
+            <div class="main-slider__content">
+                <div class="main-slider__text">
+                    <div class="main-slider__logo">
+                        <div class="main-slider__logo-img">
+                            <img src="<?php echo get_template_directory_uri()?>/assets/images/main-logo.png" alt="">
+                        </div>
+                        <div class="main-slider__title-text">
+                            <div class="main-slider__title">Кафедра військової підготовки</div>
+                            <div class="main-slider__title-add">СУМСЬКОГО ДЕРЖАВНОГО УНІВЕРСИТЕТУ</div>                 
+                        </div>
+                    </div>
+                    <div class="main-slider__icon">
+                        <img src="<?php echo get_template_directory_uri()?>/assets/images/main-slider-i.svg" alt="" srcset="">
+                        <div class="main-slider__icon-text">Можливість навчатися за змішаною формою навчання (дистанційно) з використанням веб-ресурсів програм військової підготовки</div>
+                    </div>
+                    <div class="main-slider__text">Проходження військової підготовки за програмою підготовки офіцерів запасу мають право всі громадяни України всіх категорій відповідно до чинного законодавства</div>
+                    <div class="main-slider__btn">
+                        <button class="btn-white">
+                            Подати заявку на навчання
+                        </button>
+                    </div>
+                </div>
+                <div class="main-slider__img">
+                    <img src="<?php echo get_template_directory_uri()?>/assets/images/main-slider-img.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-slider__wrap"></div>
+    <div class="main-slider__wrap-orange"></div>
+</section>
 <section class="special">
     <div class="container">
         <div class="special__body">
@@ -92,13 +126,15 @@ if ( ! defined( 'ABSPATH' ) ) {
                     </div>
                 </div>
             </div>
-            <div class="about-us__white"></div>
+
             <div class="about-us__bg" style="background-image: url('<?php echo get_template_directory_uri()?>/assets/images/background-main.png');"></div>  
             <div class="about-us__img">
                 <img src="<?php echo get_template_directory_uri()?>/assets/images/about-us-man.png" alt="">
             </div>
         </div>
+        <div class="about-us__white"></div>
     </div>
+
     <div class="about-us__gradient"></div>   
 </section>
 <section class="virtual-ex" style="background: url('<?php echo get_template_directory_uri()?>/assets/images/background-main.png')">
