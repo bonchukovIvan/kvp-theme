@@ -2,11 +2,11 @@ jQuery(document).ready(function() {
     /* 
      * last-news
      */
-    var collab_slides_per_page = 3;
-    setup_slick_count(collab_slides_per_page, '.last-news__track', '#last-news__current-page', '#last-news__summary-page')
+    var last_news_slides_per_page = 3;
+    setup_slick_count(last_news_slides_per_page, '.last-news__track', '#last-news__current-page', '#last-news__summary-page')
     jQuery('.last-news__track').slick({
         arrows: false,
-        slidesToShow: collab_slides_per_page,
+        slidesToShow: last_news_slides_per_page,
         slidesToScroll: 3,
         dots: true,
         lazyLoad: 'ondemand',
@@ -37,7 +37,7 @@ jQuery(document).ready(function() {
     /* 
      * collab
      */
-    var collab_slides_per_page = 3;
+    var collab_slides_per_page = 6;
     setup_slick_count(collab_slides_per_page, '.collab__track', '#collab__current-page', '#collab__summary-page')
     jQuery('.collab__track').slick({
         arrows: false,

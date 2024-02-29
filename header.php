@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <?php wp_head(); ?>
 	<title> 
 		<?php 
-		if (is_home()) {
+		if (is_home() || is_front_page()) {
 			echo bloginfo('title');
 		} elseif (is_404()) {
 			echo wp_title();

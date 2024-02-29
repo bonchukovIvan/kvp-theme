@@ -327,6 +327,9 @@
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
 }
+.collab__slider {
+    margin: 25px 0px;
+}
 /* last-news */
 .last-news {
     background-color: #F7F7F7;
