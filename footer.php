@@ -19,23 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             </main>
 		</div>
 	</div>
-        <section class="callback" style="background-image: url('<?php echo get_template_directory_uri()?>/assets/images/callback.png')">
-            <div class="container">
-                <div class="callback-body">
-                    <div class="callback-body__form">
-                        <div class="border-header">
-                            <h2 class="border-title">
-                                Залишилися питання?
-                            </h2>
-                        </div>
-                        <form class="callback__form">
-                            <?php echo do_shortcode('[contact-form-7 id="dceaa37" title="Callback-form"]') ?>
-                        </form>
-                    </div>
-                    <img class="callback-body__image" src="<?php echo get_template_directory_uri()?>/assets/images/girl.png" alt="" srcset="">
-                </div>
-            </div>
-        </section>
+<?php if (!is_page_template( 'search-page.php' )) get_template_part( 'template-parts/footer/footer-callback' ); ?>
 <footer class="main-footer">
         <div class="container">
             <div class="footer-body">

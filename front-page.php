@@ -289,7 +289,6 @@ if ( ! defined( 'ABSPATH' ) ) {
                                                 <button class="btn-white more">Читати новину</button>
                                             </div>
                                         </div>
-                                        
                                     </div>
                                 <?php endwhile ?>
                             <?php endif; ?>

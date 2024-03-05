@@ -328,7 +328,10 @@
     filter: grayscale(100%);
 }
 .collab__slider {
-    margin: 25px 0px;
+    margin: 25px 25px;
+}
+.collab__slider .slick-slide {
+    margin: 0px 5px;
 }
 /* last-news */
 .last-news {

@@ -53,6 +53,13 @@ jQuery(document).ready(function() {
         adaptiveHeight: true,
         responsive: [
             {
+                breakpoint: 1360,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 1,
+                },
+            },
+            {
                 breakpoint: 979,
                 settings: {
                   slidesToShow: 2,

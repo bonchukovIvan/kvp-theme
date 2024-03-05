@@ -39,8 +39,8 @@
                 </div>
             </div>
             <div class="navbar__top">
-                <div class="search">
-                        <a href="#">
+                <div class="search-icon">
+                        <a href="/search">
                             <img src="<?php echo get_template_directory_uri() ?>/assets/images/search.svg" alt="" srcset="">
                         </a>
                 </div>
