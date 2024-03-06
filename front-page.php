@@ -12,11 +12,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <?php get_header(); ?>
 
-<section class="main-slider">
+<section class="main-slider p5-25">
     <div class="container">
         <div class="main-slider__body">
             <div class="main-slider__content">
-
                 <div class="main-slider__text">
                     <div class="main-slider__logo">
                         <div class="main-slider__logo-img">
@@ -56,14 +55,10 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="main-slider__wrap"></div>
     <div class="main-slider__wrap-orange"></div>
 </section> 
-<section class="special">
+<section class="special p5-25">
     <div class="container">
         <div class="special__body">
-            <div class="border-header">
-                <h1>
-                    Військові спеціальності
-                </h1>
-            </div> 
+            <?php kvp_get_border_header(array('title' => kvp_get_custom_post_name('kvp_specialities'))); ?>
             <div class="special__content">
                 <?php
                     $args = array('post_type' => 'kvp_specialities', 'post_pre_page' => 6, 'order' => 'ASC');
@@ -71,7 +66,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                     if ( $the_query->have_posts() ): ?>
                     <?php $count = 0;?>
                         <?php while ( $the_query->have_posts() ) : ?>
-                            <?php $count++;?>
+                            <?php $count++; ?>
                             <div class="special__item item-<?php echo $count;?>">
                                 <?php $the_query->the_post(); ?>
                                 <div class="special__about">
@@ -98,15 +93,11 @@ if ( ! defined( 'ABSPATH' ) ) {
         </div>
     </div>
 </section>
-<section class="join-us" style=" background-image: url('<?php echo get_template_directory_uri()?>/assets/images/background-main.png');">
+<section class="join-us p5-25" style=" background-image: url('<?php echo get_template_directory_uri()?>/assets/images/background-main.png');">
     <div class="container">
         <div class="join-us__body">
             <div class="join-us__form">
-                <div class="border-header">
-                    <h2>
-                        <?php echo the_field("join-us_title");?>
-                    </h2>
-                </div>  
+                <?php  kvp_get_border_header( array( 'title' => get_field("join-us_title" ), 'h' => 'h2' ) ); ?>
                 <div class="join-us__content">
                     <?php echo do_shortcode('[contact-form-7 id="d4e6dc4" title="Join-us"]'); ?>
                 </div>
@@ -119,11 +110,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="container">
         <div class="about-us__body" >
             <div class="about-us__main">
-            <div class="border-header">
-                <h1>
-                    <?php echo the_field("about-us_title");?>
-                </h1>
-            </div>
+            <?php  kvp_get_border_header(array('title' => get_field("about-us_title"))); ?>
             <div class="about-us__content">
                 <div class="about-us__preview">
                     <div class="about-us__text">
@@ -150,14 +137,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <div class="about-us__gradient"></div>   
 </section>
-<section class="virtual-ex" style="background: url('<?php echo get_template_directory_uri()?>/assets/images/background-main.png')">
+<section class="virtual-ex p5-25" style="background: url('<?php echo get_template_directory_uri()?>/assets/images/background-main.png')">
     <div class="container">
         <div class="virtual-ex__body" >
-            <div class="border-header">
-                <h1>
-                    <?php echo the_field("virtual-ex_title"); ?>
-                </h1>
-            </div> 
+            <?php  kvp_get_border_header(array('title' => get_field("virtual-ex_title"))); ?>
             <div class="virtual-ex__content">
                 <div class="virtual-ex__text">
                     <?php print_r(the_field("virtual-ex_desc")); ?>
@@ -182,15 +165,11 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div class="virtual-ex__gradient"></div>
     </div>
 </section>
-<section class="collab">
+<section class="collab p5-25">
     <div class="container">
         <div class="collab__body">
         <div class="collab__body">
-            <div class="border-header">
-                <h1>
-                    <?= the_field("collab_title");?>
-                </h1>
-            </div> 
+            <?php  kvp_get_border_header(array('title' => get_field("collab_title"))); ?>
             <div class="collab__top">
                 <div class="slider__control">
                     <div class="slider-arrow left" id="collab__ln-right"></div>
@@ -233,14 +212,10 @@ if ( ! defined( 'ABSPATH' ) ) {
         </div>
     </div>
 </section>
-<section class="last-news">
+<section class="last-news p5-25">
     <div class="container">
         <div class="last-news__body">
-            <div class="border-header">
-                <h1>
-                    Новини
-                </h1>
-            </div> 
+            <?php  kvp_get_border_header(array('title' => "Новини")); ?>
             <div class="last-news__main">
                 <div class="last-news__top">
                     <button class="btn-blue">Відкрити сторінку новин</button>

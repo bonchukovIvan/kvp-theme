@@ -1,3 +1,19 @@
+<?php
+/**
+ * Template part for displaying page content in page.php
+ *
+ *
+ * @package WordPress
+ * @subpackage Sumdu_theme
+ * @since Sumdu theme 1.0
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
+?>
+
 <div class="news__item">
     <div class="news__img">
         <?php if(get_the_post_thumbnail_url()) : ?>
@@ -15,8 +31,12 @@
             <div class="news__title"><?= get_the_title(); ?></div>
             <div class="news__preview-text"><?= wp_trim_words( get_the_content(), 25 ); ?></div>
         </div>
-        <div class="btn-container">
-            <button class="btn-blue more" onclick="location.href='<?php echo get_permalink(); ?>'">Читати новину</button>
-        </div>
+        <?php kvp_get_btn( array(
+            'title'                => 'Читати новину',
+            'on_click_href'        => get_permalink(),
+            'container_add_style'  => 't-cntr m25-25',
+            'btn_add_style'        => 'm-a p15-30',
+            'btn_style'            => 'btn-blue',
+        ) );?>
     </div>
 </div>

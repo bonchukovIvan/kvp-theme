@@ -18,14 +18,14 @@ jQuery(document).ready(function() {
         adaptiveHeight: true,
         responsive: [
             {
-                breakpoint: 979,
+                breakpoint: 1300,
                 settings: {
                   slidesToShow: 2,
                   slidesToScroll: 1,
                 },
             },
             {
-                breakpoint: 600,
+                breakpoint: 979,
                 settings: {
                   slidesToShow: 1,
                   slidesToScroll: 1,
@@ -69,6 +69,42 @@ jQuery(document).ready(function() {
         ]
     }); 
     set_slick_arrows('#collab__ln-right', '#collab__ln-left', '.collab__track');
+    /* 
+     * related-news
+     */
+        var related_news_slides_per_page = 3;
+        setup_slick_count(related_news_slides_per_page , '.related-news__track', '#last-news__current-page', '#last-news__summary-page')
+        jQuery('.related-news__track').slick({
+            arrows: false,
+            slidesToShow: related_news_slides_per_page,
+            slidesToScroll: 3,
+            dots: true,
+            lazyLoad: 'ondemand',
+            adaptiveHeight: true,
+            infinite: false,
+            appendDots: $('.last-news__switcher'),
+            customPaging : function(slider, i) {
+                return ' <button type="button" aria-label="switch 2" class></button>';
+            },
+            adaptiveHeight: true,
+            responsive: [
+                {
+                    breakpoint: 1300,
+                    settings: {
+                      slidesToShow: 2,
+                      slidesToScroll: 1,
+                    },
+                },
+                {
+                    breakpoint: 750,
+                    settings: {
+                      slidesToShow: 1,
+                      slidesToScroll: 1,
+                    },
+                },
+            ]
+        }); 
+        set_slick_arrows('#related-news__ln-right', '#related-news__ln-left', '.related-news__track');
 });
 
 function set_slick_arrows(right, left, track) {

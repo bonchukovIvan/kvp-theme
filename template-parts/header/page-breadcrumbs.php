@@ -9,9 +9,9 @@
  */
 ?>
 
-<div class="breadcrumb">
+<div class="breadcrumb ">
     <div class="container">
-        <div class="breadcrumb__body">
+        <div class="breadcrumb__body m0-25">
             <?php get_breadcrumb();?>
         </div>
     </div>

@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-define('SUMDU_THEME_NAME', 'Sumdu');
+define( 'SUMDU_THEME_NAME', 'Sumdu' );
 
 register_nav_menus(
 	array(
@@ -15,16 +15,81 @@ register_nav_menus(
 	)
 );
 
-function get_border_header($title, $h = 'h1') {
-    return'<div class="border-header"><'.$h.'>'.$title.'</'.$h.'></div>';
+function kvp_get_custom_post_name($post_type) {
+    $post_type_obj = get_post_type_object( $post_type );
+    return $post_type_obj->labels->name;
+}
+
+function kvp_get_no_data_message() {
+    return "Інформацію не знайдено :(";
+}
+
+function kvp_get_preview($args = array()) {
+    $defaults = array(
+        'add_class' => '',
+    );
+
+    $args = wp_parse_args( $args, $defaults );
+
+    get_template_part(
+        'template-parts/content/content-preview', 
+        null,
+        $args
+    );
+}
+
+function kvp_get_border_header( $args = array() ) {
+    $defaults = array(
+        'title' => '',
+        'h'     => 'h1',
+    );
+
+    $args = wp_parse_args( $args, $defaults );
+    if (!$args['title']) {
+        $args['title'] = kvp_get_no_data_message();
+    }
+    $output = '';
+    $output .= '<div class="border-header">';
+    $output .= '<'.$args['h'].'>'.$args['title'].'</'.$args['h'].'>';
+    $output .= '</div>';
+    
+    echo $output;
+
+    return true;
+}
+
+function kvp_get_btn( $args = array() ) {
+    $defaults = array(
+        'title'               => kvp_get_no_data_message(),
+        'on_click_href'       => '',
+        'container_add_style' => 'full-wdth--mobile',
+        'btn_add_style'       => '',
+        'btn_style'           => 'btn-blue',
+    );
+
+    $args = wp_parse_args( $args, $defaults );
+
+    if ( $args['btn_add_style'] ) {
+        $args['btn_style'] .= ' '.$args['btn_add_style'];
+    }
+    $btn_class = 'class="'.$args['btn_style'].'"';
+    
+    $output = "";
+    $output .= "<div class='btn-container ".$args['container_add_style']."'>";
+    $output .= '<button onclick=location.href="'.$args['on_click_href'].'" '.$btn_class.' >'.$args['title'].'<span>&#8594;</span></button>';
+    $output .= "</div>";
+
+   echo $output;
+
+   return true;
 }
 
 function wporg_custom_post_types() {
 	register_post_type('kvp_specialities',
 		array(
 			'labels'      => array(
-				'name'          => __('Спеціальності', 'textdomain'),
-				'singular_name' => __('Спеціальність', 'textdomain'),
+				'name'          => __('Військові спеціальності', 'textdomain'),
+				'singular_name' => __('Військова спеціальність', 'textdomain'),
 			),
 				'public'      => true,
 				'has_archive' => false,
@@ -124,6 +189,7 @@ function add_theme_scripts() {
 	wp_enqueue_style( 'responsive', get_template_directory_uri() . '/assets/css/responsive.css' );
 	wp_enqueue_style( 'index-page-responsive', get_template_directory_uri() . '/assets/css/index-page-responsive.css' );
 	wp_enqueue_style( 'font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' );
+	wp_enqueue_style( 'add-style', get_template_directory_uri() . '/assets/css/add.css'  );
     /* 
      * reregister jquery
      */

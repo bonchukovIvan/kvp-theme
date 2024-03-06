@@ -7,9 +7,11 @@
  * @subpackage Sumdu_theme
  * @since Sumdu theme 1.0
  */
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
+
 ?>
 <div class="page-content">
 	<div class="container">

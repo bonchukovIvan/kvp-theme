@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php get_search_form(); ?>
 
-<section class="news">
+<section class="news p5-25">
 	<div class="container">
         <div class="border-header">
             <h1><?php single_cat_title(); ?></h1>
@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<div class="news__grid">
 				<?php get_template_part( 'template-parts/content/content-archive' ); ?>
 			</div>
-            <?php get_template_part( 'template-parts/content/content-popular' ); ?>
+            	<?php get_template_part( 'template-parts/content/content-popular' ); ?>
 			<nav class="kvp-pagination">
 				<?php
 					global $wp_query; 
