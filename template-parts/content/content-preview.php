@@ -17,16 +17,34 @@ if ( ! defined( 'ABSPATH' ) ) {
 <section class="preview-section p5-25--nm <?php echo $args['add_class'] ?>">
     <div class="container">
         <div class="preview__back" style="background-image: url(<?php echo get_template_directory_uri()."/assets/images/background-main.png" ?>)">
-            <div class="preview__body p5-25f " >
+            
+            <div class="preview__body p5-25f" >
+
                 <div class="preview__text">
-                    <?php get_template_part( 'template-parts/header/page-header' ); ?>
-                    <div class="preview__desc m25-0">
-                        <?php the_field("page-desc"); ?>
+
+                    <div class="">
+                        <?php get_template_part( 'template-parts/header/page-header' ); ?>
+                        <div class="preview__desc m25-0">
+                            <?php the_field("page-desc"); ?>
+                        </div>
                     </div>
+                    
+                    <?php 
+                        kvp_get_btn( array(
+                                'title'                 => 'Детальніше',
+                                'on_click_href'            => get_field("preview-link"),
+                                'container_add_style'      => '',
+                                'btn_add_style'         => 'm-a',
+                                'btn_style' => 'btn-white',
+                            ) 
+                        );
+                    ?>
+                   
                 </div>
+
                 <?php if ( is_page_template( 'templates/employment-page.php' ) ) :?>
                     <div class="preview__logo">
-                    <img src="<?php the_field( "page-img" ); ?>" alt="" class="">
+                        <img src="<?php echo get_field( "page-img" ); ?>" alt="" class="">
                     <div class="kvp-logo">
                         <a href="/" >
                             <?php 
@@ -49,9 +67,14 @@ if ( ! defined( 'ABSPATH' ) ) {
                         </p>
                     </div>
                 </div>
+
                 <?php else : ?>
                     <div class="preview__img">
-                        <img src="<?php the_field( "page-img" ); ?>" alt="" class="">
+
+                        <?php if ( get_field( "page-img" ) != '') : ?>
+                            <img src="<?php the_field( "page-img" ); ?>" alt="" class="">
+                        <?php endif; ?>
+
                     </div>
                 <?php endif; ?>
             </div>

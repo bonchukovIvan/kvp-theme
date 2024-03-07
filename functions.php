@@ -54,8 +54,6 @@ function kvp_get_border_header( $args = array() ) {
     $output .= '</div>';
     
     echo $output;
-
-    return true;
 }
 
 function kvp_get_btn( $args = array() ) {
@@ -80,8 +78,6 @@ function kvp_get_btn( $args = array() ) {
     $output .= "</div>";
 
    echo $output;
-
-   return true;
 }
 
 function wporg_custom_post_types() {
@@ -103,20 +99,35 @@ function wporg_custom_post_types() {
 		)
 	);
     register_post_type('kvp_collab',
-    array(
-        'labels'      => array(
-            'name'          => __('Навчальні заклади', 'textdomain'),
-            'singular_name' => __('Навчальний заклад', 'textdomain'),
-        ),
-            'public'      => true,
-            'has_archive' => false,
-            'supports' => array(
-                'title',
-                'thumbnail',
-                'custom-fields'
-            )   
-    )
-);
+        array(
+            'labels'      => array(
+                'name'          => __('Навчальні заклади', 'textdomain'),
+                'singular_name' => __('Навчальний заклад', 'textdomain'),
+            ),
+                'public'      => true,
+                'has_archive' => false,
+                'supports' => array(
+                    'title',
+                    'thumbnail',
+                    'custom-fields'
+                )   
+        )
+    );
+    register_post_type('kvp_refrences',
+        array(
+            'labels'      => array(
+                'name'          => __('Нормативні посилання', 'textdomain'),
+                'singular_name' => __('Нормативне посилання', 'textdomain'),
+            ),
+                'public'      => true,
+                'has_archive' => false,
+                'supports' => array(
+                    'title',
+                    'thumbnail',
+                    'custom-fields'
+                )   
+        )
+    );
 }
 
 function add_additional_class_on_li($classes, $item, $args) {

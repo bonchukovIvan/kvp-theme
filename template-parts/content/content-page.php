@@ -13,23 +13,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
+
+<?php if ( ! is_front_page() ) : ?>
+	<?php kvp_get_preview(); ?> 
+<?php endif; ?>
+
 <div class="page-content">
 	<div class="container">
-		<?php if ( ! is_front_page() ) : ?>
-			<div class="preview" style="background-image: url(<?php echo get_template_directory_uri()."/assets/images/background-main.png" ?>)">
-				<div class="preview__body" >
-					<div class="preview__text">
-						<?php get_template_part( 'template-parts/header/page-header' ); ?>
-						<div class="preview__desc">
-							<?php the_field("page-desc"); ?>
-						</div>
-					</div>
-					<div class="preview__img">
-						<img src="<?php the_field("page-img"); ?>" alt="" class="">
-					</div>
-				</div>
-			</div>
-		<?php endif; ?>
+
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<div class="entry-content">

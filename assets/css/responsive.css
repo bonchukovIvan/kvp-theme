@@ -353,6 +353,9 @@
         display: block;
         overflow: hidden;
     }
+    .page-title {
+        font-size: 32px;
+    }
     .preview {
         margin: 0 0 50px 0 ;
     }
@@ -367,6 +370,13 @@
     }
     .preview__logo {
         width: inherit;
+    }
+    .preview__text .btn-container button  {
+        width: inherit;
+    }
+
+    .references__grid {
+        grid-template-columns: 1fr;
     }
 
     .single-post__footer {

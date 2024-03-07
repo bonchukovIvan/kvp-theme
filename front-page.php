@@ -261,7 +261,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                                                 <div class="last-news__preview-text"><?= wp_trim_words( get_the_content(), 25 ); ?></div>
                                             </div>
                                             <div class="btn-container">
-                                                <button class="btn-white more">Читати новину</button>
+                                                <button class="btn-white more m-a">Читати новину</button>
                                             </div>
                                         </div>
                                     </div>
