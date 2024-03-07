@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                                 <?php $the_query->the_post(); ?>
                                 <div class="special__about">
                                     <div class="special__icon">
-                                        <img src="<?php echo the_field('special-icon'); ?>" alt="" srcset="">
+                                        <img src="<?php echo get_field('special-icon'); ?>" alt="" srcset="">
                                     </div>
                                     <div class="special__text">
                                         <div class="special__desc">

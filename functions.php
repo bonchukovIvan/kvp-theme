@@ -42,6 +42,7 @@ function kvp_get_border_header( $args = array() ) {
     $defaults = array(
         'title' => '',
         'h'     => 'h1',
+        'add_styles' => ''
     );
 
     $args = wp_parse_args( $args, $defaults );
@@ -49,7 +50,7 @@ function kvp_get_border_header( $args = array() ) {
         $args['title'] = kvp_get_no_data_message();
     }
     $output = '';
-    $output .= '<div class="border-header">';
+    $output .= '<div class="border-header '.$args['add_styles'].' ">';
     $output .= '<'.$args['h'].'>'.$args['title'].'</'.$args['h'].'>';
     $output .= '</div>';
     
@@ -174,19 +175,21 @@ function theme_slug_filter_wp_title( $title ) {
     return $title;
 }
 function kvp_get_search_query() {
-    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+    $paged = get_query_var( 'paged' )  ? get_query_var( 'paged' ) : 1;
     $args = array(
         'paged' => $paged,
-        'post_type' => array('post', 'page'),
-        'posts_per_page' => 1
+        'post_type' => array( 'post', 'page' ),
+        'posts_per_page' => 6,
+        's' => get_search_query()
         );
 
-    if (isset($_GET['search_query'])) {
-        if (!empty($_GET['search_query'])) {
-            $args['s'] = sanitize_text_field($_GET['search_query']);
+    if ( isset( $_GET['search_query'] ) ) {
+        if ( !empty( $_GET['search_query'] ) ) {
+            $args['s'] = sanitize_text_field( $_GET['search_query'] );
         }
     }
-    return  new WP_Query($args);
+    
+    return  new WP_Query( $args );
 }
 
 function add_theme_scripts() {
@@ -214,7 +217,6 @@ function add_theme_scripts() {
     wp_enqueue_script( 'main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), '', '', true );
     wp_enqueue_script( 'header', get_template_directory_uri() . '/assets/js/header.js', array('jquery'),'', '', true );
     wp_enqueue_script( 'slider', get_template_directory_uri() . '/assets/js/slider.js', array('jquery'),'', '', true );
-
 }
 
 /**

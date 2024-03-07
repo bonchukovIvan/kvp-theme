@@ -55,44 +55,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="main-slider__wrap"></div>
     <div class="main-slider__wrap-orange"></div>
 </section> 
-<section class="special p5-25">
-    <div class="container">
-        <div class="special__body">
-            <?php kvp_get_border_header(array('title' => kvp_get_custom_post_name('kvp_specialities'))); ?>
-            <div class="special__content">
-                <?php
-                    $args = array('post_type' => 'kvp_specialities', 'post_pre_page' => 6, 'order' => 'ASC');
-                    $the_query = new WP_Query( $args );
-                    if ( $the_query->have_posts() ): ?>
-                    <?php $count = 0;?>
-                        <?php while ( $the_query->have_posts() ) : ?>
-                            <?php $count++; ?>
-                            <div class="special__item item-<?php echo $count;?>">
-                                <?php $the_query->the_post(); ?>
-                                <div class="special__about">
-                                    <div class="special__icon">
-                                        <img src="<?php echo the_field('special-icon'); ?>" alt="" srcset="">
-                                    </div>
-                                    <div class="special__text">
-                                        <div class="special__desc">
-                                            <?php echo get_the_excerpt(); ?>
-                                        </div>
-                                        <div class="special__title">
-                                            <?php echo get_the_title(); ?>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="special__img">
-                                    <img src="<?php  echo get_the_post_thumbnail_url(); ?>" alt="" srcset="">
-                                </div>
-                            </div>
-                        <?php endwhile ?>
-                    <?php endif; ?>
-                    <?php wp_reset_postdata(); ?>
-            </div>
-        </div>
-    </div>
-</section>
+
+<?php get_template_part('template-parts/custom/custom-specials')?>
+
 <section class="join-us p5-25" style=" background-image: url('<?php echo get_template_directory_uri()?>/assets/images/background-main.png');">
     <div class="container">
         <div class="join-us__body">
@@ -106,6 +71,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     </div>
     <div class="join-us__gradient"></div>
 </section>
+
 <section class="about-us" id="about-us-index" style=" background-image: url('<?php echo get_template_directory_uri()?>/assets/images/grid-bg.png');">         
     <div class="container">
         <div class="about-us__body" >
@@ -114,7 +80,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             <div class="about-us__content">
                 <div class="about-us__preview">
                     <div class="about-us__text">
-                    <? print_r(the_field("about-us_desc")); ?>
+                    <? print_r(get_field("about-us_desc")); ?>
                     </div>
                     <div class="btn-container">
                         <button class="btn-blue">
@@ -122,14 +88,14 @@ if ( ! defined( 'ABSPATH' ) ) {
                         </button>
                     </div>
                     <div class="about-us__img--mobile">
-                        <img src="<?php echo the_field("about-us_img")?>" alt="">
+                        <img src="<?php echo get_field("about-us_img")?>" alt="">
                     </div>
                     </div>
                 </div>
             </div>
             <div class="about-us__bg" style="background-image: url('<?php echo get_template_directory_uri()?>/assets/images/background-main.png');"></div>  
             <div class="about-us__img">
-                <img src="<?php echo the_field("about-us_img")?>" alt="">
+                <img src="<?php echo get_field("about-us_img")?>" alt="">
             </div>
         </div>
         <div class="about-us__white"></div>
@@ -137,81 +103,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <div class="about-us__gradient"></div>   
 </section>
-<section class="virtual-ex p5-25" style="background: url('<?php echo get_template_directory_uri()?>/assets/images/background-main.png')">
-    <div class="container">
-        <div class="virtual-ex__body" >
-            <?php  kvp_get_border_header(array('title' => get_field("virtual-ex_title"))); ?>
-            <div class="virtual-ex__content">
-                <div class="virtual-ex__text">
-                    <?php print_r(the_field("virtual-ex_desc")); ?>
-                </div>
-                <div class="virtual-ex__excursion">
-                    <iframe src="https://kvp.sumdu.edu.ua/3d-index.html" frameborder="0"></iframe>
-                </div>
-                <div class="virtual-ex__app-text">
-                    Також в нас є додаток для Android з аудіоекскурсіями по 3D простору наших приміщень та віртуальному полігону з військовою технікою.
-                </div>
-                <div class="virtual-ex__app">
-                    <div class="virtual-ex__app-add">
-                        Зацікавились? Завантажуйте додаток з Google Play за посиланням:
-                    </div>
-                    <div class="virtual-ex__button">
-                        <button class="btn-blue">Завантажити додаток</button>
-                    </div>
 
-                </div>
-            </div>
-        </div>
-        <div class="virtual-ex__gradient"></div>
-    </div>
-</section>
-<section class="collab p5-25">
-    <div class="container">
-        <div class="collab__body">
-        <div class="collab__body">
-            <?php  kvp_get_border_header(array('title' => get_field("collab_title"))); ?>
-            <div class="collab__top">
-                <div class="slider__control">
-                    <div class="slider-arrow left" id="collab__ln-right"></div>
-                    <div class="slider__count">
-                        <h1 class="slider__current-page" id="collab__current-page"></h1>
-                        /
-                        <h3 class="slider__summary-page" id="collab__summary-page"></h3>
-                    </div>
-                    <div class="slider-arrow right" id="collab__ln-left"></div>
-                </div>
-            </div>
-            <div class="collab__slider">
-                <div class="collab__track">
-                    <?php
-                        $args = array('post_type' => 'kvp_collab', 'post_pre_page' => 6, 'order' => 'ASC');
-                        $the_query = new WP_Query( $args );
-                        if ( $the_query->have_posts() ): ?>
-                        <?php $count = 0;?>
-                            <?php while ( $the_query->have_posts() ) : ?>
-                                <?php $count++;?>
-                                <div class="carousel__item collab__item item-<?php echo $count;?>">
-                                <div class="collab__content">
-                                    <?php $the_query->the_post(); ?>
-                                    <div class="collab__img">
-                                        <?php if(get_the_post_thumbnail_url()) : ?>
-                                            <img src="<?php  echo get_the_post_thumbnail_url(); ?>" alt="" srcset="">
-                                        <?php else : ?>
-                                            <img src="<?php  echo get_template_directory_uri()?>/assets/images/not-found-news.jpg" alt="" srcset="">
-                                        <?php endif; ?>
-                                    </div>                                   
-                                        <div class="collab__title"><?= get_the_title(); ?></div>
-                                    </div>
-                                </div>
-                            <?php endwhile ?>
-                        <?php endif; ?>
-                        <?php wp_reset_postdata(); ?>
-                </div>
-                <div class="slider__switcher collab__switcher"></div>
-            </div>
-        </div>
-    </div>
-</section>
+<?php get_template_part('template-parts/custom/custom-virtual-ex')?>
+
+<?php get_template_part('template-parts/custom/custom-collab')?>
+
 <section class="last-news p5-25">
     <div class="container">
         <div class="last-news__body">
@@ -276,4 +172,5 @@ if ( ! defined( 'ABSPATH' ) ) {
         </div>
     </div>
 </section>
+
 <?php get_footer(); ?>

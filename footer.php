@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             </main>
 		</div>
 	</div>
-<?php if (!is_page_template( 'search-page.php' )) get_template_part( 'template-parts/footer/footer-callback' ); ?>
+<?php if (!is_page_template( 'search-page.php' ) && !is_search()) get_template_part( 'template-parts/footer/footer-callback' ); ?>
 <footer class="main-footer">
         <div class="container">
             <div class="footer-body">

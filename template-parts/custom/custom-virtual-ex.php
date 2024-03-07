@@ -11,7 +11,12 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
+
 $is_employment = is_page_template( 'templates/employment-page.php' );
+
+$title      =  !$is_employment ? get_field( "virtual-ex_title" ) : get_field( "emp-virtual-ex_title") ;
+$desc       =  !$is_employment ? get_field( "virtual-ex_desc" ) : get_field( "emp-virtual-ex_desc" );
+$border_add = !$is_employment ? "t-white" : '';
 ?>
 
 <section class="virtual-ex p5-25 t-black <?php if ( $is_employment ) echo "back-grey"?>" 
@@ -21,10 +26,10 @@ $is_employment = is_page_template( 'templates/employment-page.php' );
 >
     <div class="container">
         <div class="virtual-ex__body" >
-            <?php  kvp_get_border_header(array('title' => get_field("emp-virtual-ex_title"))); ?>
-            <div class="virtual-ex__content">
+            <?php  kvp_get_border_header( array( 'title' => $title,'add_styles' => $border_add ) ); ?>
+            <div class="virtual-ex__content <?php if(!$is_employment) echo 't-white'  ?>">
                 <div class="virtual-ex__text">
-                    <?php print_r(get_field("emp-virtual-ex_desc")); ?>
+                    <?php print_r( $desc ); ?>
                 </div>
                 <div class="virtual-ex__excursion <?php if ( $is_employment ) echo "grd__full-column" ?>">
                     <iframe src="https://kvp.sumdu.edu.ua/3d-index.html" frameborder="0"></iframe>

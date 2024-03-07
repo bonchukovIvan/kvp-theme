@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                     <div class="">
                         <?php get_template_part( 'template-parts/header/page-header' ); ?>
                         <div class="preview__desc m25-0">
-                            <?php the_field("page-desc"); ?>
+                            <?php echo get_field("page-desc"); ?>
                         </div>
                     </div>
                     
@@ -72,7 +72,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                     <div class="preview__img">
 
                         <?php if ( get_field( "page-img" ) != '') : ?>
-                            <img src="<?php the_field( "page-img" ); ?>" alt="" class="">
+                            <img src="<?php echo get_field( "page-img" ); ?>" alt="" class="">
                         <?php endif; ?>
 
                     </div>

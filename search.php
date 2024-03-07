@@ -1,53 +1,29 @@
-<?php
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
-// Silence is golden.
-?>
 <?php get_header(); ?>
-	
-<h1>Search Results for '<?php echo get_search_query();?>'</h1>
 
-				
-<?php if( have_posts() ): while( have_posts() ): the_post();?>
-	
-
-	<div class="card mb-3">
-		
-		<div class="card-body d-flex justify-content-center align-items-center">
-
-
-			<?php if(has_post_thumbnail()):?>
-
-				<img src="<?php the_post_thumbnail_url('blog-small');?>" alt="<?php the_title();?>" class="img-fluid mb-3 img-thumbnail mr-4">
-
-			<?php endif;?>
-
-			
-			<div class="blog-content">
-
-				<h3><?php the_title();?></h3>
-				<?php the_excerpt();?>
-
-				<a href="<?php the_permalink();?>" class="btn btn-success">Read more</a>
-
-			</div>
-
-
-		</div>
-
-	</div>
-
-
-<?php endwhile; else: ?>
-
-			
-			There are no results for '<?php echo get_search_query();?>'
-
-
-<?php endif;?>
-
-<?php previous_posts_link();?>
-<?php next_posts_link();?>
+<div class="content-container">
+    <h1 class="page-title"><?php _e( 'Search results for:', 'nd_dosth' ); ?></h1>
+    <div class="search-query"><?php echo get_search_query(); ?></div>    
+    <div class="container">
+        <div class="row">
+            <div class="search-results-container col-md-8">
+            <?php if ( have_posts() ): ?>
+                <?php while( have_posts() ): ?>
+                    <?php the_post(); ?>
+                    <div class="search-result">
+                        <h2><?php the_title(); ?></h2>
+                        <?php the_excerpt(); ?>
+                        <a href="<?php the_permalink(); ?>" class="read-more-link">
+                            <?php _e( 'Read More', 'nd_dosth' );  ?>
+                        </a>
+                    </div>
+                <?php endwhile; ?>
+                <?php the_posts_pagination(); ?>
+            <?php else: ?>
+                <p><?php _e( 'No Search Results found', 'nd_dosth' ); ?></p>
+            <?php endif; ?>
+            </div>
+        </div>
+    </div>
+</div>
 
 <?php get_footer(); ?>

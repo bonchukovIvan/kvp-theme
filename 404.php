@@ -28,13 +28,12 @@ get_header(); ?>
                                 <div class="description">
                                     Вибачте, але ми не можемо знайти ту сторінку, яку ви шукаєте. Можливо, вона була переміщена, видалена або ніколи не існувала.
                                 </div>
-                                <div class="btn-container">
-                                    <button class="btn-blue" onclick="location.href = '/'">
-                                        Повернутися на головну
-                                        <img src="<?php echo get_template_directory_uri()?>/assets/images/arrow-right.svg" alt="">
-                                    </button>
-                                </div>
-
+                                <?php 
+                                    kvp_get_btn( array(
+                                        'title'               => 'Повернутися на головну',
+                                        'on_click_href'       => '/',
+                                    ) );
+                                ?>
                             </div>
                             <div class="page-404__img">
                                 <img src="<?php echo get_template_directory_uri()?>/assets/images/404.svg" alt="">

@@ -457,8 +457,9 @@ nav.kvp-pagination ul a {
     color: #8D8D8D;
     font-size: 16px;
 }
-.kvp-search > * {
-    margin: 15px 0px;
+.kvp-search__form{
+    display: grid;
+    gap: 15px;
 }
 .kvp-search__search-form input {
     border: none;
@@ -492,8 +493,26 @@ nav.kvp-pagination ul a {
     border-left: 2px solid #DCDCDC!important;
     font-weight: 600;
 } 
+.search-result__pagination ul {
+    display: flex;
+    gap: 30px;
+}
 .search-result__pagination a{
     color: #000;
+}
+.search-result__item {
+    display: grid;
+    gap: 20px;
+    border-bottom: 1px solid #0000001a;
+    padding: 25px 0px;
+}
+.search-result__title {
+    font-size: 24px;
+    font-weight: 700;
+}
+.search-result__more a {
+    color: #000;
+    text-decoration: underline;
 }
 /* article styles */
 article .single-post {
