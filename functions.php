@@ -129,6 +129,12 @@ function wporg_custom_post_types() {
                 )   
         )
     );
+    register_post_type('kvp_gallery', array(
+        'public' => true,
+        'label'  => 'Галереї',
+        'supports' => array('title', 'editor', 'thumbnail', 'custom-fields', 'page-attributes'),
+    ));
+    
 }
 
 function add_additional_class_on_li($classes, $item, $args) {
