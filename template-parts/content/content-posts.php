@@ -28,7 +28,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             <div class="news__date"><?= get_the_date(); ?></div>
         </div>
         <div class="news__content-main">
-            <div class="news__title"><?= get_the_title(); ?></div>
+            <div class="news__title"><?= wp_trim_words(get_the_title(), 12); ?></div>
             <div class="news__preview-text"><?= wp_trim_words( get_the_content(), 25 ); ?></div>
         </div>
         <?php kvp_get_btn( array(

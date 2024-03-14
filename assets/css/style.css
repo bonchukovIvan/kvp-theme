@@ -517,6 +517,10 @@ nav.kvp-pagination ul a {
 .all-results strong {
     font-weight: 700;
 }
+.content-none {
+    font-size: 24px;
+    font-weight: 700;
+}
 /* article styles */
 article .single-post {
     padding: 50px 0;

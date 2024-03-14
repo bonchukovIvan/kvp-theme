@@ -174,12 +174,13 @@ function theme_slug_filter_wp_title( $title ) {
     }
     return $title;
 }
-function kvp_get_search_query() {
+function kvp_get_search_query( $post_type = array(), $posts_per_page = 6 ) {
     $paged = get_query_var( 'paged' )  ? get_query_var( 'paged' ) : 1;
+    
     $args = array(
         'paged' => $paged,
-        'post_type' => array( 'post', 'page' ),
-        'posts_per_page' => 6,
+        'post_type' => $post_type,
+        'posts_per_page' => $posts_per_page,
         's' => get_search_query()
         );
 

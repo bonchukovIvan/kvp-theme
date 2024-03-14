@@ -3,11 +3,11 @@
  * Template Name: Search Page
  */
 
-$is_search = count( $_GET );
-
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
+
+$is_search = count( $_GET );
 
 ?> 
 
@@ -25,20 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                     Пошук на сайті
                 </div>
 
-                <form role="search" class="kvp-search__search-form" action="<?php echo home_url( '/' ); ?>search">
-                    <label>
-                        <span class="screen-reader-text"><?php echo _x( 'Search for:', 'label' ) ?></span>
-                        <img src="<?php echo get_template_directory_uri();?>/assets/images/kvp-search.svg" alt="" set="">
-                        <input 
-                            type="search" 
-                            class="kvp-search__search-field"
-                            placeholder="<?php echo esc_attr_x( 'Пошук', 'placeholder' ) ?>"
-                            value="<?php echo isset($_GET['search_query']) ? $_GET['search_query'] : '';?>" 
-                            name="search_query"
-                            title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
-                    </label>
-                    <input type="submit" class="kvp-search__search-submit" value="<?php echo esc_attr_x( 'Пошук', 'submit button' ) ?>" />
-                </form>
+                <?php get_search_form(array("search_url" => "search"));?>
 
                 <div class="kvp-search__example">
                     Наприклад: <strong>Правила вступу</strong>
@@ -52,7 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php
     if ( $is_search ) {
-        $query = kvp_get_search_query();
+        $query = kvp_get_search_query(array( 'post', 'page' ));
         $total_results = $query->found_posts;
     }
 ?>
@@ -124,10 +111,12 @@ if ( ! defined( 'ABSPATH' ) ) {
             </nav>
 
         <?php else : ?>    
-            No results
+            <div class="content-none">
+                Інформації не знайдено :(
+            </div>
         <?php endif; ?>
         </div>
-    <?php  endif; ?>
+    <?php endif; ?>
 
     </div>
 </section>    

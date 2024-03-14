@@ -21,7 +21,6 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="news__popular-main">
         <?php 
         if ( function_exists('wpp_get_mostpopular') ) {
-            /* Get up to the top 5 commented posts from the last 7 days */
             wpp_get_mostpopular(array(
                 'post_type' => 'post',
                 'limit' => 10,
