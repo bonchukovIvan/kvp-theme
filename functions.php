@@ -81,6 +81,32 @@ function kvp_get_btn( $args = array() ) {
    echo $output;
 }
 
+function bartag_func( $atts ) {
+
+    $a = shortcode_atts( array(
+        'text' => 'Enter text here',
+    ), $atts );
+
+    // Decode HTML entities
+    // $decoded_text = esc_html( $a['text'] );
+    $bc_path = get_template_directory_uri() . "/assets/images/background-main.png";
+
+    $output = '<div class="custom-text preview__back" style="background-image: url(' . $bc_path . ')">';
+        $output .= '<div class="preview__body d-block t-white p15-30">';
+            $output .= '<div class="border-header">';
+                $output .= '<p>';
+                    $output .= $a['text'];
+                $output .= '</p>';
+            $output .= '</div>';
+        $output .= '</div>';
+    $output .= '</div>';
+
+    return $output; 
+}
+add_shortcode( 'bartag', 'bartag_func' );
+
+
+
 function wporg_custom_post_types() {
 	register_post_type('kvp_specialities',
 		array(
