@@ -189,7 +189,7 @@ function kvp_get_search_query() {
         }
     }
     
-    return  new WP_Query( $args );
+    return new WP_Query( $args );
 }
 
 function add_theme_scripts() {

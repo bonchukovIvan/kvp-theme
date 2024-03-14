@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                     Пошук на сайті
                 </div>
 
-                <form role="search" class="kvp-search__search-form" action="/search">
+                <form role="search" class="kvp-search__search-form" action="<?php echo home_url( '/' ); ?>search">
                     <label>
                         <span class="screen-reader-text"><?php echo _x( 'Search for:', 'label' ) ?></span>
                         <img src="<?php echo get_template_directory_uri();?>/assets/images/kvp-search.svg" alt="" set="">
@@ -87,18 +87,39 @@ if ( ! defined( 'ABSPATH' ) ) {
                     </div>
                 </div>
             <?php endwhile?>
-            <?php echo $total_results; ?>
+
+            <?php
+                $total_results = $query->found_posts;
+                $current_page = max(1, get_query_var('paged'));
+                $posts_per_page = $query->get('posts_per_page');
+                
+                $start_index = ($current_page - 1) * $posts_per_page + 1;
+                $end_index = min($start_index + $posts_per_page - 1, $total_results);
+            ?>
+            <div class="all-results p5-25">
+                <p>Показано <strong><?php echo $start_index; ?> — <?php echo $end_index; ?></strong> із <strong><?php echo $total_results; ?></strong></p>
+            </div>
+            
+            
             <nav class="kvp-pagination">
                 <?php
+
+                    global $wp;
+                    $current_url = home_url( $wp->request );
+                    $search_query = isset( $_GET['search_query'] ) ? $_GET['search_query'] : '';
+                    
                     echo paginate_links( array(
-                        'base' => str_replace(999999, '%#%', esc_url( get_pagenum_link( 999999 ) ) ),
-                        'format' => '?paged=%#%',
-                        'current' => max(1, get_query_var( 'paged' ) ),
+                        'base' => str_replace( PHP_INT_MAX, '%#%', esc_url( add_query_arg( 'paged', PHP_INT_MAX, $current_url ) ) ),
+                        'format' => '',
+                        'current' => max( 1, get_query_var( 'paged' ) ),
                         'total' => $query->max_num_pages,
-                        'prev_text'    => __('<div class="page-arrow left"></div>'),
-                        'next_text'    => __('<div class="page-arrow right"></div>'),
-                        'type' => 'list'
-                    )); 
+                        'prev_text' => __('<div class="page-arrow left"></div>'),
+                        'next_text' => __('<div class="page-arrow right"></div>'),
+                        'type' => 'list',
+                        'add_args' => array(
+                            'search_query' => $search_query
+                        )
+                    ) );
                 ?>
             </nav>
 
