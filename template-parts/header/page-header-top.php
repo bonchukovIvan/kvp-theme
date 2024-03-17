@@ -7,7 +7,27 @@
  * @subpackage Sumdu_theme
  * @since Sumdu theme 1.0
  */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
+// links
+$youtube_link = get_theme_mod('basic-header-callout-youtube' );
+$facebook_link = get_theme_mod('basic-header-callout-facebook' );
+$instagram_link = get_theme_mod('basic-header-callout-instagram' );
+
+// icons
+$youtube_icon = get_theme_mod( 'header-icon-yu-set' );
+$facebook_icon = get_theme_mod( 'header-icon-face-set' );
+$instagram_icon = get_theme_mod( 'header-icon-instagram-set' );
+$mail_icon = get_theme_mod( 'header-icon-mail-set' );
+
+// numbers
+$f_number = get_theme_mod('basic-header-callout-f-number' );
+$s_number = get_theme_mod( 'basic-header-callout-s-number' );
 ?>
+
 <div class="header-top">
     <div class="container">
         <div class="header-top__body">
@@ -52,38 +72,38 @@
                         ]);
                 ?>  
                 <div class="header-top__contacts">
+
                     <div class="numbers">
-                        <div class="phone-icon">
-                            <img src="<?php echo get_template_directory_uri()?>/assets/images/phone.svg" alt="">
-                        </div>
-                        <div class="numbers__text">
-                            <a href="tel:+380542628315">
-                                <div>
-                                    +38 0542 62 83 15
-                                </div>
-                            </a>
-                            <a href="tel:+380542628315">
-                                <div>
-                                    +38 0542 62 83 15
-                                </div>
-                            </a>
+
+                        <a href="#" id="phone-action">
+                            <div class="phone-icon">
+                                <img src="<?php echo get_template_directory_uri()?>/assets/images/phone.svg" alt="">
+                            </div>
+                        </a>
+
+                        <select name="numbers_select numbers__text" id="numbers_select_id">
+                            <option value="<?php echo str_replace(' ', '', $f_number); ?>"><?php echo $f_number; ?></option>
+                            <option value="<?php echo str_replace(' ', '', $s_number); ?>"><?php echo $s_number; ?></option>
+                        </select>
+
                         </div>
                     </div>
+
                     <div class="header-top__icons">
                         <div class="mail">
                             <a href="mailto:example@mail.com">
-                                <img src="<?php echo get_template_directory_uri()?>/assets/images/email.svg" alt="">
+                                <img src="<?php echo $mail_icon; ?>" alt="">
                             </a>
                         </div>
                         <div class="social">
-                            <a href="https://www.youtube.com/">
-                                <img src="<?php echo get_template_directory_uri()?>/assets/images/youtube.svg" alt="">
+                            <a href="<?php echo $youtube_link; ?>">
+                                <img src="<?php echo $youtube_icon; ?>" alt="">
                             </a>
-                            <a href="https://www.facebook.com/">
-                                <img src="<?php echo get_template_directory_uri()?>/assets/images/facebook.svg" alt="">
+                            <a href="<?php echo $facebook_link ?>">
+                                <img src="<?php echo $facebook_icon; ?>" alt="">
                             </a>
-                            <a href="https://www.instagram.com/">
-                                <img src="<?php echo get_template_directory_uri()?>/assets/images/instagram.svg" alt="">
+                            <a href="<?php echo $instagram_link ?>">
+                                <img src="<?php echo $instagram_icon; ?>" alt="">
                             </a>
                         </div>
                         <div class="sumdu-logo">

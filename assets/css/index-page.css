@@ -160,9 +160,10 @@
     margin: 0;
 }
 .join-us__form span.btn-container {
-    display: inline-block;
     text-align: right;
     width: 100%;
+    display: flex;
+    justify-content: flex-end;
 }
 /* about-us */
 .about-us {

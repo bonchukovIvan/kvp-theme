@@ -15,6 +15,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+// numbers
+$f_number = get_theme_mod('basic-header-callout-f-number' );
+$s_number = get_theme_mod( 'basic-header-callout-s-number' );
+
+// links
+$youtube_link = get_theme_mod( 'basic-header-callout-youtube' );
+$facebook_link = get_theme_mod( 'basic-header-callout-facebook' );
+$instagram_link = get_theme_mod( 'basic-header-callout-instagram' );
+
+// icons
+$youtube_icon = get_theme_mod( 'footer-icon-yu-set' );
+$facebook_icon = get_theme_mod( 'footer-icon-face-set' );
+$instagram_icon = get_theme_mod( 'footer-icon-instagram-set' );
+$mail_icon = get_theme_mod( 'footer-icon-mail-set' );
+
+// emails btn
+$btn_title = get_theme_mod( 'footer-btn-title-text' );
+$btn_href = get_theme_mod( 'footer-btn-href-text' );
+
 ?>
             </main>
 		</div>
@@ -61,9 +80,9 @@ if ( ! defined( 'ABSPATH' ) ) {
                         <p class="phone-type">
                             тел./факс:
                         </p>
-                        <a href="tel:+380542628315">
+                        <a href="tel:<?php echo str_replace(' ', '', $f_number) ?>">
                             <h1 class="phone-number">
-                                +38 0542 62 83 15
+                                <?php echo $f_number ?>
                             </h1>
                         </a>
                     </div>
@@ -71,36 +90,45 @@ if ( ! defined( 'ABSPATH' ) ) {
                         <p class="phone-type">
                             консультант приймальної комісії:
                         </p>
-                        <a href="tel:+380685819687">
+                        <a href="tel:<?php echo str_replace(' ', '', $s_number) ?>">
                             <h1 class="phone-number">
-                                +38 068 581 96 87
+                                <?php echo $s_number ?>
                             </h1>
                         </a>
                     </div>
                 </div>
                 <div class="footer-body__contacts">
-                    <a href="mailto:youremail@example.com">
-                        <button class="contact-btn" >
-                            Електронне звернення
-                        </button>
-                    </a>
+                    <?php 
+                        kvp_get_btn( array(
+                                'title'                 => $btn_title,
+                                'on_click_href'            => "mailto:$btn_href",
+                                'container_add_style'      => '',
+                                'btn_add_style'         => 'm-a',
+                                'btn_style' => 'btn-orange',
+                            ) 
+                        );
+                    ?>
                     <div class="email">
-                    <a href="info@kvp.sumdu.edu.ua">
-                        <img src="/images/mail.svg" alt="">
+                    <a href="mailto:<?php echo $btn_href ?>">
+                        <img src="<?php echo $mail_icon?>" alt="">
                         <p>
-                            info@kvp.sumdu.edu.ua
+                            <?php echo $btn_href ?>
                         </p>
                     </div>
                     <div class="icons">
-                        <a href="#">
-                            <img src="images/facebook.svg" alt="" srcset="">
+
+                        <a href="<?php echo $facebook_link ?>">
+                            <img src="<?php echo $facebook_icon; ?>" alt="" srcset="">
                         </a>
-                        <a href="#">
-                            <img src="images/inst.svg" alt="" srcset="">
+
+                        <a href="<?php echo $instagram_link ?>">
+                            <img src="<?php echo $instagram_icon; ?>" alt="" srcset="">
                         </a>
-                        <a href="#">
-                            <img src="images/yt.svg" alt="" srcset="">
+
+                        <a href="<?php echo $youtube_link ?>">
+                            <img src="<?php echo $youtube_icon; ?>" alt="" srcset="">
                         </a> 
+
                     </div>
                 </div>
             </div>

@@ -6,6 +6,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 define( 'SUMDU_THEME_NAME', 'Sumdu' );
 
+function filter_string_polyfill(string $string): string
+{
+    $str = preg_replace('/\x00|<[^>]*>?/', '', $string);
+    return str_replace(["'", '"'], ['&#39;', '&#34;'], $str);
+}
+
+function custom_sanitize_email( $email ) {
+    $sanitized_email = filter_var( $email, FILTER_SANITIZE_EMAIL );
+    if ( ! is_email( $sanitized_email ) ) {
+        return '';
+    }
+    return $sanitized_email;
+}
+
 register_nav_menus(
 	array(
 		'header_menu' => 'header menu', 
@@ -81,14 +95,12 @@ function kvp_get_btn( $args = array() ) {
    echo $output;
 }
 
-function bartag_func( $atts ) {
+function custom_text_func( $atts ) {
 
     $a = shortcode_atts( array(
         'text' => 'Enter text here',
     ), $atts );
 
-    // Decode HTML entities
-    // $decoded_text = esc_html( $a['text'] );
     $bc_path = get_template_directory_uri() . "/assets/images/background-main.png";
 
     $output = '<div class="custom-text preview__back" style="background-image: url(' . $bc_path . ')">';
@@ -103,9 +115,19 @@ function bartag_func( $atts ) {
 
     return $output; 
 }
-add_shortcode( 'bartag', 'bartag_func' );
+add_shortcode( 'custom_text', 'custom_text_func' );
 
+function custom_mail_func( $atts ) {
+    $a = shortcode_atts( array(
+        'text' => 'Enter text here',
+    ), $atts );
 
+    $bc_path = get_template_directory_uri() . "/assets/images/mail.svg";
+    ob_start();
+    get_template_part('template-parts/content/content-mail-section');
+    return ob_get_clean();
+}
+add_shortcode( 'custom_mail', 'custom_mail_func' );
 
 function wporg_custom_post_types() {
 	register_post_type('kvp_specialities',
@@ -173,8 +195,7 @@ function add_additional_class_on_li($classes, $item, $args) {
 function cc_mime_types($mimes) {
     $mimes['svg'] = 'image/svg+xml';
     return $mimes;
-  }
-
+}
 
 function get_breadcrumb() {
     echo '<a href="'.home_url().'" rel="nofollow"><img src="'.get_template_directory_uri().'/assets/images/home.svg"/></a>';
@@ -224,6 +245,10 @@ function kvp_get_search_query( $post_type = array(), $posts_per_page = 6 ) {
     
     return new WP_Query( $args );
 }
+
+require get_stylesheet_directory() . '/inc/class-kvp-customizer.php';
+
+new Kvp_Customizer;
 
 function add_theme_scripts() {
     /* 

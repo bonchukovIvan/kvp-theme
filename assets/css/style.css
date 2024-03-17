@@ -212,6 +212,9 @@ button span{
 .btn-white img {
     margin-left: 5px;
 }
+.btn-orange {
+    background-color: #EF7918;
+}
 /* 
  * news
  */
@@ -634,6 +637,13 @@ article td {
     height: 100%;
     padding: 0 25px;
 }
+.numbers select  {
+    border: none;
+    font-size: 16px;
+}
+.header-top {
+    border: none;
+}
 .header-top__contacts {
     display: flex;
 }
@@ -924,6 +934,9 @@ footer.main-footer a {
     align-items: center;
     padding: 50px 0;
 }
+.footer-body .btn-container button{
+    width: max-content;
+}
 .footer-body__branding {
     font-size: 16px;
     text-align: center;
@@ -960,6 +973,10 @@ footer.main-footer a {
     background-color: #EF7919;
 }
 .footer-body__contacts .email {
+    display: flex;
+    justify-content: center;
+}
+.footer-body__contacts .email a{
     display: flex;
     margin: 15px;
     font-size: 16px;
