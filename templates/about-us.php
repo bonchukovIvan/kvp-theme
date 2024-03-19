@@ -1,6 +1,6 @@
 <?php 
 /**
- * Template Name: Employment Page
+ * Template Name: About-us Page
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-$is_employment = is_page_template( 'templates/employment-page.php' );
+$is_employment = is_page_template( 'templates/about-us.php' );
 
 $title      =  !$is_employment ? get_field( "virtual-ex_title" ) : get_field( "emp-virtual-ex_title") ;
 $desc       =  !$is_employment ? get_field( "virtual-ex_desc" ) : get_field( "emp-virtual-ex_desc" );

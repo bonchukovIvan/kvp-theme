@@ -220,6 +220,12 @@
         border-left: 2px solid #d6e7f44b;
         border-right: 2px solid #d6e7f44b;;
     }
+    .numbers__text {
+        display: flex;
+    }
+    .numbers select {
+        display: none;
+    }
     /* navbar styles */
     .navbar {
         padding: 0;

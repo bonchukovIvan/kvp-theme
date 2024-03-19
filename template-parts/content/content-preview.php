@@ -42,7 +42,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                    
                 </div>
 
-                <?php if ( is_page_template( 'templates/employment-page.php' ) ) :?>
+                <?php if ( is_page_template( 'templates/about-us.php' ) ) :?>
                     <div class="preview__logo">
                         <img src="<?php echo get_field( "page-img" ); ?>" alt="" class="">
                     <div class="kvp-logo">

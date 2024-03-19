@@ -86,6 +86,19 @@ $s_number = get_theme_mod( 'basic-header-callout-s-number' );
                             <option value="<?php echo str_replace(' ', '', $s_number); ?>"><?php echo $s_number; ?></option>
                         </select>
 
+                        <div class="numbers__text">
+                            <a href="tel:<?php echo str_replace(' ', '', $f_number); ?>">
+                                <div>
+                                    <?php echo $f_number; ?>
+                                </div>
+                            </a>
+                            <a href="tel:<?php echo str_replace(' ', '', $s_number); ?>">
+                                <div>
+                                    <?php echo $s_number; ?>
+                                </div>
+                            </a>
+                        </div>
+
                         </div>
                     </div>
 

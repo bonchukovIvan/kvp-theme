@@ -179,11 +179,14 @@ function wporg_custom_post_types() {
     );
     register_post_type('kvp_gallery', array(
         'public' => true,
-        'label'  => 'Галереї',
+        'labels'  => array(
+            'name'          => __('Галереї', 'textdomain'),
+            'singular_name' => __('Галерея', 'textdomain'),
+        ),
         'supports' => array('title', 'editor', 'thumbnail', 'custom-fields', 'page-attributes'),
     ));
-    
 }
+
 
 function add_additional_class_on_li($classes, $item, $args) {
     if(isset($args->add_li_class)) {

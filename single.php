@@ -9,10 +9,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php get_header(); ?>
 
 <?php
+
 $post = $wp_query->post;
 $tmp = get_the_category($post->ID);
 $category = reset($tmp);
 $category_id = $category->cat_ID;
+
 ?>
 <article class="single-post p5-25">
 	<div class="container">

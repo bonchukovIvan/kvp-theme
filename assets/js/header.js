@@ -24,4 +24,10 @@ $(document).ready(function() {
     $('.navbar__arrow').click(function() {
         
     });
+    $('#numbers_select_id').change(function() {
+        var selectedNumber = $(this).val();
+
+        $('#phone-action').attr('href', 'tel:' + selectedNumber);
+    });
+    $('#numbers_select_id').trigger('change');
 })  
