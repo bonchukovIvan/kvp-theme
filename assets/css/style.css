@@ -44,6 +44,12 @@ a {
     padding: 15px;
     font-size: 48px;
     font-weight: 700;
+    word-break: break-all;
+    white-space: normal;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
 }
 /* 
  * border-headers 
@@ -509,9 +515,12 @@ nav.kvp-pagination ul a {
     display: flex;
     gap: 50px;
 }
+.preview-numbers-mobile,
 .preview-numbers a {
     color: #fff;
+    font-size: 24px;
 }
+
 /* 
  * search-page 
  */
@@ -621,6 +630,7 @@ article p.has-medium-font-size {
 article .entry-content  {
     display: grid;
     gap: 20px;
+    grid-template-columns: 100%;
 }
 article ol {
     list-style-type: decimal;
@@ -905,9 +915,16 @@ body.desktop .navbar__nav > li:hover .navbar__arrow {
     flex-direction: column;
     justify-content: space-between;
     color: #fff;
-    font-size: 22px;
+    font-size: 24px;
     letter-spacing: 0.4px;
     text-align: justify;
+}
+.preview-numbers-mobile {
+    display: none;
+}
+.preview__phone-icon {
+    width: 40%;
+    text-align: end;
 }
 .preview__img {
     height: 100%;

@@ -69,6 +69,12 @@
     .p5-25 {
         padding: 50px 25px;
     }
+    .article-p {
+        padding: 50px 25px;
+    }
+    .article-p-def {
+        padding: 50px 0px;
+    }
 }
 @media (max-width: 979px) {
     .full-wdth--mobile {

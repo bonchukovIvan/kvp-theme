@@ -132,7 +132,9 @@ $btn_href = get_theme_mod( 'footer-btn-href-text' );
                     </div>
                 </div>
             </div>
+            
         </div>
+       
     </footer>
     <script>
         let navbar_arrows = document.querySelectorAll('#navbar__li-arrow');

@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php get_header(); ?>
 
 <?php kvp_get_preview(array('add_class' => 'back-grey')); ?> 
-<div class="page-content">
+<div class="page-content p5-25--nm">
 	<div class="container">
 		<?php get_template_part('template-parts/content/content-article'); ?>
 	</div>
@@ -28,12 +28,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<div class="preview-numbers">
 					<a href="tel:<?php echo get_field( 'number_1' ); ?>"><div class="preview-number"><?php echo get_field( 'number_1' ); ?> </div></a>
 					<a href="tel:<?php echo get_field( 'number_2' ); ?>"><div class="preview-number"><?php echo get_field( 'number_2' ); ?> </div></a>
-					
 				</div>
 
 			</div>
 			<div class="preview__phone-icon">
 					<img src="<?php echo get_field( 'preview__phone-icon' ); ?> " alt="">
+
+				<div class="preview-numbers-mobile">
+					<a href="tel:<?php echo get_field( 'number_1' ); ?>"><div class="preview-number"><?php echo get_field( 'number_1' ); ?> </div></a>
+					<a href="tel:<?php echo get_field( 'number_2' ); ?>"><div class="preview-number"><?php echo get_field( 'number_2' ); ?> </div></a>
+
 				</div>
 
             </div>

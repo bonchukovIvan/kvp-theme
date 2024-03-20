@@ -111,7 +111,7 @@
     .about-us__img--mobile {
         position: relative;
         bottom: 0;
-        right: -5%;
+        right: -25px;
         display: flex;
         justify-content: flex-end;
         padding: 20px 0px 0px 0px;
@@ -158,7 +158,7 @@
         padding: 0px 0px 0px 5px;
     }
     .last-news__content .btn-container {
-        margin: 50px 150px 50px 150px;
+        margin: 50px 25px 50px 25px;
     }
     /* special */
     .special__content {
