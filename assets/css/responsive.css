@@ -226,6 +226,9 @@
     .numbers select {
         display: none;
     }
+    .header-top__icons {
+        margin-top: 10px;
+    }
     /* navbar styles */
     .navbar {
         padding: 0;
@@ -380,11 +383,15 @@
     .preview__text .btn-container button  {
         width: inherit;
     }
-
+    .article-with-nav__grid {
+        grid-template-columns: 1fr;
+    }
     .references__grid {
         grid-template-columns: 1fr;
     }
-
+    .kvp-gallery__body {
+        grid-template-columns: repeat(2, 1fr);
+    }
     .single-post__footer {
         flex-direction: column;
         gap: 30px;
@@ -454,6 +461,9 @@
     }
     .page-404__img img {
         width: 330px;
+    }
+    .kvp-gallery__body {
+        grid-template-columns: repeat(1, 1fr);
     }
     .callback-body__form {
         padding: 25px 25px;

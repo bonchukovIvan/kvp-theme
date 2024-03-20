@@ -109,13 +109,13 @@ $s_number = get_theme_mod( 'basic-header-callout-s-number' );
                             </a>
                         </div>
                         <div class="social">
-                            <a href="<?php echo $youtube_link; ?>">
+                            <a href="<?php echo $youtube_link; ?>" target=”_blank” >
                                 <img src="<?php echo $youtube_icon; ?>" alt="">
                             </a>
-                            <a href="<?php echo $facebook_link ?>">
+                            <a href="<?php echo $facebook_link ?>" target=”_blank” >
                                 <img src="<?php echo $facebook_icon; ?>" alt="">
                             </a>
-                            <a href="<?php echo $instagram_link ?>">
+                            <a href="<?php echo $instagram_link ?>" target=”_blank” >
                                 <img src="<?php echo $instagram_icon; ?>" alt="">
                             </a>
                         </div>

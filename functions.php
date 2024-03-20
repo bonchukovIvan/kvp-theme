@@ -4,6 +4,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+use Carbon_Fields\Container;
+use Carbon_Fields\Field;
+
 define( 'SUMDU_THEME_NAME', 'Sumdu' );
 
 function filter_string_polyfill(string $string): string
@@ -129,6 +132,19 @@ function custom_mail_func( $atts ) {
 }
 add_shortcode( 'custom_mail', 'custom_mail_func' );
 
+function custom_nav_func( $atts ) {
+
+    $a = shortcode_atts( array(
+        'id' => 'Enter text here',
+        'title' => 'Enter text here',
+    ), $atts );
+    $id = 'kvp_nav-mark--'.$a['id'];
+    $output = '<div id='.$id.' title="'.$a['title'].'"></div>';
+
+    return $output; 
+}
+add_shortcode( 'nav', 'custom_nav_func' );
+
 function wporg_custom_post_types() {
 	register_post_type('kvp_specialities',
 		array(
@@ -143,8 +159,7 @@ function wporg_custom_post_types() {
                     'thumbnail',
                     'excerpt',
                     'custom-fields'
-                )
-                
+                )    
 		)
 	);
     register_post_type('kvp_collab',
@@ -183,10 +198,9 @@ function wporg_custom_post_types() {
             'name'          => __('Галереї', 'textdomain'),
             'singular_name' => __('Галерея', 'textdomain'),
         ),
-        'supports' => array('title', 'editor', 'thumbnail', 'custom-fields', 'page-attributes'),
+        'supports' => array('title', 'custom-fields',),
     ));
 }
-
 
 function add_additional_class_on_li($classes, $item, $args) {
     if(isset($args->add_li_class)) {
@@ -198,6 +212,30 @@ function add_additional_class_on_li($classes, $item, $args) {
 function cc_mime_types($mimes) {
     $mimes['svg'] = 'image/svg+xml';
     return $mimes;
+}
+
+function crb_load() {
+    require_once( 'vendor/autoload.php' );
+    \Carbon_Fields\Carbon_Fields::boot();
+}
+
+function crb_define_gallery_custom_fields() {
+    Container::make( 'post_meta', __( 'Gallery Details' ) )
+    ->where( 'post_type', '=', 'kvp_gallery' )
+    ->add_fields( array(
+        Field::make( 'complex', 'gallery_images', 'Gallery Images' )
+            ->add_fields( array(
+                Field::make( 'image', 'image', 'Image' )->set_value_type( 'url' ),
+                Field::make( 'text', 'caption', 'Caption' ),
+            )),
+    ));
+}
+
+function crb_attach_theme_options() {
+    Container::make( 'theme_options', __( 'Theme Options' ) )
+        ->add_fields( array(
+            Field::make( 'text', 'crb_text', 'Text Field' ),
+        ) );
 }
 
 function get_breadcrumb() {
@@ -230,6 +268,7 @@ function theme_slug_filter_wp_title( $title ) {
     }
     return $title;
 }
+
 function kvp_get_search_query( $post_type = array(), $posts_per_page = 6 ) {
     $paged = get_query_var( 'paged' )  ? get_query_var( 'paged' ) : 1;
     
@@ -265,6 +304,7 @@ function add_theme_scripts() {
 	wp_enqueue_style( 'index-page-responsive', get_template_directory_uri() . '/assets/css/index-page-responsive.css' );
 	wp_enqueue_style( 'font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' );
 	wp_enqueue_style( 'add-style', get_template_directory_uri() . '/assets/css/add.css'  );
+	wp_enqueue_style( 'magnific-css', get_template_directory_uri() . '/assets/css/magnific.css'  );
     /* 
      * reregister jquery
      */
@@ -278,15 +318,19 @@ function add_theme_scripts() {
     wp_enqueue_script( 'main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), '', '', true );
     wp_enqueue_script( 'header', get_template_directory_uri() . '/assets/js/header.js', array('jquery'),'', '', true );
     wp_enqueue_script( 'slider', get_template_directory_uri() . '/assets/js/slider.js', array('jquery'),'', '', true );
+    wp_enqueue_script( 'magnific', get_template_directory_uri() . '/assets/js/magnific.min.js', array('jquery'),'', '', true );
 }
 
-/**
+/*
  * Add HTML5 theme support.
  */
 function wpdocs_after_setup_theme() {
 	add_theme_support( 'html5', array( 'search-form' ) );
 }
 
+add_action( 'after_setup_theme', 'crb_load' );
+add_action( 'carbon_fields_register_fields', 'crb_define_gallery_custom_fields' );
+add_action( 'carbon_fields_register_fields', 'crb_attach_theme_options' );
 add_action( 'after_setup_theme', 'wpdocs_after_setup_theme' );
 add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
 add_action('init', 'wporg_custom_post_types');

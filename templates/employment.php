@@ -12,31 +12,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php get_header(); ?>
 
 <?php kvp_get_preview(array('add_class' => 'back-grey')); ?> 
-<article class="employment p5-25">
+<div class="page-content">
 	<div class="container">
-		<div class="employment__body">
-			<?php the_content(); ?>
-		</div>
+		<?php get_template_part('template-parts/content/content-article'); ?>
 	</div>
-</article>
-
-
-<?php
-/**
- * Template part for displaying page content in page.php
- *
- *
- * @package WordPress
- * @subpackage Sumdu_theme
- * @since Sumdu theme 1.0
- */
-
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
-
-?>
-
+</div>
 <section class="preview-section p5-25--nm back-grey <?php echo $args['add_class'] ?>">
     <div class="container">
         <div class="preview__back" style="background-image: url(<?php echo get_template_directory_uri()."/assets/images/background-main.png" ?>)">

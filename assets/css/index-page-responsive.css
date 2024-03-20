@@ -157,6 +157,9 @@
         border-left: 4px solid #EF7918;
         padding: 0px 0px 0px 5px;
     }
+    .last-news__content .btn-container {
+        margin: 50px 150px 50px 150px;
+    }
     /* special */
     .special__content {
         grid-template-columns: 1fr;

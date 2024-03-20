@@ -29,7 +29,7 @@
                 ?>
                 <div class="navbar__additional">
                     <div class="schedule">
-                        <a href="https://shedule.sumdu.edu.ua">
+                        <a href="http://schedule.sumdu.edu.ua/" target=”_blank”>
                             <img src="<?php echo get_template_directory_uri() ?>/assets/images/schedule.svg" alt="" srcset="">
                             <div>
                                 Розклад занять

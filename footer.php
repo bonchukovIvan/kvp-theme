@@ -117,15 +117,15 @@ $btn_href = get_theme_mod( 'footer-btn-href-text' );
                     </div>
                     <div class="icons">
 
-                        <a href="<?php echo $facebook_link ?>">
+                        <a href="<?php echo $facebook_link ?>" target=”_blank”>
                             <img src="<?php echo $facebook_icon; ?>" alt="" srcset="">
                         </a>
 
-                        <a href="<?php echo $instagram_link ?>">
+                        <a href="<?php echo $instagram_link ?>" target=”_blank”>
                             <img src="<?php echo $instagram_icon; ?>" alt="" srcset="">
                         </a>
 
-                        <a href="<?php echo $youtube_link ?>">
+                        <a href="<?php echo $youtube_link ?>" target=”_blank”>
                             <img src="<?php echo $youtube_icon; ?>" alt="" srcset="">
                         </a> 
 
@@ -142,7 +142,6 @@ $btn_href = get_theme_mod( 'footer-btn-href-text' );
                 arrow.classList.toggle('active');
             });
         });
-
     </script>
 </body>
 </html>

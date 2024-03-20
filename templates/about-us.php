@@ -14,9 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php kvp_get_preview(array('add_class' => 'back-grey')); ?> 
 <article class="employment p5-25">
 	<div class="container">
-		<div class="employment__body">
-			<?php the_content(); ?>
-		</div>
+		<?php get_template_part('template-parts/content/content-article'); ?>
 	</div>
 </article>
 

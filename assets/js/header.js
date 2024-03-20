@@ -13,7 +13,6 @@ $(window).resize(function() {
 });
 $(document).ready(function() {
     $('.burger').on('click', () => {
-        console.log(1)
         $('.burger').toggleClass("open");
         $('.header-top__mobile-bottom').toggleClass("show");
     });
@@ -30,4 +29,4 @@ $(document).ready(function() {
         $('#phone-action').attr('href', 'tel:' + selectedNumber);
     });
     $('#numbers_select_id').trigger('change');
-})  
+});
