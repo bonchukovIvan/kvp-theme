@@ -41,6 +41,19 @@ class Kvp_Customizer {
 			'type' => 'url',
 		)));
 		/*
+		 * instagram link setting
+		 */ 
+		$wp_customize->add_setting('basic-header-callout-mail', array(
+			'default' => 'test@mail.com',
+			'sanitize_callback' => array($this, 'sanitize_custom_url'),
+		));
+		$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'basic-header-callout-section', array(
+			'label' => 'Адреса пошти',
+			'section' => 'basic-header-callout-section',
+			'settings' => 'basic-header-callout-mail',
+			'type' => 'url',
+		)));
+		/*
 		 * facebook link setting
 		 */ 
 		$wp_customize->add_setting('basic-header-callout-facebook', array(
@@ -240,6 +253,18 @@ class Kvp_Customizer {
             'label' => 'Іконка Youtube',
             'section' => 'footer-callout-section',
             'settings' => 'footer-icon-mail-set',
+        )));
+		/*
+		 * mail icon
+		 */ 
+        $wp_customize->add_setting('footer-callback-img-set', array(
+            'default' => '',
+            'sanitize_callback' => 'esc_url_raw', 
+        ));
+        $wp_customize->add_control(new WP_Customize_Upload_Control($wp_customize, 'footer-callback-img-set-control', array(
+            'label' => 'Зображення до секції "Залишилися питання"',
+            'section' => 'footer-callout-section',
+            'settings' => 'footer-callback-img-set',
         )));
 
     }

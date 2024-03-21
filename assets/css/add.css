@@ -85,4 +85,16 @@
         grid-row: inherit;
     }
 }
+@media (max-width: 400px) {
+    .full-wdth--mobile {
+        width: 100%;
+    }
+    .grd__full-column {
+        grid-column: inherit;
+        grid-row: inherit;
+    }
+    .preview__body {
+        padding: 50px 10px;
+    }
+}
 

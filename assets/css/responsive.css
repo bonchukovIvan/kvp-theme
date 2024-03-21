@@ -478,11 +478,13 @@
     .footer-body .email {
         justify-content: center;
     }
+    .footer-body__menu ul li {
+        margin-bottom: 15px;
+    }
 }
 /* 
  * 600px
  */
-/* page content */
 @media (max-width: 600px) {
     .single-post__top-img {
         height: 250px;
@@ -504,7 +506,9 @@
     .page-404__img img {
         width: 330px;
     }
-
+    .border-header h1 {
+        font-size: 32px;
+    }
     .kvp-gallery__body {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -515,12 +519,21 @@
     .callback-body {
         display: block;
     }
+    .kvp-search__search-form .kvp-search__search-field {
+        width: 50%;
+    }
+}
+/* 
+ * 420px
+ */
+@media (max-width: 420px) {
+    .page-title {
+        font-size: 24px;
+    }
 }
 /* 
  * 400px
  */
-/* page content */
-
 @media (max-width: 400px) {
     .header-top__contacts .numbers {
         font-size: 15px;
@@ -540,5 +553,55 @@
 
     .sumdu-logo img {
         height: 20px;
+    }
+}
+/* 
+ * 360px
+ */
+/* page content */
+@media (max-width: 360px) {
+    .header-top__text h2 {
+        font-size: 17px;
+    }
+    .header-top__logo {
+        display: flex;
+        align-items: center;
+    }
+    .social {
+        padding: 0 10px;
+    }
+    .main-slider__logo--mobile {
+        display: block;
+    }
+    .border-header h1 {
+        font-size: 28px;
+    }
+    .phone-icon {
+        display: none;
+    }
+    .numbers__text {
+        margin: 0;
+    }
+    article {
+        padding: 0 25px;
+    }
+    .news__img {
+        height: 200px;
+        width: 200px;
+    }
+    .news__content {
+        width: 200px;
+    }
+    .news__content-top {
+        display: block;
+    }
+    .news__content .btn-container {
+        margin: 0;
+    }
+    .news__content button span {
+        display: none;
+    }
+    .news__content-main {
+        margin-bottom: 50px;
     }
 }

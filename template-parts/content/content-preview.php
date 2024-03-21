@@ -44,7 +44,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
                 <?php if ( is_page_template( 'templates/about-us.php' ) ) :?>
                     <div class="preview__logo">
-                        <img src="<?php echo get_field( "page-img" ); ?>" alt="" class="">
+                        <img src="<?php echo esc_url( get_field( "page-img" ) ); ?>" alt="" class="">
                     <div class="kvp-logo">
                         <a href="/" >
                             <?php 
@@ -72,7 +72,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                     <div class="preview__img">
 
                         <?php if ( get_field( "page-img" ) != '') : ?>
-                            <img src="<?php echo get_field( "page-img" ); ?>" alt="" class="">
+                            <img src="<?php echo esc_url( get_field( "page-img" ) ); ?>" alt="" class="">
                         <?php endif; ?>
 
                     </div>

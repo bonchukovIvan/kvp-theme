@@ -196,10 +196,42 @@
         height: 100%;
         width: 100px;
     }
-    .border-header h1 {
-        font-size: 32px;
-    }
     .about-us__img--mobile img {
         height: 300px;
+    }
+    .virtual-ex__content {
+        display: block;
+    }
+    .virtual-ex__body {
+        padding: 0;
+    }
+    .virtual-ex__app-text {
+        margin: 25px 0;
+    }
+    .last-news__img {
+        height: 200px;
+    }
+    .last-news__content-top {
+        display: block;
+    }
+}
+/* 
+ * 360px
+ */
+/* page content */
+@media (max-width: 360px) {
+    .main-slider__logo--mobile {
+        display: block;
+    }
+    .main-slider__logo-img {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .main-slider__title-text {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .special__icon img {
+        width: 50px;
     }
 }

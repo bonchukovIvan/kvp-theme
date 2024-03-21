@@ -26,7 +26,7 @@ $category_id = $category->cat_ID;
 						<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
 						<div class="single-post__top-img">
 							<div class="single-post__gradient"></div>
-							<img src="<?php echo $image[0]; ?>" alt="">
+							<img src="<?php echo esc_url($image[0]); ?>" alt="">
 						</div>
 					<?php else : ?>
 						<div class="single-post__top-img">

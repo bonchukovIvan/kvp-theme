@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 $form_shortcode = get_theme_mod( 'footer-shortcode-text' );
-
+$callback_img = get_theme_mod( 'footer-callback-img-set' );
 ?>
 
 <section class="callback" style="background-image: url('<?php echo get_template_directory_uri()?>/assets/images/callback.png')">
@@ -31,7 +31,7 @@ $form_shortcode = get_theme_mod( 'footer-shortcode-text' );
                     <?php echo do_shortcode($form_shortcode) ?>
                 </form>
             </div>
-            <img class="callback-body__image" src="<?php echo get_template_directory_uri()?>/assets/images/girl.png" alt="" srcset="">
+            <img class="callback-body__image" src="<?php echo esc_url( $callback_img ); ?>" alt="" >
         </div>
     </div>
 </section>

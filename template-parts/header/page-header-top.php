@@ -16,6 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 $youtube_link = get_theme_mod('basic-header-callout-youtube' );
 $facebook_link = get_theme_mod('basic-header-callout-facebook' );
 $instagram_link = get_theme_mod('basic-header-callout-instagram' );
+$mail_link = get_theme_mod('basic-header-callout-mail' );
 
 // icons
 $youtube_icon = get_theme_mod( 'header-icon-yu-set' );
@@ -104,19 +105,19 @@ $s_number = get_theme_mod( 'basic-header-callout-s-number' );
 
                     <div class="header-top__icons">
                         <div class="mail">
-                            <a href="mailto:example@mail.com">
-                                <img src="<?php echo $mail_icon; ?>" alt="">
+                            <a href="mailto:<?php echo $mail_link; ?>">
+                                <img src="<?php echo esc_url( $mail_icon ); ?>" alt="">
                             </a>
                         </div>
                         <div class="social">
-                            <a href="<?php echo $youtube_link; ?>" target=”_blank” >
-                                <img src="<?php echo $youtube_icon; ?>" alt="">
+                            <a href="<?php echo esc_url( $youtube_link ); ?>" target=”_blank” >
+                                <img src="<?php echo esc_url( $youtube_icon ); ?>" alt="">
                             </a>
-                            <a href="<?php echo $facebook_link ?>" target=”_blank” >
-                                <img src="<?php echo $facebook_icon; ?>" alt="">
+                            <a href="<?php echo esc_url( $facebook_link ); ?>" target=”_blank” >
+                                <img src="<?php echo esc_url( $facebook_icon ); ?>" alt="">
                             </a>
-                            <a href="<?php echo $instagram_link ?>" target=”_blank” >
-                                <img src="<?php echo $instagram_icon; ?>" alt="">
+                            <a href="<?php echo esc_url( $instagram_link ); ?>" target=”_blank” >
+                                <img src="<?php echo esc_url( $instagram_icon ); ?>" alt="">
                             </a>
                         </div>
                         <div class="sumdu-logo">

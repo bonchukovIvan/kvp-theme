@@ -109,24 +109,24 @@ $btn_href = get_theme_mod( 'footer-btn-href-text' );
                         );
                     ?>
                     <div class="email">
-                    <a href="mailto:<?php echo $btn_href ?>">
-                        <img src="<?php echo $mail_icon?>" alt="">
+                    <a href="mailto:<?php echo esc_url( $btn_href ); ?>">
+                        <img src="<?php echo esc_url( $mail_icon ); ?>" alt="">
                         <p>
                             <?php echo $btn_href ?>
                         </p>
                     </div>
                     <div class="icons">
 
-                        <a href="<?php echo $facebook_link ?>" target=”_blank”>
-                            <img src="<?php echo $facebook_icon; ?>" alt="" srcset="">
+                        <a href="<?php echo esc_url( $facebook_link ) ?>" target=”_blank”>
+                            <img src="<?php echo esc_url( $facebook_icon ); ?>" alt="" srcset="">
                         </a>
 
-                        <a href="<?php echo $instagram_link ?>" target=”_blank”>
-                            <img src="<?php echo $instagram_icon; ?>" alt="" srcset="">
+                        <a href="<?php echo esc_url( $instagram_link ); ?>" target=”_blank”>
+                            <img src="<?php echo esc_url( $instagram_icon ); ?>" alt="" srcset="">
                         </a>
 
-                        <a href="<?php echo $youtube_link ?>" target=”_blank”>
-                            <img src="<?php echo $youtube_icon; ?>" alt="" srcset="">
+                        <a href="<?php echo esc_url( $youtube_link );  ?>" target=”_blank”>
+                            <img src="<?php echo esc_url( $youtube_icon ); ?>" alt="" srcset="">
                         </a> 
 
                     </div>

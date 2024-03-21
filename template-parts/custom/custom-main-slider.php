@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                     </div>
 
                     <div class="main-slider__icon">
-                        <img src="<?php echo get_field('main-slider-icon'); ?>" alt="" srcset="">
+                        <img src="<?php echo esc_url( get_field('main-slider-icon') ); ?>" alt="" srcset="">
                         <div class="main-slider__icon-text"><?php echo get_field('main-slider-text-icon'); ?></div>
                     </div>
 
@@ -46,7 +46,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
                 </div>
                 <div class="main-slider__img">
-                    <img src="<?php echo get_field('main-slider-img')?>" alt="">
+                    <img src="<?php echo esc_url( get_field('main-slider-img') ); ?>" alt="">
                 </div>
                 <div class="main-slider__logo--mobile">
 

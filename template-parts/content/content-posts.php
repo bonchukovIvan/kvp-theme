@@ -19,7 +19,8 @@ if ( ! defined( 'ABSPATH' ) ) {
         <?php if(get_the_post_thumbnail_url()) : ?>
             <img src="<?php  echo get_the_post_thumbnail_url(); ?>" alt="" srcset="">
         <?php else : ?>
-            <img src="<?php  echo get_template_directory_uri()?>/assets/images/not-found-news.jpg" alt="" srcset="">
+            <img 
+            src="<?php  echo get_template_directory_uri()?>/assets/images/not-found-news.jpg" alt="" srcset="">
         <?php endif; ?>
     </div>
     <div class="news__content">

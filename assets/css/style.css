@@ -13,16 +13,22 @@ body {
 /* 
  * typo
  */
+input {
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
-  -webkit-appearance:none;
+    -webkit-appearance:none;
 }
 input[type=checkbox] {
     transform: scale(1.5);
 }
-input[type="text"] {
+input[type] {
     font-family: inherit; /* 1 */
     font-size: inherit; /* 1 */
     line-height: inherit; /* 1 */
@@ -44,7 +50,7 @@ a {
     padding: 15px;
     font-size: 48px;
     font-weight: 700;
-    word-break: break-all;
+    /* word-break: break-all; */
     white-space: normal;
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
@@ -766,6 +772,7 @@ article td {
 .numbers select  {
     border: none;
     font-size: 16px;
+    background-color: #fff;
 }
 .numbers__text {
     display: none;
@@ -1125,10 +1132,12 @@ footer.main-footer a {
 .footer-body__contacts .icons {
     text-align: center;
 }
-.footer-body__contacts .icons img{
+.footer-body__contacts .icons img {
     margin: 0 10px;
 }
-
+.footer-body__contacts button span {
+    display: none;
+}
 .edit-footer {
     font-size: 24px;
     margin: 25px 0;
