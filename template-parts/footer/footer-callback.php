@@ -31,7 +31,10 @@ $callback_img = get_theme_mod( 'footer-callback-img-set' );
                     <?php echo do_shortcode($form_shortcode) ?>
                 </form>
             </div>
-            <img class="callback-body__image" src="<?php echo esc_url( $callback_img ); ?>" alt="" >
+            <div class="callback-body__image">
+                <img class="" src="<?php echo esc_url( $callback_img ); ?>" alt="" >
+            </div>
+
         </div>
     </div>
 </section>

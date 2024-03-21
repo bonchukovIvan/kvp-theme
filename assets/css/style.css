@@ -38,6 +38,7 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
 /* 
  * page header
  */
@@ -227,6 +228,51 @@ button span{
 }
 .btn-orange {
     background-color: #EF7918;
+}
+/* 
+ * custom-mail
+ */
+.custom-mail {
+    position: relative;
+    color: #fff;
+    border-radius: 10px;
+}
+.custom-mail .btn-container {
+    position: relative;
+    z-index: 3;
+}
+.custom-mail__body {
+    padding: 50px;
+}
+.custom-mail__top {
+    position: relative;
+    z-index: 3;
+    width: 70%;
+}
+.custom-mail__text {
+    margin-bottom: 30px;
+}
+.custom-mail__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.custom-mail__icon {
+    position: relative;
+    z-index: 3;
+    height: 100px;
+}
+.custom-mail__icon img {
+    height: 100%;
+}
+.custom-mail__gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, #00386B 0%, #3D4037 100%);
+    border-radius: 10px;
 }
 /* 
  * news
@@ -526,7 +572,9 @@ nav.kvp-pagination ul a {
     color: #fff;
     font-size: 24px;
 }
-
+.employment-section {
+    padding: 50px 0px;
+}
 /* 
  * search-page 
  */
@@ -613,6 +661,9 @@ nav.kvp-pagination ul a {
 article .single-post {
     padding: 50px 0;
 }
+article a {
+    color: #0085FF;
+}
 article p,
 article ol {
     line-height: 1.2;
@@ -630,9 +681,6 @@ article p.has-medium-font-size {
     font-size: 18px;
     color: #49545A;
 }
-/* article .entry-content p {
-    margin: 25px 0;
-} */
 article .entry-content  {
     display: grid;
     gap: 20px;
@@ -951,9 +999,6 @@ body.desktop .navbar__nav > li:hover .navbar__arrow {
     font-size: 32px;
     font-weight: 900;
 }
-.custom-text{
-    margin: 30px 0;
-}
 .custom-text .border-header{
     text-transform: none;
 }
@@ -1052,6 +1097,17 @@ body.desktop .navbar__nav > li:hover .navbar__arrow {
 }
 .callback__form {
     margin: 15px 0;
+}
+.callback-body__image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.callback .form-group.horizontal {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    align-items: baseline;
 }
 /* 
  * footer

@@ -7,6 +7,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+$add_class = isset($args['add_class']) ? $args['add_class'] : "";
+
 ?> 
 
 <?php get_header(); ?>
@@ -17,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php get_template_part('template-parts/content/content-article'); ?>
 	</div>
 </div>
-<section class="preview-section p5-25--nm back-grey <?php echo $args['add_class'] ?>">
+<section class="preview-section employment-section back-grey <?php echo  $add_class;  ?>">
     <div class="container">
         <div class="preview__back" style="background-image: url(<?php echo get_template_directory_uri()."/assets/images/background-main.png" ?>)">
             
@@ -32,9 +34,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			</div>
 			<div class="preview__phone-icon">
+				
 					<img src="<?php echo get_field( 'preview__phone-icon' ); ?> " alt="">
 
 				<div class="preview-numbers-mobile">
+
 					<a href="tel:<?php echo get_field( 'number_1' ); ?>"><div class="preview-number"><?php echo get_field( 'number_1' ); ?> </div></a>
 					<a href="tel:<?php echo get_field( 'number_2' ); ?>"><div class="preview-number"><?php echo get_field( 'number_2' ); ?> </div></a>
 

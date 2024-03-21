@@ -443,8 +443,18 @@
     .page-404__img {
         margin: 0;
     } 
-
+    .custom-mail__body {
+        padding: 25px;
+    }
+    .custom-mail__body {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .custom-mail__top {
+        width: inherit;
+    }
     .callback-body__form .form-group.horizontal {
+        display: flex;
         flex-direction: column;
         margin: 0;
     } 
@@ -553,6 +563,13 @@
 
     .sumdu-logo img {
         height: 20px;
+    }
+    .preview__img img {
+        width: 100%;
+    }
+    .references__grid {
+        display: flex;
+        flex-direction: column;
     }
 }
 /* 

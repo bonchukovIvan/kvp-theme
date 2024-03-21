@@ -24,14 +24,19 @@ $the_query = new WP_Query( $args );
             <?php if ( $the_query->have_posts() ): the_post()?>
                 <?php while ( $the_query->have_posts() ) : ?>
                 <?php $the_query->the_post(); ?>
-                    <div class="references__item back-grey">
+                    <!-- <div class="references__item back-grey">
                         <div class="references__icon">
                             <img src="<?php echo get_template_directory_uri()?>/assets/images/ref.svg" alt="">
                         </div>
                         <a class="references__link" href="<?php echo get_field("kvp-reference")?>">
                             <div class="references__text"><?php echo the_title(); ?></div>
                         </a>
-                    </div>
+                    </div> -->
+                    <?php get_template_part('template-parts/content/content-reference', null, array(
+                        'link' => get_field("kvp-reference"),
+                        'title' => the_title('', '', false),
+                        'add_class' => 'back-grey'
+                    ))?>
                 <?php endwhile; ?>
             <?php endif; ?>
 

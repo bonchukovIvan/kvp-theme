@@ -114,28 +114,42 @@ function custom_text_func( $atts ) {
         $output .= '</div>';
     $output .= '</div>';
 
-    return $output; 
+    return $output;
 }
 function custom_mail_func( $atts ) {
     $a = shortcode_atts( array(
         'text' => 'Enter text here',
+        'btn-title' => 'Enter title here',
+        'btn-href' => '#',
     ), $atts );
-
-    $bc_path = get_template_directory_uri() . "/assets/images/mail.svg";
+   
     ob_start();
-    get_template_part('template-parts/content/content-mail-section');
+    get_template_part('template-parts/content/content-mail-section', null, array(
+        'text' => $a['text'],
+        'btn-title' => $a['btn-title'],
+        'btn-href' => $a['btn-href'],
+    ));
     return ob_get_clean();
 }
 function custom_nav_func( $atts ) {
-
     $a = shortcode_atts( array(
         'id' => 'Enter text here',
         'title' => 'Enter text here',
     ), $atts );
+    
     $id = 'kvp_nav-mark--'.$a['id'];
     $output = '<div id='.$id.' title="'.$a['title'].'"></div>';
 
-    return $output; 
+    return $output;
+}
+function custom_ref_func( $atts ) {
+    $a = shortcode_atts( array(
+        'link' => '#',
+        'title' => 'Enter title',
+    ), $atts );
+    ob_start();
+    get_template_part('template-parts/content/content-reference', null, array('title' => $a['title'], 'link' => $a['link'], 'add_class' => ''));
+    return ob_get_clean();
 }
 
 
@@ -339,4 +353,5 @@ add_theme_support( 'post-thumbnails' );
 
 add_shortcode( 'custom_mail', 'custom_mail_func' );
 add_shortcode( 'custom_text', 'custom_text_func' );
+add_shortcode( 'custom_ref', 'custom_ref_func' );
 add_shortcode( 'nav', 'custom_nav_func' );
