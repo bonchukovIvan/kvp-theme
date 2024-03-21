@@ -1,0 +1,853 @@
+[
+    {
+        "key": "group_65d48572c9c0d",
+        "title": "Pages",
+        "fields": [
+            {
+                "key": "field_65d48573f86e7",
+                "label": "Опис сторінки",
+                "name": "page-desc",
+                "aria-label": "",
+                "type": "wysiwyg",
+                "instructions": "Додайте опис сторінки",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
+            },
+            {
+                "key": "field_65d485b3f86e8",
+                "label": "Зображення",
+                "name": "page-img",
+                "aria-label": "",
+                "type": "image",
+                "instructions": "Додайте зображення до превью",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "preview_size": "medium"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "default"
+                }
+            ],
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "default"
+                }
+            ],
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "templates\/references-page.php"
+                }
+            ],
+            [
+                {
+                    "param": "page_type",
+                    "operator": "!=",
+                    "value": "front_page"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    },
+    {
+        "key": "group_65e02434c1c21",
+        "title": "Головна сторінка",
+        "fields": [
+            {
+                "key": "field_65f2fc4732ca1",
+                "label": "Слайдер",
+                "name": "",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            },
+            {
+                "key": "field_65f2fcd732ca5",
+                "label": "Зображення слайдеру",
+                "name": "main-slider-img",
+                "aria-label": "",
+                "type": "image",
+                "instructions": "Додайте основне зображення",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "preview_size": "medium"
+            },
+            {
+                "key": "field_65f2fc5a32ca2",
+                "label": "Іконка тексту",
+                "name": "main-slider-icon",
+                "aria-label": "",
+                "type": "image",
+                "instructions": "Додайте іконку текста слайдера",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "preview_size": "medium"
+            },
+            {
+                "key": "field_65f2fc9632ca3",
+                "label": "Текст біля іконки",
+                "name": "main-slider-text-icon",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Додайте текст слайдера",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Можливість навчатися за змішаною формою навчання (дистанційно) з використанням веб-ресурсів програм військової підготовки",
+                "maxlength": "",
+                "placeholder": "Текст слайдера",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_65f2fcb332ca4",
+                "label": "Додатковий текст",
+                "name": "main-slider-add-text",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Додайте додатковий текст",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Проходження військової підготовки за програмою підготовки офіцерів запасу мають право всі громадяни України всіх категорій відповідно до чинного законодавства",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_65f2fdcd35629",
+                "label": "Текст кнопки",
+                "name": "main-slider-btn-text",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Додайте текст для кнопки",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Подати заявку на навчання",
+                "maxlength": "",
+                "placeholder": "Текст кнопки",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_65f2fde53562a",
+                "label": "Посилання кнопки",
+                "name": "main-slider-btn-href",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Додайте посилання для кнопки",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "https:\/\/sumdu.edu.ua\/uk\/",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_65e0317b8cf38",
+                "label": "Військові спеціальності",
+                "name": "",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            },
+            {
+                "key": "field_65e031918cf39",
+                "label": "Заголовок",
+                "name": "special_title",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Додайте заголовок до секції",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Військові спеціальності",
+                "maxlength": "",
+                "placeholder": "Заголовок",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_65e03116f3116",
+                "label": "Бажаєш приєднатися?",
+                "name": "",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            },
+            {
+                "key": "field_65e03126f3117",
+                "label": "Заголовок",
+                "name": "join-us_title",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Додайте заголовок до секції",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Бажаєш приєднатися?",
+                "maxlength": "",
+                "placeholder": "Заголовок",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_65f30a4ce452b",
+                "label": "Шорткод форми",
+                "name": "join-us-form",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Додайте шорткод контактної форми",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "'[contact-form-7 id=\"dceaa37\" title=\"Callback-form\"]'",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_65e029ad831b7",
+                "label": "Про нас",
+                "name": "",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            },
+            {
+                "key": "field_65e024354eb71",
+                "label": "Заголовок",
+                "name": "about-us_title",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Додайте заголовок до секції",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Про нас",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_65e02cc656b67",
+                "label": "Опис",
+                "name": "about-us_desc",
+                "aria-label": "",
+                "type": "wysiwyg",
+                "instructions": "Додайте опис до секції(не використовуйте зоображення або інші меді-файли!)",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
+            },
+            {
+                "key": "field_65e03030454d8",
+                "label": "Зображення",
+                "name": "about-us_img",
+                "aria-label": "",
+                "type": "image",
+                "instructions": "Додайте зображення до секції",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "preview_size": "medium"
+            },
+            {
+                "key": "field_65e02dbe6a1c2",
+                "label": "Віртуальна екскурсія",
+                "name": "",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            },
+            {
+                "key": "field_65e02de81bf0d",
+                "label": "Заголовок",
+                "name": "virtual-ex_title",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Додайте заголовок до секції",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Віртуальна екскурсія",
+                "maxlength": "",
+                "placeholder": "Заголовок",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_65e02df91bf0e",
+                "label": "Опис",
+                "name": "virtual-ex_desc",
+                "aria-label": "",
+                "type": "wysiwyg",
+                "instructions": "Додайте опис до секції(не використовуйте зоображення або інші меді-файли!)",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
+            },
+            {
+                "key": "field_65e02f78bd5ac",
+                "label": "Навчальні заклади",
+                "name": "",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            },
+            {
+                "key": "field_65e02f8abd5ad",
+                "label": "Заголовок",
+                "name": "collab_title",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Додайте посилання для секції",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "НАВЧАЛЬНІ ЗАКЛАДИ, З ЯКИМИ МИ СПІВПРАЦЮЄМО",
+                "maxlength": "",
+                "placeholder": "Заголовок",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_65fbe24dfe91a",
+                "label": "Посилання для кнопки",
+                "name": "virtual-ex_btn-href",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Додайте посилання для кнопки",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "https:\/\/sumdu.edu.ua\/uk\/",
+                "prepend": "",
+                "append": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_type",
+                    "operator": "==",
+                    "value": "front_page"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    },
+    {
+        "key": "group_65e9b1ceb6c75",
+        "title": "Нормативні посилання",
+        "fields": [
+            {
+                "key": "field_65e9b1cf679f5",
+                "label": "Посилання",
+                "name": "kvp-reference",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Додайте посилання на документ",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "https:\/\/sumdu.edu.ua\/uk\/",
+                "prepend": "",
+                "append": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "kvp_refrences"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    },
+    {
+        "key": "group_65f9371b414d5",
+        "title": "Працевлаштування",
+        "fields": [
+            {
+                "key": "field_65f9371b724dd",
+                "label": "іконка телефону",
+                "name": "preview__phone-icon",
+                "aria-label": "",
+                "type": "image",
+                "instructions": "Додайте іконку до секції",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "preview_size": "medium"
+            },
+            {
+                "key": "field_65f9377aba65d",
+                "label": "Номер 1",
+                "name": "number_1",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Додайте номер телефона №1",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "044) 454-45-45",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_65f937adba65e",
+                "label": "Номер 2",
+                "name": "number_2",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Додайте номер телефона №2",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "(044) 454-44-49",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "templates\/employment.php"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    },
+    {
+        "key": "group_65e890eb6e472",
+        "title": "Працевлаштування(Про нас)",
+        "fields": [
+            {
+                "key": "field_65e890eb79355",
+                "label": "Віртуальна екскурсія",
+                "name": "",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            },
+            {
+                "key": "field_65e890eb793c8",
+                "label": "Заголовок",
+                "name": "emp-virtual-ex_title",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Додайте заголовок секції",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "ВІРТУАЛЬНА ЕКСКУРСІЯ",
+                "maxlength": "",
+                "placeholder": "Заголовок",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_65e890eb7942e",
+                "label": "Опис",
+                "name": "emp-virtual-ex_desc",
+                "aria-label": "",
+                "type": "wysiwyg",
+                "instructions": "Додайте опис секції",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
+            },
+            {
+                "key": "field_65e890eb7948c",
+                "label": "Навчальні заклади",
+                "name": "",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            },
+            {
+                "key": "field_65e890eb794e8",
+                "label": "Заголовок",
+                "name": "emp-collab_title",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Додайте заголовок",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Навчальні заклади",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "templates\/about-us.php"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    },
+    {
+        "key": "group_65dddf274cbec",
+        "title": "Спеціальність",
+        "fields": [
+            {
+                "key": "field_65dddf2709ccd",
+                "label": "Іконка спеціальності",
+                "name": "special-icon",
+                "aria-label": "",
+                "type": "image",
+                "instructions": "Додайте іконку для спецальності, вона буде відображатися праворуч від текста",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "preview_size": "medium"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "kvp_specialities"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    }
+]

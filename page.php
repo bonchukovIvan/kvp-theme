@@ -1,7 +1,10 @@
 <?php
-
-get_header();
-
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+?>
+<?php get_header(); ?>
+<?php
 /* Start the Loop */
 while ( have_posts() ) :
 	the_post();
@@ -12,7 +15,7 @@ while ( have_posts() ) :
 		comments_template();
 	}
 endwhile; // End of the loop.
-
-get_footer();
+?>
+<?php get_footer();?>
 
 
