@@ -182,7 +182,6 @@
 /* 
  * 600px
  */
-
 @media (max-width: 600px) {
     .collab__img {
         width: 120px;
@@ -203,11 +202,4 @@
     .about-us__img--mobile img {
         height: 300px;
     }
-}
-/* 
- * 400px
- */
-
-@media (max-width: 400px) {
-
 }

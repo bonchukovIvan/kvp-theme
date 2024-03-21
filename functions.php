@@ -9,8 +9,7 @@ use Carbon_Fields\Field;
 
 define( 'SUMDU_THEME_NAME', 'Sumdu' );
 
-function filter_string_polyfill(string $string): string
-{
+function filter_string_polyfill(string $string): string {
     $str = preg_replace('/\x00|<[^>]*>?/', '', $string);
     return str_replace(["'", '"'], ['&#39;', '&#34;'], $str);
 }
@@ -99,7 +98,6 @@ function kvp_get_btn( $args = array() ) {
 }
 
 function custom_text_func( $atts ) {
-
     $a = shortcode_atts( array(
         'text' => 'Enter text here',
     ), $atts );
@@ -118,8 +116,6 @@ function custom_text_func( $atts ) {
 
     return $output; 
 }
-add_shortcode( 'custom_text', 'custom_text_func' );
-
 function custom_mail_func( $atts ) {
     $a = shortcode_atts( array(
         'text' => 'Enter text here',
@@ -130,8 +126,6 @@ function custom_mail_func( $atts ) {
     get_template_part('template-parts/content/content-mail-section');
     return ob_get_clean();
 }
-add_shortcode( 'custom_mail', 'custom_mail_func' );
-
 function custom_nav_func( $atts ) {
 
     $a = shortcode_atts( array(
@@ -143,7 +137,7 @@ function custom_nav_func( $atts ) {
 
     return $output; 
 }
-add_shortcode( 'nav', 'custom_nav_func' );
+
 
 function wporg_custom_post_types() {
 	register_post_type('kvp_specialities',
@@ -342,3 +336,7 @@ add_filter( 'upload_mimes', 'cc_mime_types' );
 
 add_theme_support( 'custom-logo' );
 add_theme_support( 'post-thumbnails' );
+
+add_shortcode( 'custom_mail', 'custom_mail_func' );
+add_shortcode( 'custom_text', 'custom_text_func' );
+add_shortcode( 'nav', 'custom_nav_func' );

@@ -14,6 +14,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
+$form_shortcode = get_theme_mod( 'footer-shortcode-text' );
 
 ?>
 
@@ -27,7 +28,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                     </h2>
                 </div>
                 <form class="callback__form">
-                    <?php echo do_shortcode('[contact-form-7 id="dceaa37" title="Callback-form"]') ?>
+                    <?php echo do_shortcode($form_shortcode) ?>
                 </form>
             </div>
             <img class="callback-body__image" src="<?php echo get_template_directory_uri()?>/assets/images/girl.png" alt="" srcset="">

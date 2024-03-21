@@ -35,9 +35,9 @@ $btn_title = get_theme_mod( 'footer-btn-title-text' );
 $btn_href = get_theme_mod( 'footer-btn-href-text' );
 
 ?>
-            </main>
-		</div>
+        </main>
 	</div>
+</div>
 <?php if (!is_page_template( 'search-page.php' ) && !is_search() && !is_page_template( 'gallery-page.php' )) get_template_part( 'template-parts/footer/footer-callback' ); ?>
 <footer class="main-footer">
         <div class="container">

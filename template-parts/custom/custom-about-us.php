@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             <div class="about-us__content">
                 <div class="about-us__preview">
                     <div class="about-us__text">
-                    <? print_r(get_field("about-us_desc")); ?>
+                    <?php print_r(get_field("about-us_desc")); ?>
                     </div>
                     <?php 
                         kvp_get_btn( array(

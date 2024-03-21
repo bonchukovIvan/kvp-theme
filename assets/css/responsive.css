@@ -7,8 +7,10 @@
         font-size: 16px;
     }
     .header-top__text {
-        display: grid;
-        gap: 5px;
+        display: none;
+    }
+    .header-top__branding {
+        margin: 0 25px 0 0;
     }
     .social > * {
         margin: 0 10px 0 0 ;
@@ -16,6 +18,7 @@
     article {
         padding: 0 25px;
     }
+    /* preivew */
     .preview__img img {
         width: 550px;
     }
@@ -23,6 +26,7 @@
         font-size: 36px;
         font-weight: 600;
     }
+    /* page-404 */
     .page-404__body {
         margin: 0 25px;
     }
@@ -32,6 +36,7 @@
     .page-header.page-404  {
         font-size: 40px;
     }
+    /* callback */
     .callback {
         background-position: inherit;
     }
@@ -41,18 +46,16 @@
     .callback-body__image {
         padding: 0 25px;
     }
+    /* news */
     .news__body {
         padding: 50px 25px;
     }
     .news__grid {
         gap: 5px;
     }
-    .header-top__branding {
-        margin: 0 25px 0 0;
-    }
-
 }
 @media (max-width: 1400px) {
+    /* news */
     .news__grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -62,12 +65,15 @@
  */
 /* page content */
 @media (max-width: 1360px) {
+    /* header-top styles */
     .header-top__li {
         margin: 0px 10px 0px 10px;
     }
+    /* navbar styles */
     .navbar__nav > li {
         margin: 0px 20px 0px 0px;
     }
+    /* news styles */
     .news__grid {
         gap: 50px;
     }
@@ -77,25 +83,28 @@
  */
 /* page content */
 @media (max-width: 1280px) {
+    /* header-top styles */
     .header-top__menu li  {
         font-size: 14px;
     }
-    /* .navbar__link {
-        font-size: 14px;
-    } */
     .header-top__body .social {
         display: none;
-    } 
+    }
     .navbar__nav > li {
         font-size: 16px;
         margin: 0px 15px 0px 0px;
     }
+    /* .navbar__link {
+        font-size: 14px;
+    } */
     .schedule a div {
         display: none;
     }
+    /* breadcrumbs */
     .breadcrumb__body {
         /* margin: 0 0 0 25px; */
     }
+    /* preview */
     .preview__img img {
         width: 525px;
     }
@@ -108,10 +117,11 @@
     button {
         padding: 15px 30px;
     }
-
+    /* page-404 */
     .page-404__img img {
         width: 500px;
     }
+    /* callback */
     .callback-body__image {
         display: none;
     }
@@ -139,7 +149,10 @@
     .form-group.horizontal span:last-child {
         margin: 0 0 0 0px;
     }
-    
+    .header-top__text {
+        display: grid;
+        gap: 5px;
+    }
     /* header-top styles */
     .header-top__body nav {
         border: none;
@@ -374,7 +387,6 @@
     .news__popular {
         position: relative;
         order: 1;
-        
     }
     .news__popular-title,
     .news__popular-main {
@@ -385,6 +397,7 @@
         display: block;
         overflow: hidden;
     }
+
     .page-title {
         font-size: 32px;
     }
@@ -422,6 +435,7 @@
     .single-post__top-img {
         height: 350px;
     }
+
     .page-404__body {
         flex-direction: column-reverse;
         align-items: center
@@ -429,6 +443,7 @@
     .page-404__img {
         margin: 0;
     } 
+
     .callback-body__form .form-group.horizontal {
         flex-direction: column;
         margin: 0;
@@ -472,22 +487,28 @@
     .single-post__top-img {
         height: 250px;
     }
+    
     .slider__switcher button {
         padding: 0px 5px;
     }
+
     .preview__img img {
         width: 330px;
     }
+
     table {
         font-size: 12px;
         margin: 0 20px 0 0;
     }
+
     .page-404__img img {
         width: 330px;
     }
+
     .kvp-gallery__body {
         grid-template-columns: repeat(1, 1fr);
     }
+
     .callback-body__form {
         padding: 25px 25px;
     }
@@ -504,15 +525,19 @@
     .header-top__contacts .numbers {
         font-size: 15px;
     }
+
     .preview__img img {
         width: 330px;
     }
+
     table {
         font-size: 10px;
     }
+
     .callback-body__form {
         padding: 15px 15px;
     }
+
     .sumdu-logo img {
         height: 20px;
     }

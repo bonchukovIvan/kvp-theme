@@ -178,6 +178,18 @@ class Kvp_Customizer {
             'section' => 'footer-callout-section',
             'settings' => 'footer-btn-href-text',
         )));
+		/*
+		 * btn href setting
+		 */ 
+        $wp_customize->add_setting('footer-shortcode-text', array(
+            'default' => '',
+            'sanitize_callback' => 'sanitize_text_field', 
+        ));
+        $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'footer-shortcode-text-control', array(
+            'label' => 'Шорткод форми', 
+            'section' => 'footer-callout-section',
+            'settings' => 'footer-shortcode-text',
+        )));
 
 
 		/*

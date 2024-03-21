@@ -48,7 +48,7 @@ $border_add = !$is_employment ? "t-white" : '';
                         $btn_class = $is_employment ? 'btn-white' : 'btn-blue';
                         kvp_get_btn( array(
                             'title'                 => 'Завантажити додаток',
-                            'on_click_href'            => '#',
+                            'on_click_href'            => get_field('virtual-ex_btn-href'),
                             'container_add_style'      => '',
                             'btn_add_style'         => '',
                             'btn_style' => $btn_class,

@@ -170,7 +170,6 @@
     position: relative;
     background-repeat: no-repeat;
     background-position: center;
-
 }
 .about-us__img--mobile {
     display: none;
@@ -349,7 +348,7 @@
 .last-news__content-top {
     display: flex;
     justify-content: space-between;
-    margin: 40px 20px 10px 20px;
+    margin: 20px 20px 10px 20px;
 }
 .last-news__content-main {
     margin: 20px 20px 15px 20px;

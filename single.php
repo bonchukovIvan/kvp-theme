@@ -36,26 +36,26 @@ $category_id = $category->cat_ID;
 					<?php endif; ?>
 					<div class="single-post__meta">
 						<i class="fa fa-calendar"></i>
-						<div class="single-post__date"><?php echo $post->post_date ?></div>
+						<div class="single-post__date"><?php echo date( 'n-j-Y', strtotime( $post->post_date ) ); ?></div>
 					</div>
 				</div>
 				<div class="single-post__main">
-					<?php print_r($post->post_content); ?>
+					<?php print_r( $post->post_content ); ?>
 				</div>
 				<div class="single-post__footer">
 					<div class="get-back">
 						<div class="get-back__ar">
 							<div class="c-arrow left"></div>
-							<a href="<?php echo get_category_link($category_id);?>">Повернутися до усіх статей</a>
+							<a href="<?php echo get_category_link( $category_id );?>">Повернутися до усіх статей</a>
 						</div>
 					</div>
-                    <?php kvp_get_btn( array('title' => 'Подати заявку на навчання') );?>
+                    <?php kvp_get_btn( array( 'title' => 'Подати заявку на навчання' ) );?>
 				</div>
 			</div>
 			<?php get_template_part( 'template-parts/content/content-popular' ); ?>
 		</div>
         <div class="last-news__body m25-0 ">
-			<?php echo kvp_get_border_header(array('title' => 'Інші новини')); ?>
+			<?php echo kvp_get_border_header( array( 'title' => 'Інші новини') ); ?>
             <div class="last-news__main">
                 <div class="last-news__top">
                     <?php kvp_get_btn( array('title' => 'Відкрити сторінку новин', 'on_click_href' => get_category_link( $category_id ) ) );?>
@@ -80,7 +80,7 @@ $category_id = $category->cat_ID;
                                 <?php  $the_query->the_post(); ?>
                                 <div class="news__item cntr">
                                     <div class="news__img full-wdth">
-                                        <?php if(get_the_post_thumbnail_url()) : ?>
+                                        <?php if( get_the_post_thumbnail_url() ) : ?>
                                             <img src="<?php  echo get_the_post_thumbnail_url(); ?>" alt="" srcset="">
                                         <?php else : ?>
                                             <img src="<?php  echo get_template_directory_uri()?>/assets/images/not-found-news.jpg" alt="" srcset="">

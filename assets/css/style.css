@@ -250,7 +250,7 @@ button span{
 .news__content-top {
     display: flex;
     justify-content: space-between;
-    margin: 40px 0px 10px 0px;
+    margin: 20px 0px 10px 0px;
 }
 .news__content-main {
     margin: 20px 0px 15px 0px;
@@ -718,6 +718,7 @@ article td {
 .header-top__mobile-bottom {
     display: flex;
     flex: 1;
+    justify-content: flex-end;
 }
 .header-top__li {
     margin: 0px 10px 0px 0px;
