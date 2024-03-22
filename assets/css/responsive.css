@@ -39,8 +39,6 @@
     }
     .preview__body {
         margin: 0;
-        display: block;
-        padding: 50px 50px 0px 50px;
     }
     .kvp-logo {
         padding: 0 0 50px 0;
@@ -176,9 +174,7 @@
     /* preview */
     .preview__img img {
         width: 525px;
-    }
-    .preview__text{
-        padding: 10px 0 50px 0;
+        height: inherit;
     }
     .phone-number {
         font-size: 28px!important;
@@ -530,7 +526,15 @@
     .page-title {
         font-size: 32px;
     }
+    .table-wrap {
+        border-top: 2px solid #DBDDDE;
+        border-bottom: 2px solid #DBDDDE;
+        box-shadow: rgb(197 201 205 / 20%) 0px 8px 24px;
+    }
     /* preview */
+    .preview__body {
+        display: block;
+    }
     .preview-numbers {
         display: none;
     }
@@ -556,7 +560,7 @@
     }
     .preview__img {
         text-align: center;
-        height: 350px;
+        height: 450px;
     }
     .preview__img img {
         width: 100%;
@@ -655,6 +659,9 @@
     .page-404__img {
         margin: 0;
     } 
+    article figure {
+        flex-direction: column;
+    }
     /* custom-mail */
     .custom-mail__body {
         padding: 25px;
@@ -731,7 +738,7 @@
     }
     /* preview_ */
     .preview__img {
-        height: 250px;
+        height: 300px;
     }
     /* page-404 */
     .page-404__img img {
@@ -838,7 +845,7 @@
         padding: 25px 25px 0px 25px;
     }
     .preview__img {
-        height: 150px;
+        height: 250px;
     }
     /* news */
     .news__popular-title {
