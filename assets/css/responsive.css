@@ -156,9 +156,9 @@
         display: none;
     }
     /* breadcrumbs */
-    .breadcrumb__body {
-        /* margin: 0 0 0 25px; */
-    }
+    /* .breadcrumb__body {
+        margin: 0 0 0 25px;
+    } */
     /* preview */
     .preview__img img {
         width: 525px;

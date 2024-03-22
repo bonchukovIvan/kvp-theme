@@ -304,11 +304,11 @@ function add_theme_scripts() {
     /* 
      * include styles
      */
-	wp_enqueue_style( 'reset', get_template_directory_uri() . '/assets/css/reset.css' );
+	wp_enqueue_style( 'reset', get_template_directory_uri() . '/assets/css/reset.min.css' );
     wp_enqueue_style( 'slick', get_template_directory_uri() . '/assets/js/slick/slick.css' );
-	wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/style.css' );
-	wp_enqueue_style( 'responsive', get_template_directory_uri() . '/assets/css/responsive.css' );
-	wp_enqueue_style( 'magnific-css', get_template_directory_uri() . '/assets/css/magnific.css'  );
+	wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/style.min.css' );
+	wp_enqueue_style( 'responsive', get_template_directory_uri() . '/assets/css/responsive.min.css' );
+	wp_enqueue_style( 'magnific-css', get_template_directory_uri() . '/assets/css/magnific.min.css'  );
     /* 
      * reregister jquery
      */
@@ -318,10 +318,10 @@ function add_theme_scripts() {
      * include scripts
      */
     wp_enqueue_script( 'jquery' );
-    wp_enqueue_script( 'slick', get_template_directory_uri() . '/assets/js/slick/slick.js', array('jquery'), '', '', true );
-    wp_enqueue_script( 'main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), '', '', true );
-    wp_enqueue_script( 'header', get_template_directory_uri() . '/assets/js/header.js', array('jquery'),'', '', true );
-    wp_enqueue_script( 'slider', get_template_directory_uri() . '/assets/js/slider.js', array('jquery'),'', '', true );
+    wp_enqueue_script( 'slick', get_template_directory_uri() . '/assets/js/slick/slick.min.js', array('jquery'), '', '', true );
+    wp_enqueue_script( 'main', get_template_directory_uri() . '/assets/js/main.min.js', array('jquery'), '', '', true );
+    wp_enqueue_script( 'header', get_template_directory_uri() . '/assets/js/header.min.js', array('jquery'),'', '', true );
+    wp_enqueue_script( 'slider', get_template_directory_uri() . '/assets/js/slider.min.js', array('jquery'),'', '', true );
     wp_enqueue_script( 'magnific', get_template_directory_uri() . '/assets/js/magnific.min.js', array('jquery'),'', '', true );
 }
 
