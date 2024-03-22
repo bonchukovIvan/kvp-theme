@@ -19,7 +19,6 @@ $page =  is_front_page() ? get_field( "collab_title" ) : get_field( "emp-collab_
 <section class="collab p5-25">
     <div class="container">
         <div class="collab__body">
-        <div class="collab__body">
             <?php  kvp_get_border_header( array( 'title' => $page) ); ?>
             <div class="collab__top">
                 <div class="slider__control">

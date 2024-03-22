@@ -23,7 +23,7 @@ $add_class = isset($args['add_class']) ? $args['add_class'] : "";
     <div class="container">
         <div class="preview__back" style="background-image: url(<?php echo get_template_directory_uri()."/assets/images/background-main.png" ?>)">
             
-            <div class="preview__body p5-25f employment-temp__body" >
+            <div class="preview__body employment-temp__body" >
 
                 <div class="preview__text">
 				<p>Контактний телефон з питань прийняття на військову службу за контрактом осіб офіцерського складу:</p>

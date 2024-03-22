@@ -54,22 +54,32 @@ $category_id = $category->cat_ID;
 			</div>
 			<?php get_template_part( 'template-parts/content/content-popular' ); ?>
 		</div>
-        <div class="last-news__body m25-0 ">
-			<?php echo kvp_get_border_header( array( 'title' => 'Інші новини') ); ?>
-            <div class="last-news__main">
-                <div class="last-news__top">
-                    <?php kvp_get_btn( array('title' => 'Відкрити сторінку новин', 'on_click_href' => get_category_link( $category_id ) ) );?>
-                    <div class="slider__control">
-                        <div class="slider-arrow left" id="related-news__ln-right"></div>
-                        <div class="slider__count">
-                            <h1 class="slider__current-page" id="last-news__current-page"></h1>
-                            /
-                            <h3 class="slider__summary-page" id="last-news__summary-page"></h3>
+
+    </div>
+</section>
+
+	</div>
+</article>
+<div class="container">
+
+<div class="last-news__body m25-0 ">
+                            <?php echo kvp_get_border_header( array( 'title' => 'Інші новини') ); ?>
+                            <div class="last-news__main">
+                                <div class="last-news__top">
+                                    <?php kvp_get_btn( array('title' => 'Відкрити сторінку новин', 'on_click_href' => get_category_link( $category_id ) ) );?>
+                                    <div class="slider__control">
+                                        <div class="slider-arrow left" id="related-news__ln-right"></div>
+                                        <div class="slider__count">
+                                            <h1 class="slider__current-page" id="last-news__current-page"></h1>
+                                            /
+                                            <h3 class="slider__summary-page" id="last-news__summary-page"></h3>
+                                        </div>
+                                        <div class="slider-arrow right" id="related-news__ln-left"></div>
+                                    </div>
+                                </div>
+
                         </div>
-                        <div class="slider-arrow right" id="related-news__ln-left"></div>
-                    </div>
-                </div>
-            <div class="related-news__slider">
+                <div class="related-news__slider">
                 <div class="related-news__track">
                     <?php
                         $args = array('post_type' => 'post', 'post_pre_page' => 6, 'order' => 'ASC', 'orderby' => 'rand', 'post__not_in' => [$post->ID]);
@@ -88,12 +98,12 @@ $category_id = $category->cat_ID;
                                     </div>
                                     <div class="news__content full-wdth">
                                         <div class="news__content-top">
-                                            <div class="news__category"><?= get_the_category()[0]->name; ?></div>
-                                            <div class="news__date"><?= get_the_date(); ?></div>
+                                            <div class="news__category"><?php get_the_category()[0]->name; ?></div>
+                                            <div class="news__date"><?php get_the_date(); ?></div>
                                         </div>
                                         <div class="news__content-main">
-                                            <div class="news__title"><?= get_the_title(); ?></div>
-                                            <div class="news__preview-text"><?= wp_trim_words( get_the_content(), 25 ); ?></div>
+                                            <div class="news__title"><?php echo wp_trim_words(get_the_title('', '', false), 5); ?></div>
+                                            <div class="news__preview-text"><?php echo wp_trim_words( get_the_content(), 15 ); ?></div>
                                         </div>
                                         <?php kvp_get_btn( array(
                                                     'title'                 => 'Читати новину',
@@ -107,10 +117,7 @@ $category_id = $category->cat_ID;
                         <?php endif; ?>
                 <?php wp_reset_postdata(); ?>
             </div>
-            <div class="slider__switcher last-news__switcher"></div>
-        </div>
-    </div>
-</section>
-	</div>
-</article>
+            <div class="slider__switcher last-news__switcher"></div>        
+</div>
+ 
 <?php get_footer(); ?>

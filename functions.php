@@ -250,22 +250,22 @@ function get_breadcrumb() {
     echo '<a href="'.home_url().'" rel="nofollow"><img src="'.get_template_directory_uri().'/assets/images/home.svg"/></a>';
     if (is_404()) {
         echo "<img src=".get_template_directory_uri().'/assets/images/breadcrumb-right.svg>';
-        wp_title();
+        echo wp_trim_words(the_title('', '', false), 5);
     }
     if (is_category() || is_single()) {
         echo "<img src=".get_template_directory_uri().'/assets/images/breadcrumb-right.svg>';
         the_category(' &bull; ');
         if (is_single()) {
             echo "<img src=".get_template_directory_uri().'/assets/images/breadcrumb-right.svg>';
-            the_title();
+            echo wp_trim_words(the_title('', '', false), 5);
         }
     } elseif (is_page()) {
         echo "<img src=".get_template_directory_uri().'/assets/images/breadcrumb-right.svg>';
-        echo the_title();
+        echo wp_trim_words(the_title('', '', false), 5);
     } elseif (is_search()) {
         echo "&nbsp;&nbsp;&#187;&nbsp;&nbsp;Search Results for... ";
         echo '"<em>';
-        echo the_search_query();
+        echo wp_trim_words(the_search_query(), 5);
         echo '</em>"';
     }
 }

@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div class="article-with-nav">
     <div class="container">
-        <div class="article-with-nav__body article-p">
+        <div class="article-with-nav__body">
             <div class="article-with-nav__grid">
 				<div class="page-navigation">
 					<div class="page-navigation__body">

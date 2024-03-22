@@ -1,95 +1,5 @@
 [
     {
-        "key": "group_65d48572c9c0d",
-        "title": "Pages",
-        "fields": [
-            {
-                "key": "field_65d48573f86e7",
-                "label": "Опис сторінки",
-                "name": "page-desc",
-                "aria-label": "",
-                "type": "wysiwyg",
-                "instructions": "Додайте опис сторінки",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "tabs": "all",
-                "toolbar": "full",
-                "media_upload": 1,
-                "delay": 0
-            },
-            {
-                "key": "field_65d485b3f86e8",
-                "label": "Зображення",
-                "name": "page-img",
-                "aria-label": "",
-                "type": "image",
-                "instructions": "Додайте зображення до превью",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "url",
-                "library": "all",
-                "min_width": "",
-                "min_height": "",
-                "min_size": "",
-                "max_width": "",
-                "max_height": "",
-                "max_size": "",
-                "mime_types": "",
-                "preview_size": "medium"
-            }
-        ],
-        "location": [
-            [
-                {
-                    "param": "page_template",
-                    "operator": "==",
-                    "value": "default"
-                }
-            ],
-            [
-                {
-                    "param": "page_template",
-                    "operator": "==",
-                    "value": "default"
-                }
-            ],
-            [
-                {
-                    "param": "page_template",
-                    "operator": "==",
-                    "value": "templates\/references-page.php"
-                }
-            ],
-            [
-                {
-                    "param": "page_type",
-                    "operator": "!=",
-                    "value": "front_page"
-                }
-            ]
-        ],
-        "menu_order": 0,
-        "position": "normal",
-        "style": "default",
-        "label_placement": "top",
-        "instruction_placement": "label",
-        "hide_on_screen": "",
-        "active": true,
-        "description": "",
-        "show_in_rest": 0
-    },
-    {
         "key": "group_65e02434c1c21",
         "title": "Головна сторінка",
         "fields": [
@@ -536,6 +446,100 @@
                 {
                     "param": "page_type",
                     "operator": "==",
+                    "value": "front_page"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    },
+    {
+        "key": "group_65d48572c9c0d",
+        "title": "Налаштування превью",
+        "fields": [
+            {
+                "key": "field_65d48573f86e7",
+                "label": "Опис сторінки",
+                "name": "page-desc",
+                "aria-label": "",
+                "type": "wysiwyg",
+                "instructions": "Додайте опис сторінки",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
+            },
+            {
+                "key": "field_65d485b3f86e8",
+                "label": "Зображення",
+                "name": "page-img",
+                "aria-label": "",
+                "type": "image",
+                "instructions": "Додайте зображення до превью",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "preview_size": "medium"
+            },
+            {
+                "key": "field_65fd69f18271c",
+                "label": "Посилання для кнопки",
+                "name": "preview-link",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "default"
+                },
+                {
+                    "param": "page_type",
+                    "operator": "!=",
                     "value": "front_page"
                 }
             ]

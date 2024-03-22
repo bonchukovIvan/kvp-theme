@@ -82,14 +82,14 @@ if ( ! defined( 'ABSPATH' ) ) {
                                         </div>
                                         <div class="last-news__content">
                                             <div class="last-news__content-top">
-                                                <div class="last-news__category"><?= get_the_category()[0]->name; ?></div>
-                                                <div class="last-news__date"><?= get_the_date(); ?></div>
+                                                <div class="last-news__category"><?php get_the_category()[0]->name; ?></div>
+                                                <div class="last-news__date"><?php get_the_date(); ?></div>
                                             </div>
                                             <div class="last-news__content-main">
-                                                <div class="last-news__title"><?= get_the_title(); ?></div>
-                                                <div class="last-news__preview-text"><?= wp_trim_words( get_the_content(), 25 ); ?></div>
+                                                <div class="last-news__title"><?php echo wp_trim_words(get_the_title('', '', false), 5); ?></div>
+                                                <div class="last-news__preview-text"><?php echo wp_trim_words( get_the_content(), 15 ); ?></div>
                                             </div>
-                                            <?php 
+                                            <?php
                                                 kvp_get_btn( array(
                                                     'title'                => 'Читати новину',
                                                     'on_click_href'        => get_permalink(),

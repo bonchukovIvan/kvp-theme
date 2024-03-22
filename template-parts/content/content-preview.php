@@ -28,12 +28,12 @@ if ( ! defined( 'ABSPATH' ) ) {
                             <?php echo get_field("page-desc"); ?>
                         </div>
                     </div>
-                    
+                    <?php $btn_container = get_field( "page-img" ) != '' ?  ' ' : 'img-none';?>
                     <?php 
                         kvp_get_btn( array(
                                 'title'                 => 'Детальніше',
                                 'on_click_href'            => get_field("preview-link"),
-                                'container_add_style'      => '',
+                                'container_add_style'      => $btn_container,
                                 'btn_add_style'         => 'm-a',
                                 'btn_style' => 'btn-white',
                             ) 
@@ -69,7 +69,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                 </div>
 
                 <?php else : ?>
-                    <div class="preview__img">
+                    <div class="preview__img<?php if(!get_field( "page-img" )) echo '--none'?>">
 
                         <?php if ( get_field( "page-img" ) != '') : ?>
                             <img src="<?php echo esc_url( get_field( "page-img" ) ); ?>" alt="" class="">
