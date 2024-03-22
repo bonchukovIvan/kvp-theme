@@ -92,12 +92,7 @@ a {
     padding: 15px;
     font-size: 48px;
     font-weight: 700;
-    /* word-break: break-all; */
     white-space: normal;
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
 }
 /* 
  * border-headers 
