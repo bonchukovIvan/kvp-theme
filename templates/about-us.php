@@ -12,11 +12,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php get_header(); ?>
 
 <?php kvp_get_preview(array('add_class' => 'back-grey')); ?> 
-<article class="employment p5-25">
+<section class="employment">
 	<div class="container">
 		<?php get_template_part('template-parts/content/content-article'); ?>
 	</div>
-</article>
+</section>
 
 <?php get_template_part('template-parts/custom/custom-specials') ?>
 
