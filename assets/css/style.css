@@ -731,7 +731,7 @@ article figure img {
 article ul li::marker {
     color: #EF7918;
 }
-/* article ul li::before {
+article ul li::before {
     content: '';
     border-radius: 50%;
     height: 7px;
@@ -742,7 +742,7 @@ article ul li::marker {
     position: absolute;
     top: 5px;
     left: -15px;
-} */
+}
 article p.has-large-font-size strong {
     font-weight: 600;
     font-size: 32px;
