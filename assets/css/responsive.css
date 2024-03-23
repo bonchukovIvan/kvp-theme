@@ -253,7 +253,7 @@
         border: none;
     }
     .numbers {
-        padding: 15px 0;
+        padding: 25px 0 0 0;
     }
     .numbers__text {
         display: flex;
@@ -322,6 +322,9 @@
     }
     .header-top__icons {
         margin-top: 15px;
+    }
+    .header-top__li a {
+        font-size: 18px;
     }
     /* navbar styles */
     .navbar {
@@ -406,6 +409,9 @@
     .navbar__body .search {
         margin: 0;
     }
+    .search-result {
+        padding: 0px 25px;
+    }
     .navbar__top {
         display: flex;
         justify-content: space-between;
@@ -489,12 +495,16 @@
         height: 450px;
     }
     /* news */
-    .news__body {
+     .news__body {
         grid-template-columns: 1fr;
     }
-    .news__grid {
+    /*.news__grid {
         grid-template-columns: 1fr;
         justify-items: center;
+    } */
+    .news__grid {
+        display: flex;
+        flex-direction: column;
     }
     .news__popular {
         position: relative;
@@ -917,6 +927,12 @@
     .related-news__track .news__img  {
         width: 250px;
     }
+    .news__content .btn-container.t-cntr.m25-25 {
+        margin: 0;
+    }
+    .news__content-top {
+        display: block;
+    }
     .employment-temp__body {
         display: flex;
         flex-direction: column;
@@ -973,8 +989,8 @@
     .preview__body {
         padding: 15px 15px 0px 15px;
     }
-    .news__content-top {
-        display: block;
+    .news__content {
+        width: 300px;
     }
     .news__content .btn-container {
         margin: 0;

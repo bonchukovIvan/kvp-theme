@@ -794,14 +794,15 @@ article blockquote {
 /* 
  * page with navigation top 
  */
-.custom-text .border-header p {
-    margin: 0px 0px 0px 10px;
-}
+
 .article-with-nav__grid {
     padding: 50px 0px;
 }
-.article-with-nav article .entry-content p {
+/* .article-with-nav article .entry-content p {
     margin: initial;
+} */
+.custom-text .border-header p {
+    margin: 0px 0px 0px 10px;
 }
 .article-with-nav__grid {
     display: grid;
