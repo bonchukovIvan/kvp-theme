@@ -657,7 +657,7 @@ nav.kvp-pagination ul a {
 .kvp-search__search-form label {
     display: flex;
     flex-basis: 100%;
-    align-items: stretch;
+    align-items: flex-start;
 }
 .kvp-search__search-form i {
     color: #8D8D8D;
@@ -728,7 +728,10 @@ article figure {
 article figure img {
     box-shadow: 0px 0px 100px 0px #0000001A;
 }
-article ul li::before {
+article ul li::marker {
+    color: #EF7918;
+}
+/* article ul li::before {
     content: '';
     border-radius: 50%;
     height: 7px;
@@ -739,7 +742,7 @@ article ul li::before {
     position: absolute;
     top: 5px;
     left: -15px;
-}
+} */
 article p.has-large-font-size strong {
     font-weight: 600;
     font-size: 32px;
@@ -760,7 +763,7 @@ article ol ol{
     margin-left: 25px;
 }
 article ol li{
-    margin: 15px 0;
+    margin: 15px 0 0 20px;
 }
 article ol li::marker{
     color: #EF7919;
@@ -774,6 +777,16 @@ article table strong{
 article td {
     border: 1px solid #DBDDDE;
     padding: 10px;
+}
+img.alignright {float:right; margin:0 0 1em 1em}
+img.alignleft {float:left; margin:0 1em 1em 0}
+img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+a img.alignright {float:right; margin:0 0 1em 1em}
+a img.alignleft {float:left; margin:0 1em 1em 0}
+a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+article blockquote {
+    border-left: 3px solid #EF7918;
+    padding: 0px 0px 0px 10px;
 }
 .table-wrap {
     overflow: auto;

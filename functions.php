@@ -309,6 +309,7 @@ function add_theme_scripts() {
 	wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/style.min.css' );
 	wp_enqueue_style( 'responsive', get_template_directory_uri() . '/assets/css/responsive.min.css' );
 	wp_enqueue_style( 'magnific-css', get_template_directory_uri() . '/assets/css/magnific.min.css'  );
+	wp_enqueue_style( 'awesome-css', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'  );
     /* 
      * reregister jquery
      */
