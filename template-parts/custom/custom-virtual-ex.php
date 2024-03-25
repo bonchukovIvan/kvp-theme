@@ -26,7 +26,7 @@ $border_add = !$is_employment ? "t-white" : '';
 >
     <div class="container">
         <div class="virtual-ex__body" >
-            <?php  kvp_get_border_header( array( 'title' => $title,'add_styles' => $border_add ) ); ?>
+            <?php  kvp_get_border_header( array( 'title' => $title,'add_styles' => $border_add, 'h'     => 'h2' ) ); ?>
             <div class="virtual-ex__content <?php if(!$is_employment) echo 't-white'  ?>">
                 <div class="virtual-ex__text">
                     <?php print_r( $desc ); ?>

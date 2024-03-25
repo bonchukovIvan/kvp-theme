@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="container">
         <div class="about-us__body" >
             <div class="about-us__main">
-            <?php  kvp_get_border_header(array('title' => get_field("about-us_title"))); ?>
+            <?php  kvp_get_border_header(array('title' => get_field("about-us_title"), 'h'     => 'h2')); ?>
             <div class="about-us__content">
                 <div class="about-us__preview">
                     <div class="about-us__text">

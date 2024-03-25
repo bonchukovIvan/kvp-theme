@@ -63,7 +63,7 @@ $category_id = $category->cat_ID;
 <div class="container">
 
 <div class="last-news__body m25-0 ">
-                            <?php echo kvp_get_border_header( array( 'title' => 'Інші новини') ); ?>
+                            <?php echo kvp_get_border_header( array( 'title' => 'Інші новини', 'h'     => 'h2') ); ?>
                             <div class="last-news__main">
                                 <div class="last-news__top">
                                     <?php kvp_get_btn( array('title' => 'Відкрити сторінку новин', 'on_click_href' => get_category_link( $category_id ) ) );?>

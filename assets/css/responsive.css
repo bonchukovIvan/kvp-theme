@@ -30,9 +30,9 @@
         margin: 0 10px 0 0 ;
     }
     /* preivew */
-    .preview__img img {
+    /* .preview__img img {
         width: 550px;
-    }
+    } */
     .preview .page-header h1 {
         font-size: 36px;
         font-weight: 600;
@@ -108,6 +108,9 @@
     .preview-section {
         padding: 0;
     }
+    .preview__text.main-text {
+        width: 50%;
+    }
 }
 /* 
  * 1360px
@@ -172,15 +175,11 @@
         margin: 0 0 0 25px;
     } */
     /* preview */
-    .preview__img img {
-        width: 525px;
-        height: inherit;
-    }
     .phone-number {
         font-size: 28px!important;
     }
     button {
-        padding: 15px 30px;
+        padding: 10px 30px;
     }
     /* page-404 */
     .page-404__img img {
@@ -202,11 +201,31 @@
     body {
         overflow-x: hidden!important;
     }
+    .single-post .last-news__body {
+        padding: 0px 25px;
+    }
+    .border-header h2,
+    .border-header h1 {
+        font-size: 32px;
+    }
+    .border-header h3 {
+        font-size: 24px;
+    }
+    .preview-section .page-title {
+        font-size: 32px;
+        font-weight: 600;
+    }
     .page-title {
         -webkit-hyphens: auto;
         -moz-hyphens: auto;
         -ms-hyphens: auto;
-        hyphens: manual;
+        hyphens: auto;
+    }
+    .page-title .title-long{
+        word-break: break-all;
+    }
+    .page-title.title-28 {
+        font-size: 28px;
     }
     /* ADDITIONAL */
     .full-wdth--mobile {
@@ -219,12 +238,6 @@
     /* btn */
     .btn-container button {
         width: 100%;
-    }
-    .border-header h2{
-        font-size: 24px;
-    }
-    .border-header h1{
-        font-size: 24px;
     }
     .form-group.horizontal span:last-child {
         margin: 0 0 0 0px;
@@ -535,10 +548,6 @@
         display: block;
         overflow: hidden;
     }
-    /* page-title */
-    .page-title {
-        font-size: 32px;
-    }
     .table-wrap {
         border-top: 2px solid #DBDDDE;
         border-bottom: 2px solid #DBDDDE;
@@ -547,6 +556,7 @@
     /* preview */
     .preview__body {
         display: block;
+        padding: 50px 10px 0px 10px;
     }
     .preview-numbers {
         display: none;
@@ -575,17 +585,21 @@
     }
     .preview__img {
         text-align: center;
-        height: 450px;
-    }
-    .preview__img img {
-        width: 100%;
-        height: 100%;
     }
     .preview__logo {
         width: inherit;
     }
     .preview__text .btn-container button  {
         width: inherit;
+    }
+    .preview-section.back-grey {
+        padding: 0;
+    }
+    .preview-section.employment-section.back-grey {
+        padding: 50px 0;
+    }
+    .preview__text.main-text {
+        width: 100%;
     }
     .article-with-nav__grid {
         grid-template-columns: 1fr;
@@ -743,10 +757,6 @@
  * 600px
  */
 @media (max-width: 600px) {
-     /* border-header */
-    .border-header h1 {
-        font-size: 32px;
-    }
     /* single-post */
     .single-post__top-img {
         height: 250px;
@@ -759,10 +769,10 @@
         font-size: 14px;
     }
     /* preview_ */
-    .preview__img {
-        height: 300px;
+    .preview__body.preview__center-img {
+        padding: 25px;
     }
-    .preview-section.back-grey {
+    .kvp-logo {
         padding: 0;
     }
     /* page-404 */
@@ -843,9 +853,7 @@
  * 420px
  */
 @media (max-width: 420px) {
-    .page-title {
-        font-size: 24px;
-    }
+
 }
 /* 
  * 400px
@@ -915,17 +923,11 @@
     .last-news.p5-25 {
         padding: 50px 0;
     }
-    .last-news__body .border-header {
-       margin: 0px 25px;
-    }
-    .last-news__top .btn-container {
-       margin: 0px 25px;
-    }
     .last-news__content .btn-container button{
         padding: 10px 10px;
     }
     .related-news__track .news__img  {
-        width: 250px;
+        width: 260px;
     }
     .news__content .btn-container.t-cntr.m25-25 {
         margin: 0;
@@ -974,10 +976,6 @@
     .news__grid .news__img {
         width: 100%;
     }
-    /* border-header */
-    .border-header h1 {
-        font-size: 28px;
-    }
     /* news */
     .news__img {
         height: 200px;
@@ -986,11 +984,8 @@
     /* .news__content {
         width: 200px;
     } */
-    .preview__body {
-        padding: 15px 15px 0px 15px;
-    }
     .news__content {
-        width: 300px;
+        width: 260px;
     }
     .news__content .btn-container {
         margin: 0;

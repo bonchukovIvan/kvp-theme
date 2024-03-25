@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="container">
         <div class="join-us__body">
             <div class="join-us__form">
-                <?php kvp_get_border_header( array( 'title' => get_field("join-us_title" ), 'h' => 'h2' ) ); ?>
+                <?php kvp_get_border_header( array( 'title' => get_field("join-us_title" ), 'h' => 'h3' ) ); ?>
                 <div class="join-us__content">
                     <?php echo do_shortcode(get_field('join-us-form')); ?>
                 </div>

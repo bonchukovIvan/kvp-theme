@@ -69,4 +69,18 @@ if ( ! defined( 'ABSPATH' ) ) {
         createDivs();	
     });
 </script>
+<script>
+let text = $('.page-title').text();
+
+let words = text.trim().split(/[\s-]+/);
+
+words.forEach(function(word) {
+    if (word.length > 13) {
+        let newText = text.replace(word, '<div class="title-long">' + word + '</div>');
+        
+        $('.page-title').html(newText);
+		$('.page-title').addClass('title-28')
+    }
+});
+</script>
 <?php get_footer(); ?>

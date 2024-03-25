@@ -14,13 +14,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 
-<section class="preview-section <?php echo $args['add_class']?>">
+<section class="preview-section <?php if (isset($args['add_class'])) echo $args['add_class']?>">
     <div class="container">
         <div class="preview__back" style="background-image: url(<?php echo get_template_directory_uri()."/assets/images/background-main.png" ?>)">
             
-            <div class="preview__body" >
+            <div class="preview__body <?php if (isset($args['add_class-body'])) echo $args['add_class-body']; ?>" >
 
-                <div class="preview__text">
+                <div class="preview__text main-text">
 
                     <div class="">
                         <?php get_template_part( 'template-parts/header/page-header' ); ?>

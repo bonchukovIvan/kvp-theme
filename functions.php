@@ -252,14 +252,15 @@ function get_breadcrumb() {
         echo "<img src=".get_template_directory_uri().'/assets/images/breadcrumb-right.svg>';
         echo wp_trim_words(the_title('', '', false), 5);
     }
-    if (is_category() || is_single()) {
+    if ( is_single()) {
+        echo "<img src=".get_template_directory_uri().'/assets/images/breadcrumb-right.svg>';
+        echo wp_trim_words(the_title('', '', false), 5);
+
+    } elseif(is_category()) {
         echo "<img src=".get_template_directory_uri().'/assets/images/breadcrumb-right.svg>';
         the_category(' &bull; ');
-        if (is_single()) {
-            echo "<img src=".get_template_directory_uri().'/assets/images/breadcrumb-right.svg>';
-            echo wp_trim_words(the_title('', '', false), 5);
-        }
-    } elseif (is_page()) {
+    }
+     elseif (is_page()) {
         echo "<img src=".get_template_directory_uri().'/assets/images/breadcrumb-right.svg>';
         echo wp_trim_words(the_title('', '', false), 5);
     } elseif (is_search()) {

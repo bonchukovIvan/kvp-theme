@@ -39,7 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <section class="last-news p5-25">
     <div class="container">
         <div class="last-news__body">
-            <?php  kvp_get_border_header(array('title' => "Новини")); ?>
+            <?php  kvp_get_border_header( array('title' => "Новини", 'h'     => 'h2') ); ?>
             <div class="last-news__main">
                 <div class="last-news__top">
                 <?php 

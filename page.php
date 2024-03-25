@@ -14,8 +14,28 @@ while ( have_posts() ) :
 	if ( comments_open() || get_comments_number() ) {
 		comments_template();
 	}
+
 endwhile; // End of the loop.
 ?>
+<script>
+let text = $('.page-title').text();
+
+let words = text.trim().split(/[\s-]+/);
+
+words.forEach(function(word) {
+    if (word.length > 13) {
+        let newText = text.replace(word, '<div class="title-long">' + word + '</div>');
+        
+        $('.page-title').html(newText);
+		$('.page-title').addClass('title-28')
+    }
+    if (word.length > 10) {
+        let newText = text.replace(word, '<div class="title-long">' + word + '</div>');
+        
+		$('.page-title').addClass('title-28')
+    }
+});
+</script>
 <?php get_footer();?>
 
 

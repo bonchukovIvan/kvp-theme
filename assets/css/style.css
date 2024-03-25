@@ -102,10 +102,15 @@ a {
     display: block;
     text-transform: uppercase;
 }
-.border-header h2 {
+.border-header h3 {
    padding: 15px;
    font-size: 30px;
    font-weight: 700;
+}
+.border-header h2 {
+    padding: 15px;
+    font-size: 48px;
+    font-weight: 700;
 }
 .border-header h1 {
     padding: 15px;
@@ -475,6 +480,12 @@ button span{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+/* .related-news__slider button {
+    padding: 15px 25px;
+} */
+.last-news__top button{
+    padding: 15px 5px;
 }
 .slick-dots li{
     display: inline;   
@@ -1073,6 +1084,7 @@ body.desktop .navbar__nav > li:hover .navbar__arrow {
 .preview__desc {
     margin: 50px 0px;
 }
+.preview__text--employment,
 .preview__text {  
     display: flex;
     flex-direction: column;
@@ -1081,6 +1093,12 @@ body.desktop .navbar__nav > li:hover .navbar__arrow {
     font-size: 24px;
     letter-spacing: 0.4px;
     text-align: justify;
+}
+.preview__text.main-text {
+    width: 75%;
+}
+.preview__text--employment {
+    gap: 25px;
 }
 .preview__text .btn-container {
     margin-bottom: 50px;
@@ -1106,13 +1124,16 @@ body.desktop .navbar__nav > li:hover .navbar__arrow {
     color: #fff;
 }
 .preview__img img{
-    width: 675px;
-    height: 472px;
+    width: 100%;
     object-fit: contain;
 }
 .preview__body .kvp-logo .faculty {
     font-size: 32px;
     font-weight: 900;
+}
+.preview__body.preview__center-img {
+    align-items: center;
+    padding: 50px;
 }
 .custom-text .border-header{
     text-transform: none;
