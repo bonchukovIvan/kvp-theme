@@ -29,10 +29,6 @@
     .social > * {
         margin: 0 10px 0 0 ;
     }
-    /* preivew */
-    /* .preview__img img {
-        width: 550px;
-    } */
     .preview .page-header h1 {
         font-size: 36px;
         font-weight: 600;
@@ -214,6 +210,9 @@
     .preview-section .page-title {
         font-size: 32px;
         font-weight: 600;
+    }
+    .preview__img img {
+        max-height: 350px;
     }
     .page-title {
         -webkit-hyphens: auto;
@@ -585,6 +584,8 @@
     }
     .preview__img {
         text-align: center;
+        width: 100%;
+        height: 100%;
     }
     .preview__logo {
         width: inherit;
@@ -844,16 +845,10 @@
     .last-news__content-main {
         grid-gap: 0px;
     }
-    .last-news__body,
+
     .collab__body {
         padding: 0px 0px;
     }
-}
-/* 
- * 420px
- */
-@media (max-width: 420px) {
-
 }
 /* 
  * 400px
@@ -886,9 +881,6 @@
         margin: 0;
         display: block;
         padding: 25px 25px 0px 25px;
-    }
-    .preview__img {
-        height: 250px;
     }
     /* news */
     .news__popular-title {
@@ -944,6 +936,7 @@
     .employment-section.back-grey {
         padding: 50px 0;
     }
+
 }
 /* 
  * 360px
@@ -981,9 +974,6 @@
         height: 200px;
         width: 200px;
     }
-    /* .news__content {
-        width: 200px;
-    } */
     .news__content {
         width: 260px;
     }

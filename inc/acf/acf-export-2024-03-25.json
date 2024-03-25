@@ -503,8 +503,8 @@
                 "min_width": "",
                 "min_height": "",
                 "min_size": "",
-                "max_width": "",
-                "max_height": "",
+                "max_width": 725,
+                "max_height": 468,
                 "max_size": "",
                 "mime_types": "",
                 "preview_size": "medium"
@@ -541,6 +541,34 @@
                     "param": "page_type",
                     "operator": "!=",
                     "value": "front_page"
+                }
+            ],
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "templates\/about-us.php"
+                }
+            ],
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "templates\/employment.php"
+                }
+            ],
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "templates\/navigation-page.php"
+                }
+            ],
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "templates\/references-page.php"
                 }
             ]
         ],
