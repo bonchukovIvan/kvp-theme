@@ -28,20 +28,7 @@ class Kvp_Customizer {
 			'description' => __('Налаштування контактної інформації в шапці сайту'),
 		));
 		/*
-		 * instagram link setting
-		 */ 
-		$wp_customize->add_setting('basic-header-callout-instagram', array(
-			'default' => 'https://www.instagram.com/',
-			'sanitize_callback' => array($this, 'sanitize_custom_url'),
-		));
-		$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'basic-header-callout-section', array(
-			'label' => 'Посилання на Ваш Instagram',
-			'section' => 'basic-header-callout-section',
-			'settings' => 'basic-header-callout-instagram',
-			'type' => 'url',
-		)));
-		/*
-		 * instagram link setting
+		 * mail link setting
 		 */ 
 		$wp_customize->add_setting('basic-header-callout-mail', array(
 			'default' => 'test@mail.com',
@@ -51,6 +38,19 @@ class Kvp_Customizer {
 			'label' => 'Адреса пошти',
 			'section' => 'basic-header-callout-section',
 			'settings' => 'basic-header-callout-mail',
+			'type' => 'url',
+		)));
+		/*
+		 * facebook link setting
+		 */ 
+		$wp_customize->add_setting('basic-header-callout-instagram', array(
+			'default' => 'https://www.instagram.com/',
+			'sanitize_callback' => array($this, 'sanitize_custom_url'),
+		));
+		$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'basic-header-callout-instagram-control', array(
+			'label' => 'Посилання на Ваш Instagram',
+			'section' => 'basic-header-callout-section',
+			'settings' => 'basic-header-callout-instagram',
 			'type' => 'url',
 		)));
 		/*
@@ -250,7 +250,7 @@ class Kvp_Customizer {
             'sanitize_callback' => 'esc_url_raw', 
         ));
         $wp_customize->add_control(new WP_Customize_Upload_Control($wp_customize, 'footer-icon-mail-set-control', array(
-            'label' => 'Іконка Youtube',
+            'label' => 'Іконка Пошти',
             'section' => 'footer-callout-section',
             'settings' => 'footer-icon-mail-set',
         )));
