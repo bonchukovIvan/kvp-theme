@@ -56,9 +56,6 @@ a {
 .m-a {
     margin: auto;
 }
-.m0-25 {
-    padding: 0px 25px;
-}
 .m25-0 {
     margin: 25px 0;
 }
@@ -342,7 +339,7 @@ button span{
     gap: 30px;
 }
 .news__content {
-    width: 330px;
+
 }
 .news__content-top {
     display: flex;
@@ -368,9 +365,12 @@ button span{
 .news__preview-text {
     font-size: 15px;
 }
-.news__img{
+.news__img {
     height: 300px;
-    width: 330px;
+}
+.search-result__body .content-none {
+    padding: 100px 25px;
+    text-align: center;
 }
 .news__img img {
     height: 100%; 
@@ -430,13 +430,17 @@ button span{
     display: grid;
     gap: 15px;
 }
-.single-post .news__popular{
+/* .single-post .news__popular{
     display: none;
+} */
+.single-post__top {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 .single-post__top-img {
     position: relative;
     height: 550px;
-    margin: 30px 0px 30px 0px;
 }
 .single-post__top-img img {
     height: 100%;
@@ -458,10 +462,13 @@ button span{
 }
 .single-post__body {
     display: grid;
-    gap: 30px;
+    gap: 50px;
+    grid-template-columns: 75% 25%;
+    margin: 50px 0px;
 }
 .single-post__content {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 30px;
 }
 .single-post .last-news__body{
@@ -485,9 +492,9 @@ button span{
 /* .related-news__slider button {
     padding: 15px 25px;
 } */
-.last-news__top button{
+/* .last-news__top button {
     padding: 15px 5px;
-}
+} */
 .slick-dots li{
     display: inline;   
 }
@@ -587,11 +594,11 @@ nav.kvp-pagination ul a {
     display: grid;
     gap: 30px;
  }
-.kvp-gallery__body {
+/* .kvp-gallery__body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-}
+} */
 .kvp-gallery__row {
     display: flex;
     flex-direction: column;
@@ -601,15 +608,17 @@ nav.kvp-pagination ul a {
 .kvp-gallery__item  {
     background-color: #DBDDDE;
     overflow: hidden;
+    width: 200px;
+    float: left;
 }
 .kvp-gallery__item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: all 0.7s;
+    transition: all 0.3s;
 }
 .kvp-gallery__item img:hover  {
-    scale: 120%;
+    scale: 105%;
 }
 /* 
  * about-us-temp
@@ -973,14 +982,13 @@ article blockquote {
  */
 .navbar {
     background-color: #00386B;
-    padding: 15px 0;
+    padding: 10px 0;
     border-bottom: 1px solid #fff;
 }
 .navbar__body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 25px;
 }
 .navbar__bottom {
     display: flex;
@@ -1158,6 +1166,7 @@ body.desktop .navbar__nav > li:hover .navbar__arrow {
 .main-slider {
     background-color: #DDD9D9;
     position: relative;
+    padding: 100px 0px;
 }
 .main-slider__wrap-orange {
     position: absolute;
@@ -1189,6 +1198,10 @@ body.desktop .navbar__nav > li:hover .navbar__arrow {
 }
 .main-slider__text {
     display: grid;
+ 
+}
+.main-slider__text-p {
+    line-height: 140%;
 }
 .main-slider__logo {
     display: flex;
@@ -1233,19 +1246,19 @@ body.desktop .navbar__nav > li:hover .navbar__arrow {
 .main-slider__icon-text {
     font-size: 24px;
     font-weight: 700;
+    line-height: 140%;
 }
 .main-slider__img {
     flex-basis: 100%;
     align-self: center;
 }
 .main-slider__img img {
- 
     width: 100%;
 }
 /* special */
 .special {
     background-color: #F7F7F7;
-    padding: 50px 0;
+    padding: 100px 0;
 }
 .special__content {
     display: grid;
@@ -1257,7 +1270,9 @@ body.desktop .navbar__nav > li:hover .navbar__arrow {
     display: flex;
     flex-direction: column-reverse;
 }
-
+.special__img {
+    margin: 50px 0px 0px 0px;
+}
 .special__img img {
     width: 100%;
     object-fit: cover;
@@ -1274,8 +1289,9 @@ body.desktop .navbar__nav > li:hover .navbar__arrow {
     margin: 15px 0px 0px 0px;
 }
 /* join-us */
-.join-us {
+.join-us-main {
     position: relative;
+    padding: 100px 25px;
 }
 .join-us__gradient {
     position: absolute;
@@ -1288,7 +1304,7 @@ body.desktop .navbar__nav > li:hover .navbar__arrow {
 }
 .join-us__form {
     background-color: #fff;
-    padding: 25px;
+    padding: 30px 50px;
     position: relative;
     z-index: 1; 
 }
@@ -1340,13 +1356,13 @@ body.desktop .navbar__nav > li:hover .navbar__arrow {
 .about-us__body {
     position: relative;
     height: 750px;
-    padding: 50px 0;
+    padding: 100px 0;
 }
 .about-us__white {
     position: absolute;
     top: 0;
     left: 0;
-    height: 70%;
+    height: 75%;
     width: 45%;
     background: #fff;
     z-index: 3;
@@ -1358,14 +1374,15 @@ body.desktop .navbar__nav > li:hover .navbar__arrow {
 }
 .about-us__content {
     display: grid;
-    grid-template-columns: 60% 1fr;
+    grid-template-columns: 50% 1fr;
     z-index: 5;
 }
 .about-us__text strong {
     font-weight: 700;
 }
 .about-us__text {
-    margin: 25px 0px 0px 0px;
+    margin: 50px 0px;
+    line-height: 140%;
 }
 .about-us__text * {
     margin: 25px 0;
@@ -1391,6 +1408,7 @@ body.desktop .navbar__nav > li:hover .navbar__arrow {
 .virtual-ex {
     position: relative;
     color: #fff;
+    padding: 100px 0px;
 }
 .virtual-ex__gradient {
     position: absolute;
@@ -1413,7 +1431,7 @@ body.desktop .navbar__nav > li:hover .navbar__arrow {
     grid-template-rows: 2fr 0.5fr;
 }
 .virtual-ex__excursion {
-    height: 500px;
+    height: 560px;
 }
 .virtual-ex__excursion iframe {
     height: 100%;
@@ -1444,14 +1462,24 @@ body.desktop .navbar__nav > li:hover .navbar__arrow {
 }
 .virtual-ex__text * {
     margin: 25px 0px;
+    line-height: 140%;
 }
 .virtual-ex__text strong {
     font-weight: 700;
 }
 /* collab */
+.collab {
+    padding: 100px 0px;
+}
 .collab__top {
     display: flex;
     justify-content: end;
+}
+.collab__slider,
+.collab__body {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
 }
 .collab__content {
     display: flex;
@@ -1480,15 +1508,21 @@ body.desktop .navbar__nav > li:hover .navbar__arrow {
 /* last-news */
 .last-news {
     background-color: #F7F7F7;
+    padding: 100px 0px;
+}
+.last-news__slider,
+.last-news__main,
+.last-news__body {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 .last-news__top {
-    margin: 25px 0;
     display: flex;
     justify-content: space-between;
 }
-
-.last-news__slider {
-    margin: 50px 0;
+.slick-list {
+    margin: 0px -25px;
 }
 .last-news .slick-slide {
     margin: 0px 25px;
@@ -1655,6 +1689,8 @@ body.desktop .navbar__nav > li:hover .navbar__arrow {
 .callback {
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
+    padding: 50px 0px 0px 0px;
 }
 .callback-container {
     max-width: 1920px;

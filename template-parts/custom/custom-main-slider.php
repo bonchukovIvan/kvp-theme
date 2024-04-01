@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 
-<section class="main-slider p5-25">
+<section class="main-slider">
     <div class="container">
         <div class="main-slider__body">
             <div class="main-slider__content">
@@ -34,7 +34,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                         <div class="main-slider__icon-text"><?php echo get_field('main-slider-text-icon'); ?></div>
                     </div>
 
-                    <div class="main-slider__text"><?php echo get_field('main-slider-add-text'); ?></div>
+                    <div class="main-slider__text-p"><?php echo get_field('main-slider-add-text'); ?></div>
 
                     <?php 
                         kvp_get_btn( array(

@@ -9,7 +9,7 @@ jQuery(document).ready(function() {
         slidesToShow: last_news_slides_per_page,
         slidesToScroll: 3,
         dots: true,
-        lazyLoad: 'ondemand',
+        lazyLoad: 'progressive' ,
         infinite: false,
         appendDots: $('.last-news__switcher'),
         customPaging : function(slider, i) {
@@ -44,7 +44,7 @@ jQuery(document).ready(function() {
         slidesToShow: collab_slides_per_page,
         slidesToScroll: 3,
         dots: true,
-        lazyLoad: 'ondemand',
+        lazyLoad: 'progressive' ,
         infinite: false,
         appendDots: $('.collab__switcher'),
         customPaging : function(slider, i) {
@@ -79,7 +79,7 @@ jQuery(document).ready(function() {
         slidesToShow: related_news_slides_per_page,
         slidesToScroll: 3,
         dots: true,
-        lazyLoad: 'ondemand',
+        lazyLoad: 'progressive',
         adaptiveHeight: true,
         infinite: false,
         appendDots: $('.last-news__switcher'),

@@ -9,7 +9,6 @@ $is_search = count( $_GET );
 ?>
 
 <?php get_header(); ?>
-
 <section class="news p5-25">
 	<div class="container">
 

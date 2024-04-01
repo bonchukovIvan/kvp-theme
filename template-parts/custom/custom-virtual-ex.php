@@ -19,7 +19,7 @@ $desc       =  !$is_employment ? get_field( "virtual-ex_desc" ) : get_field( "em
 $border_add = !$is_employment ? "t-white" : '';
 ?>
 
-<section class="virtual-ex p5-25 t-black <?php if ( $is_employment ) echo "back-grey"?>" 
+<section class="virtual-ex t-black <?php if ( $is_employment ) echo "back-grey"?>" 
 <?php if ( !$is_employment ) : ?> 
     style="background: url('<?php echo get_template_directory_uri()?>/assets/images/background-main.png')" 
 <?php endif; ?>

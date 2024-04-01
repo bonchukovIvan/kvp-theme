@@ -2,8 +2,19 @@
  * 1600px
  */
 @media (max-width: 1600px) {
+    .header-top {
+        padding: 10px 25px;
+    }
+    .breadcrumb__body,
+    .navbar__body {
+        padding: 0px 25px;
+    }
     /* ADDITIONAL */
-    .p5-25 {
+    .main-slider,
+    .special,
+    .virtual-ex,
+    .p5-25,
+    .collab {
         padding: 50px 25px;
     }
     .article-p {
@@ -74,6 +85,9 @@
     .news__grid {
         gap: 5px;
     }
+    .single-post__body .news__popular {
+        margin: 0px 50px 0px 0px;
+    }
     /* about-us */
     .about-us__content {
         grid-template-columns: 50% 1fr;
@@ -90,6 +104,9 @@
     }
     .preview__body .btn-container.img-none {
         margin-bottom: 50px;
+    }
+    .search-result {
+        padding: 0px 25px;
     }
 }
 /* 
@@ -160,6 +177,9 @@
         font-size: 16px;
         margin: 0px 15px 0px 0px;
     }
+    .virtual-ex__app {
+        gap: 15px;
+    }
     /* .navbar__link {
         font-size: 14px;
     } */
@@ -199,6 +219,15 @@
     }
     .single-post .last-news__body {
         padding: 0px 25px;
+    }
+    .single-post__body {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+    .collab__slider,
+    .collab__body {
+        gap: 50px
     }
     .border-header h2,
     .border-header h1 {
@@ -244,6 +273,12 @@
     .header-top__text {
         display: grid;
         gap: 5px;
+    }
+    .header-top {
+        padding: 10px 0;
+    }
+    .single-post__body .news__popular {
+        margin: 0;
     }
     /* header-top styles */
     .header-top__body nav {
@@ -753,6 +788,12 @@
     .form-group span {
         margin: 0;
     }
+    .join-us__content span.btn-container input {
+        width: 100%;
+    }
+    .join-us__form {
+        padding: 30px 25px;
+    }
 }
 /* 
  * 600px
@@ -886,12 +927,8 @@
     .news__popular-title {
         font-size: 20px;
     }
-    .news__content {
-        width: 250px;
-    }
     .news__img {
         height: 250px;
-        width: 250px;
     }
     .slider__switcher {
         display: none;
@@ -917,9 +954,6 @@
     }
     .last-news__content .btn-container button{
         padding: 10px 10px;
-    }
-    .related-news__track .news__img  {
-        width: 260px;
     }
     .news__content .btn-container.t-cntr.m25-25 {
         margin: 0;
@@ -972,7 +1006,6 @@
     /* news */
     .news__img {
         height: 200px;
-        width: 200px;
     }
     .news__content {
         width: 260px;
