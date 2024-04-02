@@ -19,14 +19,14 @@ $desc       =  !$is_employment ? get_field( "virtual-ex_desc" ) : get_field( "em
 $border_add = !$is_employment ? "t-white" : '';
 ?>
 
-<section class="virtual-ex p5-25 t-black <?php if ( $is_employment ) echo "back-grey"?>" 
+<section class="virtual-ex t-black <?php if ( $is_employment ) echo "back-grey"?>" 
 <?php if ( !$is_employment ) : ?> 
     style="background: url('<?php echo get_template_directory_uri()?>/assets/images/background-main.png')" 
 <?php endif; ?>
 >
     <div class="container">
         <div class="virtual-ex__body" >
-            <?php  kvp_get_border_header( array( 'title' => $title,'add_styles' => $border_add ) ); ?>
+            <?php  kvp_get_border_header( array( 'title' => $title,'add_styles' => $border_add, 'h'     => 'h2' ) ); ?>
             <div class="virtual-ex__content <?php if(!$is_employment) echo 't-white'  ?>">
                 <div class="virtual-ex__text">
                     <?php print_r( $desc ); ?>

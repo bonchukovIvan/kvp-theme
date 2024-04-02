@@ -14,7 +14,7 @@ $the_query = new WP_Query( $args );
 
 <?php get_header(); ?>
 
-<?php kvp_get_preview(); ?> 
+<?php kvp_get_preview(array('add_class-body' => 'preview__center-img')); ?> 
 
 <div class="references">
     <div class="container">

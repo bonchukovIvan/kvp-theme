@@ -36,10 +36,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 <!-- collab-end -->
 
 <!-- last-news-start -->
-<section class="last-news p5-25">
+<section class="last-news">
     <div class="container">
         <div class="last-news__body">
-            <?php  kvp_get_border_header(array('title' => "Новини")); ?>
+            <?php  kvp_get_border_header( array('title' => "Новини", 'h'     => 'h2') ); ?>
             <div class="last-news__main">
                 <div class="last-news__top">
                 <?php 
@@ -72,32 +72,34 @@ if ( ! defined( 'ABSPATH' ) ) {
                                 <?php while ( $the_query->have_posts() ) : ?>
                                     <?php $count++;?>
                                     <div class="carousel__item last-news__item item-<?php echo $count;?>">
-                                        <?php $the_query->the_post(); ?>
-                                        <div class="last-news__img">
-                                            <?php if(get_the_post_thumbnail_url()) : ?>
-                                                <img src="<?php  echo get_the_post_thumbnail_url(); ?>" alt="" srcset="">
-                                            <?php else : ?>
-                                                <img src="<?php  echo get_template_directory_uri()?>/assets/images/not-found-news.jpg" alt="" srcset="">
-                                            <?php endif; ?>
-                                        </div>
-                                        <div class="last-news__content">
-                                            <div class="last-news__content-top">
-                                                <div class="last-news__category"><?= get_the_category()[0]->name; ?></div>
-                                                <div class="last-news__date"><?= get_the_date(); ?></div>
+                                        <div class="carousel__item-body">
+                                            <?php $the_query->the_post(); ?>
+                                            <div class="last-news__img">
+                                                <?php if(get_the_post_thumbnail_url()) : ?>
+                                                    <img data-lazy="<?php echo get_the_post_thumbnail_url(); ?>"  alt="" srcset="">
+                                                <?php else : ?>
+                                                    <img data-lazy="<?php echo get_template_directory_uri()?>/assets/images/not-found-news.jpg"  alt="" srcset="">
+                                                <?php endif; ?>
                                             </div>
-                                            <div class="last-news__content-main">
-                                                <div class="last-news__title"><?= get_the_title(); ?></div>
-                                                <div class="last-news__preview-text"><?= wp_trim_words( get_the_content(), 25 ); ?></div>
+                                            <div class="last-news__content">
+                                                <div class="last-news__content-top">
+                                                    <div class="last-news__category"><?php get_the_category()[0]->name; ?></div>
+                                                    <div class="last-news__date"><?php get_the_date(); ?></div>
+                                                </div>
+                                                <div class="last-news__content-main">
+                                                    <div class="last-news__title"><?php echo wp_trim_words(get_the_title('', '', false), 5); ?></div>
+                                                    <div class="last-news__preview-text"><?php echo wp_trim_words( get_the_content(), 15 ); ?></div>
+                                                </div>
+                                                <?php
+                                                    kvp_get_btn( array(
+                                                        'title'                => 'Читати новину',
+                                                        'on_click_href'        => get_permalink(),
+                                                        'container_add_style'  => 'more m-a',
+                                                        'btn_add_style'        => 'm-a p15-30',
+                                                        'btn_style'            => 'btn-white',
+                                                    ) );
+                                                ?>
                                             </div>
-                                            <?php 
-                                                kvp_get_btn( array(
-                                                    'title'                => 'Читати новину',
-                                                    'on_click_href'        => get_permalink(),
-                                                    'container_add_style'  => 'more m-a',
-                                                    'btn_add_style'        => 'm-a p15-30',
-                                                    'btn_style'            => 'btn-white',
-                                                ) );
-                                            ?>
                                         </div>
                                     </div>
                                 <?php endwhile ?>

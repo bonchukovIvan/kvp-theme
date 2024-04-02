@@ -41,7 +41,7 @@ $gallery_id = $is_empty ? $posts->posts[0]->ID : sanitize_key($_GET['gallery_id'
         <?php $gallery_images = carbon_get_post_meta( $gallery_id, 'gallery_images' ); ?>
         <?php if ( $gallery_images ) : ?>
           <?php foreach ( $gallery_images as $image ) : ?>
-            <div class="kvp-gallery__item">
+            <div class="kvp-gallery__item <?php echo $image['caption']?>">
               <a href="<?php echo esc_url( $image['image'] ); ?>" class="kvp-gallery__link">
                 <img src="<?php echo esc_url( $image['image'] ); ?>" alt="<?php echo  esc_attr( $image['caption'] )?>">
               </a>
@@ -82,5 +82,14 @@ $gallery_id = $is_empty ? $posts->posts[0]->ID : sanitize_key($_GET['gallery_id'
         });
     });
 </script>
-
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script type="text/javascript">
+$(window).on('load', function () {
+  var container = document.querySelector('.kvp-gallery__body');
+  var msnry = new Masonry( container, {
+      columnWidth: '.kvp-gallery__item',
+      itemSelector: '.kvp-gallery__item'
+    });     
+  });
+</script>
 <?php get_footer(); ?>

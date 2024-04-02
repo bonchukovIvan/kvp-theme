@@ -9,13 +9,12 @@ $is_search = count( $_GET );
 ?>
 
 <?php get_header(); ?>
-
 <section class="news p5-25">
 	<div class="container">
 
 		<?php kvp_get_border_header(array('title' => single_cat_title('', false))) ?>
 
-		<div class="p5-25">
+		<div class="kvp-news-search p5-25">
 			<?php get_search_form(array("search_url" => "category/news")); ?>
 		</div>
 

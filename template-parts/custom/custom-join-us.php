@@ -11,11 +11,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 
-<section class="join-us p5-25" style=" background-image: url('<?php echo get_template_directory_uri()?>/assets/images/background-main.png');">
+<section class="join-us-main" style=" background-image: url('<?php echo get_template_directory_uri()?>/assets/images/background-main.png');">
     <div class="container">
         <div class="join-us__body">
             <div class="join-us__form">
-                <?php kvp_get_border_header( array( 'title' => get_field("join-us_title" ), 'h' => 'h2' ) ); ?>
+                <?php kvp_get_border_header( array( 'title' => get_field("join-us_title" ), 'h' => 'h3' ) ); ?>
                 <div class="join-us__content">
                     <?php echo do_shortcode(get_field('join-us-form')); ?>
                 </div>

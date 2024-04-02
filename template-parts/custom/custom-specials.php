@@ -14,10 +14,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 
-<section class="special p5-25">
+<section class="special">
     <div class="container">
         <div class="special__body">
-            <?php kvp_get_border_header(array('title' => kvp_get_custom_post_name('kvp_specialities'))); ?>
+            <?php kvp_get_border_header(array('title' => kvp_get_custom_post_name('kvp_specialities'), 'h'     => 'h2')); ?>
             <div class="special__content">
                 <?php
                     $args = array('post_type' => 'kvp_specialities', 'post_pre_page' => 6, 'order' => 'ASC');

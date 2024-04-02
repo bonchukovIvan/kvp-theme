@@ -29,4 +29,5 @@ $(document).ready(function() {
         $('#phone-action').attr('href', 'tel:' + selectedNumber);
     });
     $('#numbers_select_id').trigger('change');
+    $('table').wrap('<div class="table-wrap"></div>');
 });

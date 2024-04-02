@@ -16,11 +16,10 @@ $page =  is_front_page() ? get_field( "collab_title" ) : get_field( "emp-collab_
 
 ?>
 
-<section class="collab p5-25">
+<section class="collab">
     <div class="container">
         <div class="collab__body">
-        <div class="collab__body">
-            <?php  kvp_get_border_header( array( 'title' => $page) ); ?>
+            <?php  kvp_get_border_header( array( 'title' => $page, 'h'     => 'h2') ); ?>
             <div class="collab__top">
                 <div class="slider__control">
                     <div class="slider-arrow left" id="collab__ln-right"></div>
@@ -46,9 +45,9 @@ $page =  is_front_page() ? get_field( "collab_title" ) : get_field( "emp-collab_
                                     <?php $the_query->the_post(); ?>
                                     <div class="collab__img">
                                         <?php if(get_the_post_thumbnail_url()) : ?>
-                                            <img src="<?php  echo get_the_post_thumbnail_url(); ?>" alt="" srcset="">
+                                            <img data-lazy="<?php echo get_the_post_thumbnail_url(); ?>"  alt="" srcset="">
                                         <?php else : ?>
-                                            <img src="<?php  echo get_template_directory_uri()?>/assets/images/not-found-news.jpg" alt="" srcset="">
+                                            <img data-lazy="<?php echo get_template_directory_uri()?>/assets/images/not-found-news.jpg" alt="" srcset="">
                                         <?php endif; ?>
                                     </div>                                   
                                         <div class="collab__title"><?= get_the_title(); ?></div>

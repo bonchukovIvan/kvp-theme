@@ -23,18 +23,17 @@ $callback_img = get_theme_mod( 'footer-callback-img-set' );
         <div class="callback-body">
             <div class="callback-body__form">
                 <div class="border-header">
-                    <h2 class="border-title">
+                    <h3 class="border-title">
                         Залишилися питання?
-                    </h2>
+                    </h3>
                 </div>
                 <form class="callback__form">
                     <?php echo do_shortcode($form_shortcode) ?>
                 </form>
             </div>
-            <div class="callback-body__image">
-                <img class="" src="<?php echo esc_url( $callback_img ); ?>" alt="" >
-            </div>
-
+        </div>
+        <div class="callback-body__image">
+                <img loading="lazy" src="<?php echo esc_url( $callback_img ); ?>" alt="" >
         </div>
     </div>
 </section>

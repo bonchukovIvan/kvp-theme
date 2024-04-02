@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="container">
         <div class="about-us__body" >
             <div class="about-us__main">
-            <?php  kvp_get_border_header(array('title' => get_field("about-us_title"))); ?>
+            <?php  kvp_get_border_header(array('title' => get_field("about-us_title"), 'h'     => 'h2')); ?>
             <div class="about-us__content">
                 <div class="about-us__preview">
                     <div class="about-us__text">
@@ -35,7 +35,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             </div>
             <div class="about-us__bg" style="background-image: url('<?php echo get_template_directory_uri()?>/assets/images/background-main.png');"></div>  
             <div class="about-us__img">
-                <img src="<?php echo esc_url( get_field("about-us_img") )?>" alt="">
+                <img loading="lazy" src="<?php echo esc_url( get_field("about-us_img") )?>" alt="">
             </div>
         </div>
         <div class="about-us__white"></div>
