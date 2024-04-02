@@ -2,6 +2,9 @@
  * 1600px
  */
 @media (max-width: 1600px) {
+    .kvp-gallery__item  {
+        width: 30.34%;
+    }
     .header-top {
         padding: 10px 25px;
     }
@@ -16,6 +19,9 @@
     .p5-25,
     .collab {
         padding: 50px 25px;
+    }
+    .special__body {
+        padding: 0px 25px;
     }
     .article-p {
         padding: 50px 25px;
@@ -73,6 +79,9 @@
     }
     .callback-body__image {
         padding: 0 25px;
+    }
+    .single-post .last-news__body {
+        padding: 100px 25px;
     }
     .last-news__body,
     .collab__body {
@@ -214,6 +223,12 @@
  * 979px
  */
 @media (max-width: 979px) {
+    .kvp-gallery__body {
+        margin-left: -15px;
+    }
+    .kvp-gallery__item {
+        width: 100%;
+    }
     body {
         overflow-x: hidden!important;
     }
@@ -279,6 +294,12 @@
     }
     .single-post__body .news__popular {
         margin: 0;
+    }
+    related-news {
+        padding: 50px 25px;
+    }
+    .single-post .last-news__body {
+   
     }
     /* header-top styles */
     .header-top__body nav {
@@ -970,13 +991,16 @@
     .employment-section.back-grey {
         padding: 50px 0;
     }
-
+    .special__body {
+        padding: 0;
+    }
 }
 /* 
  * 360px
  */
 /* page content */
 @media (max-width: 360px) {
+
     .btn-container button span {
         display: none;
     }

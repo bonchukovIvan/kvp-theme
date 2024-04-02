@@ -60,25 +60,25 @@ $category_id = $category->cat_ID;
 
 	</div>
 </article>
+<div class="related-news">
 <div class="container">
 
-<div class="last-news__body m25-0">
-                            <?php echo kvp_get_border_header( array( 'title' => 'Інші новини', 'h'     => 'h2') ); ?>
-                            <div class="last-news__main">
-                                <div class="last-news__top">
-                                    <?php kvp_get_btn( array('title' => 'Відкрити сторінку новин', 'on_click_href' => get_category_link( $category_id ) ) );?>
-                                    <div class="slider__control">
-                                        <div class="slider-arrow left" id="related-news__ln-right"></div>
-                                        <div class="slider__count">
-                                            <h1 class="slider__current-page" id="last-news__current-page"></h1>
-                                            /
-                                            <h3 class="slider__summary-page" id="last-news__summary-page"></h3>
-                                        </div>
-                                        <div class="slider-arrow right" id="related-news__ln-left"></div>
-                                    </div>
+<div class="last-news__body">
+                    <?php echo kvp_get_border_header( array( 'title' => 'Інші новини', 'h'     => 'h2') ); ?>
+                    <div class="last-news__main">
+                        <div class="last-news__top">
+                            <?php kvp_get_btn( array('title' => 'Відкрити сторінку новин', 'on_click_href' => get_category_link( $category_id ) ) );?>
+                            <div class="slider__control">
+                                <div class="slider-arrow left" id="related-news__ln-right"></div>
+                                <div class="slider__count">
+                                    <h1 class="slider__current-page" id="last-news__current-page"></h1>
+                                    /
+                                    <h3 class="slider__summary-page" id="last-news__summary-page"></h3>
                                 </div>
-
+                                <div class="slider-arrow right" id="related-news__ln-left"></div>
+                            </div>
                         </div>
+                </div>
                 <div class="related-news__slider">
                 <div class="related-news__track">
                     <?php
@@ -119,5 +119,7 @@ $category_id = $category->cat_ID;
             </div>
             <div class="slider__switcher last-news__switcher"></div>        
 </div>
+</div>
+
  
 <?php get_footer(); ?>

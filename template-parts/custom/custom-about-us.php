@@ -35,7 +35,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             </div>
             <div class="about-us__bg" style="background-image: url('<?php echo get_template_directory_uri()?>/assets/images/background-main.png');"></div>  
             <div class="about-us__img">
-                <img src="<?php echo esc_url( get_field("about-us_img") )?>" alt="">
+                <img loading="lazy" src="<?php echo esc_url( get_field("about-us_img") )?>" alt="">
             </div>
         </div>
         <div class="about-us__white"></div>

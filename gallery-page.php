@@ -84,18 +84,12 @@ $gallery_id = $is_empty ? $posts->posts[0]->ID : sanitize_key($_GET['gallery_id'
 </script>
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 <script type="text/javascript">
-  var elem = document.querySelector('.kvp-gallery__body');
-  var msnry = new Masonry( elem, {
-    // options
-    itemSelector: '.kvp-gallery__item',
-    columnWidth: 80
-  });
-
-  // element argument can be a selector string
-  //   for an individual element
-  var msnry = new Masonry( '.kvp-gallery__body', {
-    // options
+$(window).on('load', function () {
+  var container = document.querySelector('.kvp-gallery__body');
+  var msnry = new Masonry( container, {
+      columnWidth: '.kvp-gallery__item',
+      itemSelector: '.kvp-gallery__item'
+    });     
   });
 </script>
-
 <?php get_footer(); ?>
