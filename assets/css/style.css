@@ -607,7 +607,7 @@ nav.kvp-pagination ul a {
 }
 .kvp-gallery__wrap {
     display: grid;
-    gap: 30px;
+    gap: 50px;
  }
 /* .kvp-gallery__body {
     display: grid;
@@ -623,9 +623,13 @@ nav.kvp-pagination ul a {
 .kvp-gallery__item  {
     overflow: hidden;
     width: 480px;
+    height: 250px;
     margin: 10px;
     float: left;
     max-height: 530px;
+}
+.xl-heigth {
+    height: 520px;
 }
 .grid-sizer {
     width: 200px;
