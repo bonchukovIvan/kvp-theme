@@ -151,6 +151,12 @@
     .news__grid {
         gap: 50px;
     }
+    .special__content {
+        grid-template-columns: 1fr 1fr;
+    }
+    .special__item:nth-child(3n + 2) {
+        flex-direction: column;
+    }
     /* main-slider */
     .main-slider__wrap-orange {
         transform: skewX(347deg);
@@ -815,6 +821,10 @@
     .join-us__form {
         padding: 30px 25px;
     }
+    .special__img {
+        width: 100%;
+        height: 300px;
+    }
 }
 /* 
  * 600px
@@ -911,6 +921,9 @@
     .collab__body {
         padding: 0px 0px;
     }
+    .special__img {
+        height: 300px;
+    }
 }
 /* 
  * 400px
@@ -993,6 +1006,9 @@
     }
     .special__body {
         padding: 0;
+    }
+    .special__img {
+        height: 200px;
     }
 }
 /* 
