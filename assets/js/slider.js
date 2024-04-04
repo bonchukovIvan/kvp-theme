@@ -42,7 +42,7 @@ jQuery(document).ready(function() {
     jQuery('.collab__track').slick({
         arrows: false,
         slidesToShow: collab_slides_per_page,
-        slidesToScroll: 3,
+        slidesToScroll: 6,
         dots: true,
         lazyLoad: 'progressive' ,
         infinite: false,

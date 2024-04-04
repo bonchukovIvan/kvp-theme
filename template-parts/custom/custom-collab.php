@@ -34,7 +34,7 @@ $page =  is_front_page() ? get_field( "collab_title" ) : get_field( "emp-collab_
             <div class="collab__slider">
                 <div class="collab__track">
                     <?php
-                        $args = array('post_type' => 'kvp_collab', 'post_pre_page' => 6, 'order' => 'ASC');
+                        $args = array('post_type' => 'kvp_collab', 'post_pre_page' => 18, 'order' => 'ASC');
                         $the_query = new WP_Query( $args );
                         if ( $the_query->have_posts() ): ?>
                         <?php $count = 0;?>
