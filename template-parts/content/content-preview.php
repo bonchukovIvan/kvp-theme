@@ -12,6 +12,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+$btn_href = !get_field("preview-link") ? '#post-'.$args['article_id'] : get_field("preview-link");
+
 ?>
 
 <section class="preview-section <?php if (isset($args['add_class'])) echo $args['add_class']?>">
@@ -32,7 +34,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                     <?php 
                         kvp_get_btn( array(
                                 'title'                 => 'Детальніше',
-                                'on_click_href'            => get_field("preview-link"),
+                                'on_click_href'            => $btn_href,
                                 'container_add_style'      => $btn_container,
                                 'btn_add_style'         => 'm-a',
                                 'btn_style' => 'btn-white',

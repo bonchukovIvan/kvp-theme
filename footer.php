@@ -23,9 +23,11 @@ $s_number = get_theme_mod( 'basic-header-callout-s-number' );
 $youtube_link = get_theme_mod( 'basic-header-callout-youtube' );
 $facebook_link = get_theme_mod( 'basic-header-callout-facebook' );
 $instagram_link = get_theme_mod( 'basic-header-callout-instagram' );
+$telegram_link = get_theme_mod( 'basic-header-callout-tg' );
 
 // icons
 $youtube_icon = get_theme_mod( 'footer-icon-yu-set' );
+$telegram_icon = get_theme_mod( 'footer-icon-tg-set' );
 $facebook_icon = get_theme_mod( 'footer-icon-face-set' );
 $instagram_icon = get_theme_mod( 'footer-icon-instagram-set' );
 $mail_icon = get_theme_mod( 'footer-icon-mail-set' );
@@ -127,6 +129,10 @@ $btn_href = get_theme_mod( 'footer-btn-href-text' );
 
                         <a href="<?php echo esc_url( $youtube_link );  ?>" target=”_blank”>
                             <img src="<?php echo esc_url( $youtube_icon ); ?>" alt="" srcset="">
+                        </a> 
+
+                        <a href="<?php echo esc_url( $telegram_link );  ?>" target=”_blank”>
+                            <img src="<?php echo esc_url( $telegram_icon ); ?>" alt="" srcset="">
                         </a> 
 
                     </div>

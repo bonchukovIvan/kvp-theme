@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php get_header(); ?>
 
-<?php kvp_get_preview(); ?> 
+<?php kvp_get_preview(array('article_id' => get_the_ID())); ?> 
 
 <div class="article-with-nav">
     <div class="container">

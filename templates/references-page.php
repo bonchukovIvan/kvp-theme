@@ -14,9 +14,8 @@ $the_query = new WP_Query( $args );
 
 <?php get_header(); ?>
 
-<?php kvp_get_preview(array('add_class-body' => 'preview__center-img')); ?> 
-
-<div class="references">
+<?php kvp_get_preview(array('add_class-body' => 'preview__center-img', 'article_id' => get_the_ID())); ?> 
+<div class="references" id="post-<?php the_ID(); ?>">
     <div class="container">
         <div class="references__body p5-25">
             <div class="references__grid">

@@ -43,9 +43,6 @@
     .header-top__branding {
         margin: 0 25px 0 0;
     }
-    .social > * {
-        margin: 0 10px 0 0 ;
-    }
     .preview .page-header h1 {
         font-size: 36px;
         font-weight: 600;
@@ -229,6 +226,7 @@
  * 979px
  */
 @media (max-width: 979px) {
+
     .kvp-gallery__body {
         margin-left: -15px;
     }
@@ -399,6 +397,9 @@
     }
     .header-top__li a {
         font-size: 18px;
+    }
+    ul .numbers__menu {
+        display: none;
     }
     /* navbar styles */
     .navbar {

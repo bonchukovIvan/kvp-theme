@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php get_header(); ?>
 
-<?php kvp_get_preview(array('add_class' => 'back-grey', 'add_class-body' => 'preview__center-img')); ?> 
+<?php kvp_get_preview(array('add_class' => 'back-grey', 'add_class-body' => 'preview__center-img', 'article_id' => get_the_ID())); ?> 
 <section class="employment">
 	<div class="container">
 		<?php get_template_part('template-parts/content/content-article'); ?>

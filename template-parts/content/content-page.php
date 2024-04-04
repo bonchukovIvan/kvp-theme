@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <?php if ( ! is_front_page() ) : ?>
-	<?php kvp_get_preview(); ?> 
+	<?php kvp_get_preview(array('article_id' => get_the_ID())); ?> 
 <?php endif; ?>
 
 <div class="page-content">

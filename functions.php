@@ -43,6 +43,7 @@ function kvp_get_no_data_message() {
 function kvp_get_preview($args = array()) {
     $defaults = array(
         'add_class' => '',
+        'article_id' => '',
     );
 
     $args = wp_parse_args( $args, $defaults );
