@@ -65,7 +65,11 @@ if ( ! defined( 'ABSPATH' ) ) {
                 <div class="last-news__slider">
                     <div class="last-news__track">
                         <?php
-                            $args = array('post_type' => 'post', 'post_pre_page' => 6, 'order' => 'ASC');
+                            $args = array(
+                                'post_type' => 'post', 
+                                'post_pre_page' => 6, 
+                                'order'  => 'DESC',
+                                'orderby'    => 'date');
                             $the_query = new WP_Query( $args );
                             if ( $the_query->have_posts() ): ?>
                             <?php $count = 0;?>
@@ -87,8 +91,8 @@ if ( ! defined( 'ABSPATH' ) ) {
                                                     <div class="last-news__date"><?php get_the_date(); ?></div>
                                                 </div>
                                                 <div class="last-news__content-main">
-                                                    <div class="last-news__title"><?php echo wp_trim_words(get_the_title('', '', false), 5); ?></div>
-                                                    <div class="last-news__preview-text"><?php echo wp_trim_words( get_the_content(), 15 ); ?></div>
+                                                    <div class="last-news__title"><?php echo wp_trim_words(get_the_title('', '', false), 20); ?></div>
+                                                    <div class="last-news__preview-text"><?php echo wp_trim_words( get_the_content(), 30 ); ?></div>
                                                 </div>
                                                 <?php
                                                     kvp_get_btn( array(

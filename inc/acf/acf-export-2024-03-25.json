@@ -504,7 +504,7 @@
                 "min_height": "",
                 "min_size": "",
                 "max_width": 725,
-                "max_height": 468,
+                "max_height": 470,
                 "max_size": "",
                 "mime_types": "",
                 "preview_size": "medium"
@@ -861,6 +861,26 @@
                 "max_size": "",
                 "mime_types": "",
                 "preview_size": "medium"
+            },
+            {
+                "key": "field_660e59f6ab388",
+                "label": "Ідентифікатор відео",
+                "name": "special-href",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "Mu6p2sGXiCw",
+                "prepend": "",
+                "append": ""
             }
         ],
         "location": [

@@ -328,7 +328,7 @@ button span{
 }
 .news__body {
     display: grid;
-    grid-template-columns: 75% 25%;
+    grid-template-columns: 3fr 1fr;
     align-items: start;
     padding: 50px 0;
     justify-items: center;
@@ -411,7 +411,7 @@ button span{
     margin: 25px 0;
     counter-increment: item;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
 }
 .wpp__most-popular--item::before {
     font-size: 48px;
@@ -485,6 +485,14 @@ button span{
     gap: 50px;
     background-color: #F7F7F7;
 }
+.single-post__top-img img {
+    border: none;
+}
+.related-news__body {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
 .related-news {
     background-color: #F7F7F7;
     padding: 100px 25px;
@@ -495,7 +503,7 @@ button span{
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, #161C20, #00386B66 );
+    background: linear-gradient(to right, #21282c8c, #00386B66);
     box-shadow: 0px 0px 100px 0px #0000001A;    
 }
 .related-news__track .slick-slide {
@@ -767,6 +775,9 @@ article em {
 article ul li {
     position: relative;
     margin-bottom: 10px;
+}
+article img {
+    border: 2px solid #00386B;
 }
 article figure {
     display: flex;

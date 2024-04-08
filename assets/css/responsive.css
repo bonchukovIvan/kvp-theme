@@ -302,9 +302,6 @@
     related-news {
         padding: 50px 25px;
     }
-    .single-post .last-news__body {
-   
-    }
     /* header-top styles */
     .header-top__body nav {
         border: none;
@@ -572,6 +569,7 @@
     /* news */
      .news__body {
         grid-template-columns: 1fr;
+        padding: 0;
     }
     /*.news__grid {
         grid-template-columns: 1fr;

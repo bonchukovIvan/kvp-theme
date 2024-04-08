@@ -43,16 +43,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                                 </div>
                                 <div class="special__img">
                                 <?php if (get_field('special-href')) :?>
-                                    <!-- <iframe 
-                                        width="420" 
-                                        height="315"
-                                        src="https://www.youtube.com/embed/<?php echo get_field('special-href'); ?>?loop=1&autoplay=1&mute=1&controls=0"
-                                        frameborder="0" 
-                                        allowfullscreen
-                                        >
-    
-                                    </iframe> -->
-                                    <iframe width="560" height="315" src="http://www.youtube.com/embed/<?php echo get_field('special-href'); ?>?autoplay=1&loop=1&controls=0&mute=1&playlist=<?php echo get_field('special-href'); ?>" frameborder="0" allowfullscreen></iframe>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/<?php echo get_field('special-href'); ?>?autoplay=1&loop=1&controls=0&mute=1&playlist=<?php echo get_field('special-href'); ?>" frameborder="0" allowfullscreen></iframe>
                                 <?php else :?>
                                     <img src="<?php  echo get_the_post_thumbnail_url(); ?>" alt="" srcset="">
                                 <?php endif; ?>

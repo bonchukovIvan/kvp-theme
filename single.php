@@ -63,7 +63,7 @@ $category_id = $category->cat_ID;
 <div class="related-news">
 <div class="container">
 
-<div class="last-news__body">
+<div class="related-news__body">
                     <?php echo kvp_get_border_header( array( 'title' => 'Інші новини', 'h'     => 'h2') ); ?>
                     <div class="last-news__main">
                         <div class="last-news__top">
@@ -89,28 +89,30 @@ $category_id = $category->cat_ID;
                             <?php while ( $the_query->have_posts() ) : ?>
                                 <?php  $the_query->the_post(); ?>
                                 <div class="news__item cntr">
-                                    <div class="news__img full-wdth">
-                                        <?php if(get_the_post_thumbnail_url()) : ?>
-                                            <img data-lazy="<?php echo get_the_post_thumbnail_url(); ?>"  alt="" srcset="">
-                                        <?php else : ?>
-                                            <img data-lazy="<?php echo get_template_directory_uri()?>/assets/images/not-found-news.jpg" alt="" srcset="">
-                                        <?php endif; ?>
-                                    </div>
-                                    <div class="news__content">
-                                        <div class="news__content-top">
-                                            <div class="news__category"><?php get_the_category()[0]->name; ?></div>
-                                            <div class="news__date"><?php get_the_date(); ?></div>
+                                    <div class="carousel__item-body">
+                                        <div class="news__img full-wdth">
+                                            <?php if(get_the_post_thumbnail_url()) : ?>
+                                                <img data-lazy="<?php echo get_the_post_thumbnail_url(); ?>"  alt="" srcset="">
+                                            <?php else : ?>
+                                                <img data-lazy="<?php echo get_template_directory_uri()?>/assets/images/not-found-news.jpg" alt="" srcset="">
+                                            <?php endif; ?>
+                                        </div>        
+                                        <div class="news__content">
+                                            <div class="news__content-top">
+                                                <div class="news__category"><?php get_the_category()[0]->name; ?></div>
+                                                <div class="news__date"><?php get_the_date(); ?></div>
+                                            </div>
+                                            <div class="news__content-main">
+                                                <div class="news__title"><?php echo wp_trim_words(get_the_title('', '', false), 20); ?></div>
+                                                <div class="news__preview-text"><?php echo wp_trim_words( get_the_content(), 30 ); ?></div>
+                                            </div>
+                                            <?php kvp_get_btn( array(
+                                                        'title'                 => 'Читати новину',
+                                                        'on_click_href'            => get_permalink(),
+                                                        'container_add_style'      => 't-cntr m25-25',
+                                                        'btn_add_style'         => 'm-a',
+                                                    ) );?>
                                         </div>
-                                        <div class="news__content-main">
-                                            <div class="news__title"><?php echo wp_trim_words(get_the_title('', '', false), 5); ?></div>
-                                            <div class="news__preview-text"><?php echo wp_trim_words( get_the_content(), 15 ); ?></div>
-                                        </div>
-                                        <?php kvp_get_btn( array(
-                                                    'title'                 => 'Читати новину',
-                                                    'on_click_href'            => get_permalink(),
-                                                    'container_add_style'      => 't-cntr m25-25',
-                                                    'btn_add_style'         => 'm-a',
-                                                ) );?>
                                     </div>
                                 </div>
                             <?php endwhile ?>

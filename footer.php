@@ -111,7 +111,7 @@ $btn_href = get_theme_mod( 'footer-btn-href-text' );
                         );
                     ?>
                     <div class="email">
-                    <a href="mailto:<?php echo esc_url( $btn_href ); ?>">
+                    <a href="mailto:<?php echo $btn_href; ?>">
                         <img src="<?php echo esc_url( $mail_icon ); ?>" alt="">
                         <p>
                             <?php echo $btn_href ?>
