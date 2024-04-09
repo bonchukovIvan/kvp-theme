@@ -897,8 +897,9 @@ article blockquote {
 }
 .page-navigation__item.active::before {
     content: '';
-    height: 8px;
-    width: 8px;
+    /* height: 8px;
+    width: 8px; */
+    padding: 4px 4px;
     background-color: #EF7918;
     border-radius: 50%;
     display: inline-block;
