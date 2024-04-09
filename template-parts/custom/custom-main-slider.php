@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 
-<section class="main-slider">
+<section class="main-slider" id="main-slider-section">
     <div class="container">
         <div class="main-slider__body">
             <div class="main-slider__content">

@@ -20,6 +20,7 @@ $border_add = !$is_employment ? "t-white" : '';
 ?>
 
 <section class="virtual-ex t-black <?php if ( $is_employment ) echo "back-grey"?>" 
+        id="virtual-ex-section"
 <?php if ( !$is_employment ) : ?> 
     style="background: url('<?php echo get_template_directory_uri()?>/assets/images/background-main.png')" 
 <?php endif; ?>
@@ -32,7 +33,7 @@ $border_add = !$is_employment ? "t-white" : '';
                     <?php print_r( $desc ); ?>
                 </div>
                 <div class="virtual-ex__excursion <?php if ( $is_employment ) echo "grd__full-column" ?>">
-                    <iframe src="https://kvp.sumdu.edu.ua/3d-index.html" frameborder="0"></iframe>
+                    <iframe src="/3d-index.html" frameborder="0"></iframe>
                 </div>
                 <?php if ( !$is_employment ) :?>
                     <div class="virtual-ex__app-text">

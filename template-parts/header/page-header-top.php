@@ -83,11 +83,6 @@ $s_number = get_theme_mod( 'basic-header-callout-s-number' );
                                 <img src="<?php echo get_template_directory_uri()?>/assets/images/phone.svg" alt="">
                             </div>
                         </a>
-
-                        <!-- <select name="numbers_select numbers__text" id="numbers_select_id">
-                            <option value="<?php echo str_replace(' ', '', $f_number); ?>"><?php echo $f_number; ?></option>
-                            <option value="<?php echo str_replace(' ', '', $s_number); ?>"><?php echo $s_number; ?></option>
-                        </select> -->
                         <ol class="numbers__menu">
                             <li class="numbers__item">
                                 <a href="tel:<?php echo str_replace(' ', '', $f_number); ?>"><?php echo $f_number; ?></a>

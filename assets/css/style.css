@@ -977,9 +977,9 @@ article blockquote {
 .numbers__menu:hover .sub-numbers__menu {
     display: block;
     position: absolute;
-    top: 20px;
+    top: 19px;
     left: -48px;
-    z-index: 9999;
+    z-index: 99;    
 }
 .mail,
 .numbers,
@@ -1484,6 +1484,9 @@ body.desktop .navbar__nav > li:hover .navbar__arrow {
     color: #fff;
     padding: 100px 0px;
 }
+.virtual-ex.t-black {
+    color: #000;
+}
 .virtual-ex__gradient {
     position: absolute;
     top: 0;
@@ -1901,9 +1904,7 @@ footer.main-footer a {
 .t-cntr {
     text-align: center;
 }
-.t-black {
-    color: #000;
-}
+
 .t-white {
     color: #fff;
 }

@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 
-<section class="special">
+<section class="special" id="special-section">
     <div class="container">
         <div class="special__body">
             <?php kvp_get_border_header(array('title' => kvp_get_custom_post_name('kvp_specialities'), 'h'     => 'h2')); ?>
