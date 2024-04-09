@@ -1779,6 +1779,7 @@ body.desktop .navbar__nav > li:hover .navbar__arrow {
 }
 .callback-body__image {
     height: 800px;
+    width: 50%;
 }
 .callback-body__form {
     background-color: #fff;
