@@ -100,7 +100,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                                                         'on_click_href'        => get_permalink(),
                                                         'container_add_style'  => 'more m-a',
                                                         'btn_add_style'        => 'm-a p15-30',
-                                                        'btn_style'            => 'btn-white',
+                                                        'btn_style'            => '',
                                                     ) );
                                                 ?>
                                             </div>

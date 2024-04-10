@@ -63,7 +63,7 @@ $is_search = count( $_GET );
                     </div>
                     <div class="search-result__desc">
                         <p>
-                            <?php echo wp_trim_words( get_the_content(), 25 ); ?>
+                            <?php echo strip_shortcodes(wp_trim_words( get_the_content(), 25 ));  ?>
                         </p>
                     </div>
                     <div class="search-result__more">

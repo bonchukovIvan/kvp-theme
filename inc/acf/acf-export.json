@@ -302,6 +302,26 @@
                 "delay": 0
             },
             {
+                "key": "field_66167b8369e70",
+                "label": "Посилання для кнопки",
+                "name": "about-us-btn-href",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
                 "key": "field_65e03030454d8",
                 "label": "Зображення",
                 "name": "about-us_img",
@@ -382,6 +402,26 @@
                 "toolbar": "full",
                 "media_upload": 1,
                 "delay": 0
+            },
+            {
+                "key": "field_66167bae69e71",
+                "label": "Посилання для кнопки",
+                "name": "virtual-ex_btn-href",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Додайте опис до секції(не використовуйте зоображення або інші меді-файли!)",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
             },
             {
                 "key": "field_65e02f78bd5ac",

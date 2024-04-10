@@ -923,6 +923,12 @@
     .special__img {
         height: 300px;
     }
+    .news__title {
+        line-height: 1;
+    }
+    .news__preview-text {
+        line-height: 1;
+    }
 }
 /* 
  * 400px

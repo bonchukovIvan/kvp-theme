@@ -349,10 +349,9 @@ button span{
     margin: 20px 0px 10px 0px;
 }
 .news__content-main {
-    margin: 20px 0px 15px 0px;
+    margin: 20px 0px 20px 0px;
     display: grid;
     grid-template-rows: repeat(2, 90px);
-    grid-gap: 25px;
 }
 .news__content-main button {
     text-align: center;
@@ -362,10 +361,11 @@ button span{
     margin: 0px 0px 15px 0px;
     overflow:hidden;
     display: -webkit-box;
-    max-width: 400px;
+    line-height: 22px;
 }
 .news__preview-text {
     font-size: 15px;
+    line-height: 22px;
 }
 .news__img {
     height: 300px;
@@ -729,6 +729,9 @@ nav.kvp-pagination ul a {
     display: flex;
     gap: 30px;
 }
+.search-result__desc {
+    line-height: 1.4;
+}
 .search-result__pagination a{
     color: #000;
 }
@@ -776,14 +779,12 @@ article ul li {
     position: relative;
     margin-bottom: 10px;
 }
-article img {
-    border: 2px solid #00386B;
-}
 article figure {
     display: flex;
 }
 article figure img {
     box-shadow: 0px 0px 100px 0px #0000001A;
+    border: 2px solid #00386B;
 }
 article ul li::marker {
     color: #EF7918;
@@ -1615,7 +1616,7 @@ body.desktop .navbar__nav > li:hover .navbar__arrow {
     margin: 20px 20px 10px 20px;
 }
 .last-news__content-main {
-    margin: 20px 20px 15px 20px;
+    margin: 20px 20px 40px 20px;
     display: grid;
     grid-template-rows: repeat(2, 89px);
     grid-template-columns: 100%;
@@ -1624,15 +1625,21 @@ body.desktop .navbar__nav > li:hover .navbar__arrow {
 .last-news__content-main button {
     text-align: center;
 }
+.last-news__content button {
+    background-color: #EF7918;
+    border: 1px solid #fff;
+}
 .last-news__title {
     font-weight: 700;
     margin: 0px 0px 15px 0px;
     overflow:hidden;
     display: -webkit-box;
     max-width: 400px;
+    line-height: 22px;
 }
 .last-news__preview-text {
     font-size: 15px;
+    line-height: 22px;
 }
 .last-news .btn-container {
     text-align: center;
@@ -1842,6 +1849,9 @@ footer.main-footer a {
     text-align: center;
     text-transform: uppercase;
 }
+.footer-body__branding .logo {
+    line-height: 1.2;
+}
 .footer-body__branding .logo img{
     height: 75px;
 }
@@ -1850,9 +1860,18 @@ footer.main-footer a {
     font-weight: 900;
     padding: 10px 0;
 }
-.footer-body__menu a{
+.footer-body .email a:hover {
+    text-decoration: underline; 
+}
+.phone a:hover {
+    text-decoration: underline; 
+}
+.footer-body__menu a {
     text-decoration: none;
     color: #fff;
+}
+.footer-body__menu a:hover {
+    text-decoration: underline; 
 }
 .footer-body__li {
     margin: 10px;

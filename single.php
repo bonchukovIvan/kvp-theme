@@ -103,8 +103,8 @@ $category_id = $category->cat_ID;
                                                 <div class="news__date"><?php get_the_date(); ?></div>
                                             </div>
                                             <div class="news__content-main">
-                                                <div class="news__title"><?php echo wp_trim_words(get_the_title('', '', false), 20); ?></div>
-                                                <div class="news__preview-text"><?php echo wp_trim_words( get_the_content(), 30 ); ?></div>
+                                                <div class="news__title"><?php echo wp_trim_words(get_the_title('', '', false), 12); ?></div>
+                                                <div class="news__preview-text"><?php echo wp_trim_words( get_the_content(), 25 ); ?></div>
                                             </div>
                                             <?php kvp_get_btn( array(
                                                         'title'                 => 'Читати новину',
