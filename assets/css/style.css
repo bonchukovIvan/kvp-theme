@@ -834,7 +834,7 @@ article table strong{
     font-weight: 700;
 }
 article td {
-    border: 1px solid #DBDDDE;
+    border: 1px solid #DBDDDE!important;
     padding: 10px;
 }
 img.alignright {float:right; margin:0 0 1em 1em}
