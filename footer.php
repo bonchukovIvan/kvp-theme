@@ -151,5 +151,6 @@ $btn_href = get_theme_mod( 'footer-btn-href-text' );
             });
         });
     </script>
+    <?php wp_footer(); ?>
 </body>
 </html>

@@ -395,7 +395,7 @@
     .header-top__li a {
         font-size: 18px;
     }
-    ul .numbers__menu {
+    .numbers__menu {
         display: none;
     }
     /* navbar styles */
