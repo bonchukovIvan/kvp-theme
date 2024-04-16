@@ -36,13 +36,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 
                     <div class="main-slider__text-p"><?php echo get_field('main-slider-add-text'); ?></div>
 
-                    <?php 
-                        kvp_get_btn( array(
-                            'title'                => get_field('main-slider-btn-text'),
-                            'on_click_href'       => get_field('main-slider-btn-href'),
-                            'btn_style'            => 'btn-white',
-                        ) );
-                    ?>
+                    <div class="main-slider__buttons">
+                        <?php 
+                            kvp_get_btn( array(
+                                'title'                => get_field('main-slider-btn-text'),
+                                'on_click_href'       => get_field('main-slider-btn-href'),
+                                'btn_style'            => 'btn-white',
+                            ) );
+                        ?>
+                        <?php 
+                            kvp_get_btn( array(
+                                'title'                => 'Новини',
+                                'on_click_href'       => '',
+                                'btn_style'            => 'btn-white',
+                            ) );
+                        ?>
+                    </div>
 
                 </div>
                 <div class="main-slider__img">

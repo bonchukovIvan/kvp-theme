@@ -398,6 +398,13 @@
     .numbers__menu {
         display: none;
     }
+    .news-widget {
+        display: none!important;
+    }
+    .main-slider__buttons {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
     /* navbar styles */
     .navbar {
         padding: 0;
