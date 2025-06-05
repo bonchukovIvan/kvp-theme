@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php get_header(); ?>
 
-<?php kvp_get_preview(); ?> 
+<?php kvp_get_preview(array('article_id' => get_the_ID())); ?> 
 
 <div class="article-with-nav">
     <div class="container">
@@ -40,9 +40,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
             $('html, body').animate({
                 scrollTop: $($(this).attr('href')).offset().top
-            }, 800); 
+            }, 800);
 			$('.page-navigation__item.active').removeClass('active');
-			$('a[href^="'+$(this).attr('href')+'"]').children().toggleClass('active');
+			$(this).children().toggleClass('active');
         });
         function createDivs() {
 
@@ -50,7 +50,6 @@ if ( ! defined( 'ABSPATH' ) ) {
             let count = 1;
 
             divs.each(function(index, div) {
-
                 let anchor = $('<a>').attr('href', '#' + div.id);
                 let listItem = $('<li>').text($(div).attr('title'));
 
@@ -69,6 +68,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         createDivs();	
     });
 </script>
+
 <script>
 let text = $('.page-title').text();
 
@@ -82,5 +82,9 @@ words.forEach(function(word) {
 		$('.page-title').addClass('title-28')
     }
 });
+
+
+
+
 </script>
 <?php get_footer(); ?>

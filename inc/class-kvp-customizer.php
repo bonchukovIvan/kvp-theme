@@ -80,6 +80,20 @@ class Kvp_Customizer {
 			'type' => 'url',
 		)));
 		/*
+		 * telegram link setting
+		 */ 
+		$wp_customize->add_setting('basic-header-callout-tg', array(
+			'default' => 'https://t.me/',
+			'sanitize_callback' => array($this, 'sanitize_custom_url'),
+		));
+		$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'basic-header-callout-tg-control', array(
+			'label' => 'Посилання на Ваш tg',
+			'section' => 'basic-header-callout-section',
+			'settings' => 'basic-header-callout-tg',
+			'type' => 'url',
+		)));
+		
+		/*
 		 * first number setting
 		 */ 
 		$wp_customize->add_setting('basic-header-callout-f-number', array(
@@ -139,6 +153,18 @@ class Kvp_Customizer {
             'label' => 'Іконка Youtube',
             'section' => 'basic-header-callout-section',
             'settings' => 'header-icon-yu-set',
+        )));
+		/*
+		 * telegram icon
+		 */ 
+        $wp_customize->add_setting('header-icon-tg-set', array(
+            'default' => '',
+            'sanitize_callback' => 'esc_url_raw', 
+        ));
+        $wp_customize->add_control(new WP_Customize_Upload_Control($wp_customize, 'header-icon-tg-set-control', array(
+            'label' => 'Іконка Telegram',
+            'section' => 'basic-header-callout-section',
+            'settings' => 'header-icon-tg-set',
         )));
 		/*
 		 * mail icon
@@ -241,6 +267,18 @@ class Kvp_Customizer {
             'label' => 'Іконка Youtube',
             'section' => 'footer-callout-section',
             'settings' => 'footer-icon-yu-set',
+        )));
+		/*
+		 * telegram icon
+		 */ 
+        $wp_customize->add_setting('footer-icon-tg-set', array(
+            'default' => '',
+            'sanitize_callback' => 'esc_url_raw', 
+        ));
+        $wp_customize->add_control(new WP_Customize_Upload_Control($wp_customize, 'footer-icon-tg-set-control', array(
+            'label' => 'Іконка Telegram',
+            'section' => 'footer-callout-section',
+            'settings' => 'footer-icon-tg-set',
         )));
 		/*
 		 * mail icon

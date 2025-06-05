@@ -16,7 +16,7 @@ $page =  is_front_page() ? get_field( "collab_title" ) : get_field( "emp-collab_
 
 ?>
 
-<section class="collab">
+<section class="collab" id="collab-section">
     <div class="container">
         <div class="collab__body">
             <?php  kvp_get_border_header( array( 'title' => $page, 'h'     => 'h2') ); ?>
@@ -34,7 +34,7 @@ $page =  is_front_page() ? get_field( "collab_title" ) : get_field( "emp-collab_
             <div class="collab__slider">
                 <div class="collab__track">
                     <?php
-                        $args = array('post_type' => 'kvp_collab', 'post_pre_page' => 18, 'order' => 'ASC');
+                        $args = array('post_type' => 'kvp_collab', 'posts_per_page' => -1, 'order' => 'ASC');
                         $the_query = new WP_Query( $args );
                         if ( $the_query->have_posts() ): ?>
                         <?php $count = 0;?>

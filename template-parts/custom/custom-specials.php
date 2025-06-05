@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 
-<section class="special">
+<section class="special" id="special-section">
     <div class="container">
         <div class="special__body">
             <?php kvp_get_border_header(array('title' => kvp_get_custom_post_name('kvp_specialities'), 'h'     => 'h2')); ?>
@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                                 <?php $the_query->the_post(); ?>
                                 <div class="special__about">
                                     <div class="special__icon">
-                                        <img src="<?php echo esc_url( get_field('special-icon') ); ?>" alt="" srcset="">
+                                            <img src="<?php echo esc_url( get_field('special-icon') ); ?>" alt="" srcset="">
                                     </div>
                                     <div class="special__text">
                                         <div class="special__desc">
@@ -42,7 +42,11 @@ if ( ! defined( 'ABSPATH' ) ) {
                                     </div>
                                 </div>
                                 <div class="special__img">
+                                <?php if (get_field('special-href')) :?>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/<?php echo get_field('special-href'); ?>?autoplay=1&loop=1&controls=0&mute=1&playlist=<?php echo get_field('special-href'); ?>" frameborder="0" allowfullscreen></iframe>
+                                <?php else :?>
                                     <img src="<?php  echo get_the_post_thumbnail_url(); ?>" alt="" srcset="">
+                                <?php endif; ?>
                                 </div>
                             </div>
                         <?php endwhile ?>

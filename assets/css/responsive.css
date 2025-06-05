@@ -43,9 +43,6 @@
     .header-top__branding {
         margin: 0 25px 0 0;
     }
-    .social > * {
-        margin: 0 10px 0 0 ;
-    }
     .preview .page-header h1 {
         font-size: 36px;
         font-weight: 600;
@@ -229,6 +226,7 @@
  * 979px
  */
 @media (max-width: 979px) {
+
     .kvp-gallery__body {
         margin-left: -15px;
     }
@@ -303,9 +301,6 @@
     }
     related-news {
         padding: 50px 25px;
-    }
-    .single-post .last-news__body {
-   
     }
     /* header-top styles */
     .header-top__body nav {
@@ -399,6 +394,16 @@
     }
     .header-top__li a {
         font-size: 18px;
+    }
+    .numbers__menu {
+        display: none;
+    }
+    .news-widget {
+        display: none!important;
+    }
+    .main-slider__buttons {
+        grid-template-columns: 1fr;
+        gap: 25px;
     }
     /* navbar styles */
     .navbar {
@@ -571,6 +576,7 @@
     /* news */
      .news__body {
         grid-template-columns: 1fr;
+        padding: 0;
     }
     /*.news__grid {
         grid-template-columns: 1fr;
@@ -923,6 +929,12 @@
     }
     .special__img {
         height: 300px;
+    }
+    .news__title {
+        line-height: 1;
+    }
+    .news__preview-text {
+        line-height: 1;
     }
 }
 /* 

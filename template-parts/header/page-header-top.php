@@ -16,6 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 $youtube_link = get_theme_mod('basic-header-callout-youtube' );
 $facebook_link = get_theme_mod('basic-header-callout-facebook' );
 $instagram_link = get_theme_mod('basic-header-callout-instagram' );
+$telegram_link = get_theme_mod('basic-header-callout-tg' );
 $mail_link = get_theme_mod('basic-header-callout-mail' );
 
 // icons
@@ -23,6 +24,7 @@ $youtube_icon = get_theme_mod( 'header-icon-yu-set' );
 $facebook_icon = get_theme_mod( 'header-icon-face-set' );
 $instagram_icon = get_theme_mod( 'header-icon-instagram-set' );
 $mail_icon = get_theme_mod( 'header-icon-mail-set' );
+$telegram_icon = get_theme_mod( 'header-icon-tg-set' );
 
 // numbers
 $f_number = get_theme_mod('basic-header-callout-f-number' );
@@ -81,12 +83,17 @@ $s_number = get_theme_mod( 'basic-header-callout-s-number' );
                                 <img src="<?php echo get_template_directory_uri()?>/assets/images/phone.svg" alt="">
                             </div>
                         </a>
+                        <ol class="numbers__menu">
+                            <li class="numbers__item">
+                                <a href="tel:<?php echo str_replace(' ', '', $f_number); ?>"><?php echo $f_number; ?></a>
+                                <ol class="sub-numbers__menu">
+                                    <li class="numbers__item">
+                                        <a href="tel:<?php echo str_replace(' ', '', $s_number); ?>"><?php echo $s_number; ?></a>
+                                    </li>
+                                </ol>
+                            </li>
 
-                        <select name="numbers_select numbers__text" id="numbers_select_id">
-                            <option value="<?php echo str_replace(' ', '', $f_number); ?>"><?php echo $f_number; ?></option>
-                            <option value="<?php echo str_replace(' ', '', $s_number); ?>"><?php echo $s_number; ?></option>
-                        </select>
-
+                        </ol>
                         <div class="numbers__text">
                             <a href="tel:<?php echo str_replace(' ', '', $f_number); ?>">
                                 <div>
@@ -118,6 +125,9 @@ $s_number = get_theme_mod( 'basic-header-callout-s-number' );
                             </a>
                             <a href="<?php echo esc_url( $instagram_link ); ?>" target=”_blank” >
                                 <img src="<?php echo esc_url( $instagram_icon ); ?>" alt="">
+                            </a>
+                            <a href="<?php echo esc_url( $telegram_link ); ?>" target=”_blank” >
+                                <img src="<?php echo esc_url( $telegram_icon ); ?>" alt="">
                             </a>
                         </div>
                         <div class="sumdu-logo">

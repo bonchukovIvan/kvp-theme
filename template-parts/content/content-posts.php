@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         </div>
         <div class="news__content-main">
             <div class="news__title"><?= wp_trim_words(get_the_title(), 12); ?></div>
-            <div class="news__preview-text"><?= wp_trim_words( get_the_content(), 25 ); ?></div>
+            <div class="news__preview-text"><?= wp_trim_words( get_the_content(), 20 ); ?></div>
         </div>
         <?php kvp_get_btn( array(
             'title'                => 'Читати новину',

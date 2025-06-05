@@ -13,7 +13,7 @@ $add_class = isset($args['add_class']) ? $args['add_class'] : "";
 
 <?php get_header(); ?>
 
-<?php kvp_get_preview(array('add_class' => 'back-grey')); ?> 
+<?php kvp_get_preview(array('add_class' => 'back-grey', 'article_id' => get_the_ID())); ?> 
 <div class="page-content">
 	<div class="container">
 		<?php get_template_part('template-parts/content/content-article'); ?>

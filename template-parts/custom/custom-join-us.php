@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 
-<section class="join-us-main" style=" background-image: url('<?php echo get_template_directory_uri()?>/assets/images/background-main.png');">
+<section class="join-us-main" id="join-section" style="background-image: url('<?php echo get_template_directory_uri()?>/assets/images/background-main.png');" >
     <div class="container">
         <div class="join-us__body">
             <div class="join-us__form">

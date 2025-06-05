@@ -16,7 +16,9 @@ $posts = new WP_Query( $args );
 $is_empty = empty($_GET);
 $gallery_id = $is_empty ? $posts->posts[0]->ID : sanitize_key($_GET['gallery_id']);
 ?> 
+
 <?php get_header(); ?>
+
 <div class="kvp-gallery p5-25">
   <div class="container">
 
@@ -92,4 +94,5 @@ $(window).on('load', function () {
     });     
   });
 </script>
+
 <?php get_footer(); ?>
